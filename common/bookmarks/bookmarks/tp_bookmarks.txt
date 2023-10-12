@@ -1,0 +1,27 @@
+bm_867_byzantine = {
+	start_date = 867.1.1
+	is_playable = yes
+	group = bm_group_867
+
+	weight = {
+		value = 0
+	}
+
+	# Byzantine Emperor
+	character = {
+		name = "bookmark_thepurple_basilius_macedonia"
+		dynasty = 644
+		dynasty_splendor_level = 1
+		type = male
+		birth = 836.5.25
+		title = e_byzantium
+		government = feudal_government
+		culture = greek
+		religion = orthodox
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 1700
+		position = { 700 620 }
+
+		animation = map_worry
+	}
+}
