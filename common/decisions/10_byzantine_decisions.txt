@@ -18,7 +18,25 @@ struggle_byzantine_ending_decay_decision = {
 	}
 
 	is_valid = {
+		# 関係勢力であること
 		is_independent_ruler = yes
+
+		# コンスタンティノープルを関係勢力以外が所有していること
+
+		# コンスタンティノープルの宗教が正教会/聖像破壊派でないこと
+		# または
+		# 関係勢力以外の文化であること
+
+		# ビザンツ帝国の称号を誰も持っていないこと
+		custom_tooltip = {
+			text = struggle_byzantine_ending_decay_decision_correct_phase_tt
+			NOT = {
+				any_held_title = { this = title:e_byzantium }
+			}
+		}
+
+		# ビザンツ帝国の請求権を誰も持っていないこと
+		# ビザンツ帝国のタイトルが破壊されてからN年以上経過していること
 
 		custom_tooltip = {
 			text = struggle_byzantine_ending_decay_decision_correct_phase_tt
@@ -35,6 +53,16 @@ struggle_byzantine_ending_decay_decision = {
 	# 以上が2つが100年続いている
 	# TODO
 
+	# 正教会、聖像破壊派の情熱が0になる
+	# -> モスクワが正教会だった場合逆に100になる..?
+	# カトリックがローマを所有している場合、カトリックの情熱が50上がる
+	# -> ローマ帝国統一への意欲
+	# コンスタンティノープルをカトリックから見て敵対的、邪悪とみなされる宗教のものが所有していた場合、
+	# -> ローマ帝国統一への意欲
+	# 30年間、聖戦コストが半分になる
+	# -> -> ローマ帝国統一への意欲
+	# イタリア地域に存在する文化の、文化進捗が早くなる
+	# -> 学者の移動
 	effect = {
 		tp_struggle_ending_destroy_byzantium_effect = yes
 	}
@@ -46,6 +74,52 @@ struggle_byzantine_ending_decay_decision = {
 	ai_potential = { always = yes }
 
 	ai_will_do = { base = 100 }
+}
+
+# Debug
+struggle_byzantine_change_phase_prosperity_decision = {
+	major = yes
+	title = struggle_byzantine_change_phase_prosperity_decision
+	is_invisible = no
+	is_shown = {
+		has_fp2_dlc_trigger = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				is_ai = no
+				any_character_struggle = { is_struggle_type = byzantine_struggle }
+			}
+			# root = {change_struggle_phase = struggle_phase_byzantine_decay}
+			random_character_struggle = {
+				limit = { is_struggle_type = byzantine_struggle }
+				change_struggle_phase = struggle_phase_byzantine_prosperity
+			}
+		}
+	}
+}
+
+# Debug
+struggle_byzantine_change_phase_opportunity_decision = {
+	major = yes
+	title = struggle_byzantine_change_phase_opportunity_decision
+	is_invisible = no
+	is_shown = {
+		has_fp2_dlc_trigger = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				is_ai = no
+				any_character_struggle = { is_struggle_type = byzantine_struggle }
+			}
+			# root = {change_struggle_phase = struggle_phase_byzantine_decay}
+			random_character_struggle = {
+				limit = { is_struggle_type = byzantine_struggle }
+				change_struggle_phase = struggle_phase_byzantine_opportunity
+			}
+		}
+	}
 }
 
 # Debug
@@ -66,6 +140,29 @@ struggle_byzantine_change_phase_decay_decision = {
 			random_character_struggle = {
 				limit = { is_struggle_type = byzantine_struggle }
 				change_struggle_phase = struggle_phase_byzantine_decay
+			}
+		}
+	}
+}
+
+# Debug
+struggle_byzantine_change_phase_hostility_decision = {
+	major = yes
+	title = struggle_byzantine_change_phase_hostility_decision
+	is_invisible = no
+	is_shown = {
+		has_fp2_dlc_trigger = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				is_ai = no
+				any_character_struggle = { is_struggle_type = byzantine_struggle }
+			}
+			# root = {change_struggle_phase = struggle_phase_byzantine_decay}
+			random_character_struggle = {
+				limit = { is_struggle_type = byzantine_struggle }
+				change_struggle_phase = struggle_phase_byzantine_hostility
 			}
 		}
 	}
