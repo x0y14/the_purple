@@ -1,0 +1,20 @@
+# ビザンツ帝国の慣習的領土内に存在するすべての王国が帝国称号に格上げされる
+# ホントはe_noneとかに紐づけて帝国が存在しない地域にしたい。けどやり方分からない
+tp_struggle_ending_destroy_byzantium_effect = {
+	if = {
+		title:e_byzantium = {
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_kingdom
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+					}
+				}
+				# イベリアの流用
+				fp2_struggle_compromise_create_new_empire_effect = yes
+			}
+		}
+
+
+	}
+}

@@ -92,7 +92,9 @@ byzantine_struggle = {
 				#### 侵入
 				#### 無関係
 			}
-			ending_decisions = {}
+			ending_decisions = {
+				struggle_byzantine_ending_decay_decision
+			}
 		}
 
 		# 機会
@@ -129,7 +131,9 @@ byzantine_struggle = {
 			faith_effects = {}
 			culture_effects = {}
 			other_effects = {}
-			ending_decisions = {}
+			ending_decisions = {
+				struggle_byzantine_ending_decay_decision
+			}
 		}
 
 		# 衰退
@@ -161,7 +165,9 @@ byzantine_struggle = {
 			faith_effects = {}
 			culture_effects = {}
 			other_effects = {}
-			ending_decisions = {}
+			ending_decisions = {
+				struggle_byzantine_ending_decay_decision
+			}
 		}
 
 		# 敵意
@@ -197,7 +203,9 @@ byzantine_struggle = {
 			faith_effects = {}
 			culture_effects = {}
 			other_effects = {}
-			ending_decisions = {}
+			ending_decisions = {
+				struggle_byzantine_ending_decay_decision
+			}
 		}
 	}
 	
