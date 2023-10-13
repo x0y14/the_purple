@@ -22,7 +22,7 @@ byzantine_struggle = {
 	}
 	faiths = {
 		orthodox
-		catholic
+		# catholic
 		armenian_apostolic
 		iconoclast
 		hellenic_pagan
