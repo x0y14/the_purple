@@ -12,6 +12,7 @@ tp_struggle_ending_destroy_byzantium_effect = {
 				}
 				# イベリアの流用
 				fp2_struggle_compromise_create_new_empire_effect = yes
+				# set_de_jure_liege_title = title_e:none
 			}
 		}
 
