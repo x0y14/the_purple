@@ -1,4 +1,7 @@
-# Struggle Of Byzantium (ビザンツの闘争)
+# The Purple (Struggle For Byzantium)
+
+![Thumbnail](thubnail.jpg)
+
 ---
 ## エリア
 - 帝国慣習的領土
