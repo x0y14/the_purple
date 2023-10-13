@@ -1,0 +1,6 @@
+byzantine_struggle_starting_events = {
+	events = {
+		neutral_struggle.0001
+		byzantine_struggle.0001
+	}
+}

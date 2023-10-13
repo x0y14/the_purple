@@ -1,0 +1,109 @@
+byzantine_struggle = {
+	culture = {
+		greek
+	}
+	faiths = {
+		orthodox
+		catholic
+	}
+	regions = {
+		custom_eastern_roman_empire
+	}
+	start_phase = struggle_phase_byzantine_opportunity
+	phase_list = {
+		struggle_phase_byzantine_opportunity = {
+
+			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
+
+			# There has to be at least one.
+			future_phases = {
+				struggle_phase_byzantine_hostility = 
+				{	
+					default = yes
+					#these should be defined in common/struggle/catalyst
+					catalysts = {					
+						catalysts_betrayed_alliance = 25
+						catalysts_something_something = 30
+					}	
+				}
+				struggle_iberia_phase_tension = {	}	
+			}
+
+			war_effects = {}
+			faith_effects = {}
+			culture_effects = {}
+			other_effects = {}
+			ending_decisions = {}
+		}
+		struggle_phase_byzantine_hostility = {
+
+			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
+
+			# There has to be at least one.
+			future_phases = {
+				struggle_phase_byzantine_opportunity = 
+				{	
+					default = yes
+					#these should be defined in common/struggle/catalyst
+					catalysts = {					
+						catalysts_betrayed_alliance = 25
+						catalysts_something_something = 30
+					}	
+				}
+				struggle_iberia_phase_tension = {	}	
+			}
+
+			war_effects = {}
+			faith_effects = {}
+			culture_effects = {}
+			other_effects = {}
+			ending_decisions = {}
+		}
+	}
+	
+	involvement_prerequisite_percentage = 0.4
+
+	# Root = struggle
+	on_start = {
+		trigger_event = { on_action = fp2_iberian_struggle_starting_events }
+	}
+	
+	# Root = struggle
+	on_end = {}
+
+	# Root = struggle
+	on_change_phase = {
+		trigger_event = fp2_struggle.0003
+	}
+
+	# Root = struggle
+	# scope:character = character (who has gone from uninvolved to interloper/involved in the struggle)
+	on_join = {
+		scope:character = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+
+				if = {
+					limit = {
+						root = { was_player_joined = scope:character }
+					}
+
+					if = {
+						limit = {
+							NOT = { has_character_flag =  fp2_struggle_intro_event_flag }
+						}
+						add_character_flag = fp2_struggle_intro_event_flag
+					}
+				}
+
+				trigger_event = byzantine_struggle.0010
+			}
+			else = {
+				# assign an intent to the freshly joined character
+				trigger_event = byzantine_struggle.0002
+			}
+		}
+	}  
+}

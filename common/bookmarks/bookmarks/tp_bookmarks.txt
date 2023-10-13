@@ -1,4 +1,4 @@
-bm_867_byzantine = {
+﻿bm_867_byzantine = {
 	start_date = 867.1.1
 	is_playable = yes
 	group = bm_group_867
@@ -9,7 +9,7 @@ bm_867_byzantine = {
 
 	# Byzantine Emperor
 	character = {
-		name = "bookmark_thepurple_basilius_macedonia"
+		name = "bookmark_thepurple_basileios_makedonia"
 		dynasty = 644
 		dynasty_splendor_level = 1
 		type = male

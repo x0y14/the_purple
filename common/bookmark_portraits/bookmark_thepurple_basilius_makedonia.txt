@@ -1,6 +1,6 @@
 # Auto generated file, do not edit manually. Created using console command dump_bookmark_portrait_for
 # History database id:1700
-bookmark_thepurple_basilius_macedonia={
+bookmark_thepurple_basileios_makedonia={
 	type=male
 	id=7454
 	age=0.300000
