@@ -32,6 +32,69 @@ byzantine_struggle = {
 	}
 	start_phase = struggle_phase_byzantine_opportunity
 	phase_list = {
+		# 繁栄
+		# ルネサンスをイメージ
+		struggle_phase_byzantine_prosperity = {
+
+			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
+
+			future_phases = {
+				# 衰退
+				# 繁栄に衰退はつきものである
+				struggle_phase_byzantine_decay = {
+					default = yes
+
+					catalysts = {
+
+					}
+				}
+				# 機会
+				# 現状で満足してはならない
+				struggle_phase_byzantine_opportunity = {
+					catalysts = {					
+						catalysts_betrayed_alliance = 25
+						catalysts_something_something = 30
+					}	
+				}
+			}
+
+			war_effects = {
+				#### 共通
+				# Nothing
+
+				#### 関係
+				# 戦争コスト上昇
+
+				#### 侵入
+				# 戦争コスト上昇
+				# 傭兵コスト減少
+
+				#### 無関係
+				# Nothing
+			}
+			faith_effects = {
+				#### 共通
+				#### 関係
+				# 聖戦コスト減少
+				#### 侵入
+				# 聖戦コスト減少
+				#### 無関係
+			}
+			culture_effects = {
+				#### 共通
+				#### 関係
+				#### 侵入
+				#### 無関係
+			}
+			other_effects = {
+				#### 共通
+				#### 関係
+				#### 侵入
+				#### 無関係
+			}
+			ending_decisions = {}
+		}
+
 		# 機会
 		# ゲーム中でこの期間が一番長いです。
 		# この期間を長く続けることができれば、繁栄フェイズへと向かうことができるでしょう。
@@ -59,38 +122,6 @@ byzantine_struggle = {
 					catalysts = {
 
 					}
-				}
-			}
-
-			war_effects = {}
-			faith_effects = {}
-			culture_effects = {}
-			other_effects = {}
-			ending_decisions = {}
-		}
-		# 繁栄
-		# ルネサンスをイメージ
-		struggle_phase_byzantine_prosperity = {
-
-			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
-
-			future_phases = {
-				# 衰退
-				# 繁栄に衰退はつきものである
-				struggle_phase_byzantine_decay = {
-					default = yes
-
-					catalysts = {
-
-					}
-				}
-				# 機会
-				# 現状で満足してはならない
-				struggle_phase_byzantine_opportunity = {
-					catalysts = {					
-						catalysts_betrayed_alliance = 25
-						catalysts_something_something = 30
-					}	
 				}
 			}
 
