@@ -1,10 +1,31 @@
 byzantine_struggle = {
-	culture = {
+	cultures = {
+		# Byzantine
+		armenian
 		greek
+		alan
+		georgian
+		assyrian
+		#Latin
+		italian
+		roman
+		cisalpine
+		sardinian
+		sicilian
+		lombard
+		langobard
+		# South-Slavic
+		croatian
+		bosnian
+		serbian
+		bulgarian
 	}
 	faiths = {
 		orthodox
 		catholic
+		armenian_apostolic
+		iconoclast
+		hellenic_pagan
 	}
 	regions = {
 		custom_eastern_roman_empire
