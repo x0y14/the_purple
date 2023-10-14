@@ -1,6 +1,6 @@
 # The Purple (Struggle For Byzantium)
 
-![Thumbnail](thubnail.jpg)
+![Thumbnail](thumbnail.jpg)
 
 ---
 ## エリア
