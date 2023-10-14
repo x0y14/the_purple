@@ -30,7 +30,7 @@ struggle_byzantine_ending_decay_decision = {
 		# ビザンツ帝国の称号を誰も持っていないこと
 		custom_tooltip = {
 			text = struggle_byzantine_ending_decay_decision_not_exists_e_byzantium_tt
-			NAND = {
+			NOR = {
 				any_held_title = { this = title:e_byzantium }
 				exists = title:e_byzantium
 			}
