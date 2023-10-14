@@ -78,4 +78,22 @@
 
 		animation = map_worry
 	}
+
+	# Shu'ayb ibn Umar
+	character = {
+		name = "bookmark_thepurple_shuayb_hafsid"
+		dynasty = 1029093
+		dynasty_splendor_level = 1
+		type = male
+		birth = 805.1.1
+		title = d_krete
+		government = clan_government
+		culture = andalusian
+		religion = muwalladi
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 159525
+		position = { 600 800 }
+
+		animation = map_worry
+	}
 }
