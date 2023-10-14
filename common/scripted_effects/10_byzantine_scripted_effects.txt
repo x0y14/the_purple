@@ -15,7 +15,9 @@ tp_struggle_ending_destroy_byzantium_effect = {
 				# set_de_jure_liege_title = title_e:none
 			}
 		}
-
-
 	}
+}
+
+tp_struggle_ending_destroy_byzantium_effect_after = {
+	struggle:byzantine_struggle = { end_struggle = struggle_byzantine_ending_decay_decision }
 }
