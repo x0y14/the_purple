@@ -1,0 +1,48 @@
+# TODO 闘争に関与している者の妻が妊娠していた場合は妻は活動に参加できなくする
+
+# is_available_allow_travelling = {
+# 	is_alive = yes
+# 	is_in_army = no
+# 	is_imprisoned = no
+# 	has_contagious_deadly_disease_trigger = no
+# 	is_incapable = no
+# 	custom_description = {
+# 		text = ALREADY_IN_ACTIVITY
+# 		NOR = {
+# 			exists = involved_activity
+# 			has_variable = homage_liege_scope
+# 			has_character_flag = meditation_character_flag
+# 			has_character_flag = petition_liege_character_flag
+# 			has_character_flag = holding_court_character_flag
+# 			is_being_visited_on_tour_strict = yes
+# 		}
+# 	}
+# 	custom_description = {
+# 		text = ALREADY_PLANNING_ACTIVITY
+# 		NOT = { has_character_flag = planning_an_activity }
+# 	}
+# 	# Variable set within the adventure inspiration events
+# 	NOT = { has_variable = gone_adventuring }
+# 	NAND = {
+# 		is_female = yes
+# 		is_pregnant = yes
+		
+# 		any_spouse = {
+# 			scope:actor = {
+# 				any_character_struggle = {
+# 					involvement = involved
+# 					is_struggle_type = byzantine_struggle
+# 				}
+				
+# 			}
+# 			any_character_struggle = {
+# 				involvement = involved
+# 				is_struggle_type = byzantine_struggle
+# 			}
+# 		}
+# 		any_character_struggle = {
+# 			involvement = involved
+# 			is_struggle_type = byzantine_struggle
+# 		}
+# 	}
+# }
