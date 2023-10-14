@@ -65,6 +65,7 @@ struggle_byzantine_ending_decay_decision = {
 	# -> 学者の移動
 	effect = {
 		tp_struggle_ending_destroy_byzantium_effect = yes
+		tp_struggle_ending_destroy_byzantium_effect_after = yes
 	}
 
 	cost = {}
