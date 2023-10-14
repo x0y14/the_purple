@@ -29,17 +29,22 @@ struggle_byzantine_ending_decay_decision = {
 
 		# ビザンツ帝国の称号を誰も持っていないこと
 		custom_tooltip = {
-			text = struggle_byzantine_ending_decay_decision_correct_phase_tt
-			NOT = {
+			text = struggle_byzantine_ending_decay_decision_not_exists_e_byzantium_tt
+			NAND = {
 				any_held_title = { this = title:e_byzantium }
+				exists = title:e_byzantium
 			}
 		}
 
 		# ビザンツ帝国の請求権を誰も持っていないこと
 		# ビザンツ帝国のタイトルが破壊されてからN年以上経過していること
-
 		custom_tooltip = {
-			text = struggle_byzantine_ending_decay_decision_correct_phase_tt
+			text = struggle_byzantine_ending_decay_decision_padded_Nyears_since_destroyed_tt
+		}
+
+		# 関係勢力であること
+		custom_tooltip = {
+			text = struggle_byzantine_ending_decay_decision_in_decay_phase_tt
 			any_character_struggle = {
 				involvement = involved
 				is_struggle_type = byzantine_struggle
