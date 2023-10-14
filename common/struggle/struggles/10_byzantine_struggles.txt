@@ -1,4 +1,4 @@
-byzantine_struggle = {
+﻿byzantine_struggle = {
 	cultures = {
 		# Byzantine
 		armenian
@@ -30,47 +30,68 @@ byzantine_struggle = {
 	regions = {
 		custom_eastern_roman_empire
 	}
+	involvement_prerequisite_percentage = 0.8
+	# Root = struggle
+	on_start = {
+		trigger_event = {
+			on_action = fp2_iberian_struggle_starting_events
+		}
+	}
+	# Root = struggle
+	on_change_phase = {
+		trigger_event = fp2_struggle.0003
+	}
+	# Root = struggle
+	# scope:character = character (who has gone from uninvolved to interloper/involved in the struggle)
+	on_join = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			trigger_event = byzantine_struggle.0010
+		}
+	}
 	start_phase = struggle_phase_byzantine_opportunity
 	phase_list = {
 		# 繁栄
 		# ルネサンスをイメージ
 		struggle_phase_byzantine_prosperity = {
-
 			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
-
 			future_phases = {
 				# 衰退
 				# 繁栄に衰退はつきものである
 				struggle_phase_byzantine_decay = {
-					default = yes
-
 					catalysts = {
-
 					}
 				}
 				# 機会
 				# 現状で満足してはならない
 				struggle_phase_byzantine_opportunity = {
-					catalysts = {					
+					catalysts = {
 						catalysts_betrayed_alliance = 25
 						catalysts_something_something = 30
-					}	
+					}
 				}
 			}
-
 			war_effects = {
 				#### 共通
-				# Nothing
-
+				common_parameters = {
+					# 長い停戦期間
+					truces_by_involved_or_interlopers_within_region_longer = yes
+				}
 				#### 関係
 				# 戦争コスト上昇
-
 				#### 侵入
-				# 戦争コスト上昇
-				# 傭兵コスト減少
-
+				interloper_parameters = {
+					# 包囲中に人質を取れるチャンスがアップ
+					struggle_siege_capture_chance_add_25 = yes
+				}
+				interloper_character_modifier = {
+					# 傭兵雇用コストの削減
+					# -> 繁栄フェイズは内政に注力すべきで過度に拡張すべきでない
+					mercenary_hire_cost_mult = -0.8
+				}
 				#### 無関係
-				# Nothing
 			}
 			faith_effects = {
 				#### 共通
@@ -88,151 +109,148 @@ byzantine_struggle = {
 			}
 			other_effects = {
 				#### 共通
+				common_parameters = {
+					# 休戦購入
+					unlocks_truce_purchasing_interaction = yes
+				}
 				#### 関係
 				#### 侵入
 				#### 無関係
+				involved_parameters = {
+					# 「友だちになる」が使用可能に
+					struggle_unlocks_befriend_schemes_for_everyone = yes
+					# 関係者同士が同盟を結びやすくなる
+					involved_form_alliances_with_each_other_easier = yes
+				}
+				involved_county_modifier = {
+					# 建設にかかる期間を半減
+					build_speed = -0.5
+					# 建設にかかるコストを半減
+					build_gold_cost = -0.5
+					# 開発度成長速度 N倍
+					development_growth_factor = 2
+					# 領民からの評価
+					county_opinion_add = 50
+				}
+				involved_character_modifier = {
+					# 敵対的な策略に対する抵抗
+					hostile_scheme_resistance_add = 50
+				}
 			}
 			ending_decisions = {
 				struggle_byzantine_ending_decay_decision
 			}
 		}
-
+		
 		# 機会
 		# ゲーム中でこの期間が一番長いです。
 		# この期間を長く続けることができれば、繁栄フェイズへと向かうことができるでしょう。
 		struggle_phase_byzantine_opportunity = {
-
 			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
-
 			# There has to be at least one.
 			future_phases = {
 				# 繁栄
 				# 安定した政権は反映するだろう
-				struggle_phase_byzantine_prosperity = 
-				{	
-					default = yes
+				struggle_phase_byzantine_prosperity = {
 					#these should be defined in common/struggle/catalyst
-					catalysts = {					
+					catalysts = {
 						catalysts_betrayed_alliance = 25
 						catalysts_something_something = 30
-					}	
+					}
 				}
 				# 衰退
 				# しっかりと政権運営できなければ衰退するかもしれない
-				struggle_phase_byzantine_decay = 
-				{
+				struggle_phase_byzantine_decay = {
 					catalysts = {
-
 					}
 				}
 			}
-
-			war_effects = {}
-			faith_effects = {}
-			culture_effects = {}
-			other_effects = {}
+			war_effects = {
+			}
+			faith_effects = {
+			}
+			culture_effects = {
+			}
+			other_effects = {
+				common_parameters = {
+					unlocks_incite_revolts_interaction = yes
+				}
+			}
 			ending_decisions = {
 				struggle_byzantine_ending_decay_decision
 			}
 		}
-
 		# 衰退
 		struggle_phase_byzantine_decay = {
-
 			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
-
 			future_phases = {
 				# 敵意
 				# 原因となった者はその地位を追われるだろう
 				struggle_phase_byzantine_hostility = {
-					default = yes
-
 					catalysts = {
-
 					}
 				}
 				# 機会
 				# より相応しい人物がその地位を狙うかもしれない
 				struggle_phase_byzantine_opportunity = {
-					catalysts = {					
+					catalysts = {
 						catalysts_betrayed_alliance = 25
 						catalysts_something_something = 30
-					}	
+					}
 				}
 			}
-
-			war_effects = {}
-			faith_effects = {}
-			culture_effects = {}
-			other_effects = {}
+			war_effects = {
+			}
+			faith_effects = {
+			}
+			culture_effects = {
+			}
+			other_effects = {
+				involved_parameters = {
+					unlocks_incite_revolts_interaction = yes
+				}
+			}
 			ending_decisions = {
 				struggle_byzantine_ending_decay_decision
 			}
 		}
-
 		# 敵意
 		struggle_phase_byzantine_hostility = {
-
 			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
-
 			# There has to be at least one.
 			future_phases = {
 				# 衰退
 				# 内紛は衰退を招くだろう
 				struggle_phase_byzantine_decay = {
-					default = yes
-					catalysts = {					
+					catalysts = {
 						catalysts_betrayed_alliance = 25
 						catalysts_something_something = 30
 					}
 				}
-
 				# 機会
 				# 新たな支配者はその地位に相応しいのだろうか
-				struggle_phase_byzantine_opportunity = 
-				{	
+				struggle_phase_byzantine_opportunity = {
 					#these should be defined in common/struggle/catalyst
-					catalysts = {					
+					catalysts = {
 						catalysts_betrayed_alliance = 25
 						catalysts_something_something = 30
 					}
 				}
 			}
-
-			war_effects = {}
-			faith_effects = {}
-			culture_effects = {}
-			other_effects = {}
+			war_effects = {
+			}
+			faith_effects = {
+			}
+			culture_effects = {
+			}
+			other_effects = {
+				involved_parameters = {
+					unlocks_incite_revolts_interaction = yes
+				}
+			}
 			ending_decisions = {
 				struggle_byzantine_ending_decay_decision
 			}
 		}
 	}
-	
-	involvement_prerequisite_percentage = 0.4
-
-	# Root = struggle
-	on_start = {
-		trigger_event = { on_action = fp2_iberian_struggle_starting_events }
-	}
-	
-	# Root = struggle
-	on_end = {}
-
-	# Root = struggle
-	on_change_phase = {
-		trigger_event = fp2_struggle.0003
-	}
-
-	# Root = struggle
-	# scope:character = character (who has gone from uninvolved to interloper/involved in the struggle)
-	on_join = {
-		if = {
-			limit = {
-				is_ai = no
-			}
-
-			trigger_event = byzantine_struggle.0010
-		}
-	}  
 }
