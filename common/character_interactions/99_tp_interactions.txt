@@ -1,0 +1,444 @@
+##################################################
+# Incite Revolts
+# by Maxence Voleau
+################################################## Updated for SP1
+
+incite_revolts_interaction = {
+    interface_priority = 30
+    category = interaction_category_hostile
+    common_interaction = yes
+    desc = incite_revolts_interaction_desc
+    icon = faction
+
+    greeting = positive
+
+    auto_accept = yes
+
+    cost = {
+        gold = {
+            add = {
+                value = 0
+                # Gold spent will provide 10x levies, e.g. 25 provides 250 - not automated yet
+                if = {
+                    limit = { scope:small_investment_in_revolt = yes }
+                    add = 25
+                }
+                if = {
+                    limit = { scope:medium_investment_in_revolt = yes }
+                    add = 75
+                }
+                if = {
+                    limit = { scope:high_investment_in_revolt = yes }
+                    add = 200
+                }
+            }
+        }
+    }
+
+    is_shown = {
+        has_dlc_feature = the_fate_of_iberia
+        NOT = { scope:recipient = scope:actor }
+        # Only available during Opportunity, Hostility and Tension phases
+        scope:actor = {
+            OR = {
+                any_character_struggle = {
+                    involvement = involved
+                    is_struggle_type = iberian_struggle
+                    has_struggle_phase_parameter = unlocks_incite_revolts_interaction
+                }
+                any_character_struggle = {
+                    involvement = involved
+                    is_struggle_type = byzantine_struggle
+                    has_struggle_phase_parameter = unlocks_incite_revolts_interaction
+                }
+            }
+        }
+        # Can only target involved
+        scope:recipient = {
+            any_character_struggle = {
+                involvement = involved
+            }
+        }
+    }
+
+    is_valid_showing_failures_only = {
+
+        custom_description = {
+            text = at_least_one_county_with_neutral_negative_opinion
+            scope:recipient = {
+                any_sub_realm_county = {
+                    count > 0
+                    holder = scope:recipient
+                    county_opinion < 0
+                    NOR = {
+                        has_county_modifier = small_investment_in_revolt_modifier
+                        has_county_modifier = medium_investment_in_revolt_modifier
+                        has_county_modifier = high_investment_in_revolt_modifier
+                    }
+                }
+            }
+        }
+    }
+
+    # Small investment
+    send_option = {
+        flag = small_investment_in_revolt
+        localization = small_investment
+    }
+
+    # Medium investment
+    send_option = {
+        flag = medium_investment_in_revolt
+        localization = medium_investment
+        starts_enabled = { always = yes	}
+    }
+
+    # High investment
+    send_option = {
+        flag = high_investment_in_revolt
+        localization = high_investment
+    }
+
+    on_accept = {
+        # Select the random county
+        hidden_effect = {
+            scope:recipient = {
+                random_sub_realm_county = {
+                    limit = {
+                        NOR = {
+                            has_county_modifier = small_investment_in_revolt_modifier
+                            has_county_modifier = medium_investment_in_revolt_modifier
+                            has_county_modifier = high_investment_in_revolt_modifier
+                        }
+                        county_opinion < 0
+                        holder = scope:recipient
+                    }
+                    weight = {
+                        base = 1
+                        # More likely to finance county of your own Faith or Culture
+                        modifier = {
+                            add = 2
+                            OR = {
+                                faith = scope:actor.faith
+                                culture = scope:actor.culture
+                            }
+                        }
+                        # More likely to finance county prone to trigger populist factions
+                        modifier = {
+                            add = 5
+                            NAND = {
+                                faith = scope:recipient.faith
+                                culture = scope:recipient.culture
+                            }
+                        }
+                        # More likely to finance county bordering your Realm
+                        modifier = {
+                            add = 5
+                            any_neighboring_county = {
+                                holder = scope:actor
+                            }
+                        }
+                    }
+                    save_scope_as = chosen_county
+                }
+            }
+        }
+
+        scope:actor = {
+            stress_impact = {
+                just = medium_stress_impact_gain
+                honest = medium_stress_impact_gain
+                trusting = medium_stress_impact_gain
+                greedy = minor_stress_impact_gain
+            }
+            if = {
+                limit = {
+                    scope:actor = {
+                        OR = {
+                            has_relation_rival = scope:recipient
+                            has_relation_nemesis = scope:recipient
+                        }
+                    }
+                }
+                stress_impact = {
+                    vengeful = medium_stress_impact_loss
+                }
+            }
+            if = {
+                limit = {
+                    scope:actor = {
+                        is_vassal_of = scope:recipient
+                    }
+                }
+                stress_impact = {
+                    ambitious = medium_stress_impact_loss
+                }
+            }
+        }
+
+        # SP1 Polish (Hugo)
+        scope:actor = {
+            duel = {
+                skill = intrigue
+                value = scope:recipient.intrigue
+
+                10 = { # Failure
+                    desc = incite_revolts_interaction_notif_failure
+                    compare_modifier = {
+                        value = scope:duel_value
+                        multiplier = -1.5
+                    }
+                    show_as_tooltip = {
+                        if = {
+                            limit = { scope:small_investment_in_revolt = yes }
+                            custom_tooltip = apply_small_investment_in_revolt_on_random_county
+                        }
+                        else_if = {
+                            limit = { scope:medium_investment_in_revolt = yes }
+                            custom_tooltip = apply_medium_investment_in_revolt_on_random_county
+                        }
+                        else_if = {
+                            limit = { scope:high_investment_in_revolt = yes }
+                            custom_tooltip = apply_high_investment_in_revolt_on_random_county
+                        }
+                        reverse_add_opinion = {
+                            target = scope:recipient
+                            modifier = angry_opinion
+                            opinion = -50
+                        }
+                    }
+
+                    hidden_effect = {
+                        send_interface_toast = {
+                            title = incite_revolts_interaction_result.tt
+                            left_icon = scope:chosen_county
+                            right_icon = scope:recipient
+
+                            scope:chosen_county = {
+                                if = {
+                                    limit = { scope:small_investment_in_revolt = yes }
+                                    add_county_modifier = {
+                                        modifier = small_investment_in_revolt_modifier
+                                        years = 10
+                                    }
+                                }
+                                else_if = {
+                                    limit = { scope:medium_investment_in_revolt = yes }
+                                    add_county_modifier = {
+                                        modifier = medium_investment_in_revolt_modifier
+                                        years = 10
+                                    }
+                                }
+                                else_if = {
+                                    limit = { scope:high_investment_in_revolt = yes }
+                                    add_county_modifier = {
+                                        modifier = high_investment_in_revolt_modifier
+                                        years = 10
+                                    }
+                                }
+                            }
+                            reverse_add_opinion = {
+                                target = scope:recipient
+                                modifier = angry_opinion
+                                opinion = -50
+                            }
+                            hidden_effect = {
+                                scope:recipient = {
+                                    progress_towards_rival_effect = {
+                                        CHARACTER = scope:actor
+                                        REASON = fp2_progress_towards_rival_funded_revolt_against_me
+                                        OPINION = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                10 = { # Success
+                    desc = incite_revolts_interaction_notif_success
+                    compare_modifier = {
+                        value = scope:duel_value
+                        multiplier = 1.5
+                    }
+
+                    show_as_tooltip = {
+                        if = {
+                            limit = { scope:small_investment_in_revolt = yes }
+                            custom_tooltip = apply_small_investment_in_revolt_on_random_county
+                        }
+                        else_if = {
+                            limit = { scope:medium_investment_in_revolt = yes }
+                            custom_tooltip = apply_medium_investment_in_revolt_on_random_county
+                        }
+                        else_if = {
+                            limit = { scope:high_investment_in_revolt = yes }
+                            custom_tooltip = apply_high_investment_in_revolt_on_random_county
+                        }
+                    }
+
+                    hidden_effect = {
+                        send_interface_toast = {
+                            title = incite_revolts_interaction_result.tt
+                            left_icon = scope:chosen_county
+
+                            scope:chosen_county = {
+                                if = {
+                                    limit = { scope:small_investment_in_revolt = yes }
+                                    add_county_modifier = {
+                                        modifier = small_investment_in_revolt_modifier
+                                        years = 10
+                                    }
+                                }
+                                else_if = {
+                                    limit = { scope:medium_investment_in_revolt = yes }
+                                    add_county_modifier = {
+                                        modifier = medium_investment_in_revolt_modifier
+                                        years = 10
+                                    }
+                                }
+                                else_if = {
+                                    limit = { scope:high_investment_in_revolt = yes }
+                                    add_county_modifier = {
+                                        modifier = high_investment_in_revolt_modifier
+                                        years = 10
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_frequency = 60
+
+    ai_potential = {
+        any_character_struggle = {
+            involvement = involved
+            OR = {
+                is_struggle_phase = struggle_iberia_phase_opportunity
+                is_struggle_phase = struggle_iberia_phase_hostility
+            }
+        }
+        short_term_gold >= medium_gold_value
+    }
+
+    ai_targets = {
+        # For the AI, we limit it to neighboring_rulers
+        ai_recipients = neighboring_rulers
+    }
+
+    ai_will_do = {
+        base = -50 # Let's limit it to specific character to avoid pure chaos
+
+        ###############
+        ## BASE
+        ###############
+
+        # ai values
+        modifier = {
+            ai_vengefulness > 0
+            add = ai_vengefulness
+        }
+        modifier = {
+            add = {
+                value = ai_compassion
+                multiply = -1
+            }
+        }
+
+        modifier = {
+            add = {
+                value = ai_honor
+                multiply = -1
+            }
+        }
+
+        # intrigue skill points
+        modifier = {
+            add = {
+                value = intrigue
+                multiply = 3
+            }
+        }
+
+        # diff faith
+        modifier = {
+            add = 25
+            NOT = { faith = scope:recipient.faith }
+        }
+
+        # diff culture
+        modifier = {
+            add = 25
+
+            NOT = {
+                culture = {
+                    OR = {
+                        this = scope:recipient.culture
+                        cultural_acceptance = { target = scope:recipient.culture value >= 90 }
+                    }
+                }
+            }
+        }
+
+        ###############
+        ## TRAITS
+        ###############
+
+        # schemer
+        modifier = {
+            add = 25
+            has_trait = schemer
+        }
+
+        # intrigue education
+        modifier = {
+            add = 25
+            OR = {
+                has_trait = education_intrigue_1
+                has_trait = education_intrigue_2
+                has_trait = education_intrigue_3
+                has_trait = education_intrigue_4
+            }
+        }
+
+        ################
+        ## RELATIONSHIP
+        ################
+
+        # more likely to do it against rival or nemesis
+        modifier = {
+            add = 50
+            scope:recipient = {
+                OR = {
+                    has_relation_rival = scope:actor
+                    has_relation_nemesis = scope:actor
+                }
+            }
+        }
+
+        # boost against liege for Ambitious
+        modifier = {
+            add = 50
+            scope:actor = {
+                has_trait = ambitious
+                is_vassal_of = scope:recipient
+            }
+        }
+
+        # never target your friends
+        modifier = {
+            add = -1000
+            scope:recipient = {
+                OR = {
+                    has_relation_friend = scope:actor
+                    has_relation_lover = scope:actor
+                    has_relation_soulmate = scope:actor
+                    has_relation_best_friend = scope:actor
+                }
+            }
+        }
+    }
+}
