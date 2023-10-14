@@ -1,6 +1,6 @@
 # Auto generated file, do not edit manually. Created using console command dump_bookmark_portrait_for
 # History database id:145164
-historical_export_145164={
+bookmark_thepurple_konstantinos_doukas={
 	type=male
 	id=6114
 	age=0.570000

@@ -20,7 +20,61 @@
 		religion = orthodox
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
 		history_id = 1700
-		position = { 700 620 }
+		position = { 950 230 }
+
+		animation = map_worry
+	}
+
+	# Konstantinos Doukas
+	character = {
+		name = "bookmark_thepurple_konstantinos_doukas"
+		dynasty = 633
+		dynasty_splendor_level = 1
+		type = male
+		birth = 810.1.1
+		title = d_paphlagonia
+		government = feudal_government
+		culture = greek
+		religion = orthodox
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 145164
+		position = { 1200 300 }
+
+		animation = map_worry
+	}
+
+	# Kallistos II
+	character = {
+		name = "bookmark_thepurple_kallistos2_melissenos"
+		dynasty = 101399
+		dynasty_splendor_level = 2
+		type = male
+		birth = 840.1.1
+		title = d_anatolia
+		government = feudal_government
+		culture = greek
+		religion = orthodox
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 145137
+		position = { 1000 500 }
+
+		animation = map_worry
+	}
+
+	# Pantherios
+	character = {
+		name = "bookmark_thepurple_pantherios_skleros"
+		dynasty = 627
+		dynasty_splendor_level = 2
+		type = male
+		birth = 810.1.1
+		title = d_athens
+		government = feudal_government
+		culture = greek
+		religion = orthodox
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 145150
+		position = { 500 500 }
 
 		animation = map_worry
 	}
