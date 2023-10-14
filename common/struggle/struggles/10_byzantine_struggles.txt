@@ -62,14 +62,16 @@
 				# 繁栄に衰退はつきものである
 				struggle_phase_byzantine_decay = {
 					catalysts = {
+						tp_catalyst_unnatural_death_emperor_character = emperor_unnatural_death_struggle_catalyst_gain
+						tp_catalyst_natural_death_emperor_character = emperor_natural_death_struggle_catalyst_gain
 					}
 				}
 				# 機会
 				# 現状で満足してはならない
 				struggle_phase_byzantine_opportunity = {
 					catalysts = {
-						catalysts_betrayed_alliance = 25
-						catalysts_something_something = 30
+						tp_catalyst_unnatural_death_emperor_character = emperor_unnatural_death_struggle_catalyst_gain
+						tp_catalyst_natural_death_emperor_character = emperor_natural_death_struggle_catalyst_gain
 					}
 				}
 			}

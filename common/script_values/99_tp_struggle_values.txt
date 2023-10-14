@@ -1,0 +1,2 @@
+emperor_unnatural_death_struggle_catalyst_gain = 1000
+emperor_natural_death_struggle_catalyst_gain = 500
