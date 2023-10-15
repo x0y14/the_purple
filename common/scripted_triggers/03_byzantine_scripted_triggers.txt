@@ -19,3 +19,16 @@ tp_character_interloper_in_byzantine_trigger = {
 		is_struggle_type = byzantine_struggle
 	}
 }
+
+tp_is_pregnant_of_purple_trigger = {
+	AND = {
+		is_female = yes
+		is_pregnant = yes
+		OR = {
+			has_title = title:e_byzantium
+			any_spouse = {
+				has_title = title:e_byzantium
+			}
+		}
+	}
+}
