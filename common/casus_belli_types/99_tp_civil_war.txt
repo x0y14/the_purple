@@ -207,13 +207,6 @@ claimant_faction_war = {
 
 	# 皇帝側の勝利
 	on_defeat = {
-		scope:attacker = { show_pow_release_message_effect = yes }
-		on_lost_faction_revolt_war = yes
-
-		scope:defender = {
-			add_dread = medium_dread_gain
-			add_achievement_flag_effect = { FLAG = achievement_know_your_place_flag }
-		}
 
 		# -- the purple --
 		# 皇帝側がAIであること
@@ -278,6 +271,15 @@ claimant_faction_war = {
 			}
 		}
 		# -- ----------- --
+
+		scope:attacker = { show_pow_release_message_effect = yes }
+		on_lost_faction_revolt_war = yes
+
+		scope:defender = {
+			add_dread = medium_dread_gain
+			add_achievement_flag_effect = { FLAG = achievement_know_your_place_flag }
+		}
+
 	}
 
 	check_attacker_inheritance_validity = no
