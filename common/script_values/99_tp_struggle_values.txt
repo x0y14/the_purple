@@ -1,2 +1,5 @@
 emperor_unnatural_death_struggle_catalyst_gain = 1000
 emperor_natural_death_struggle_catalyst_gain = 500
+tp_struggle_catalyst_gain_1 = 1
+tp_struggle_catalyst_gain_50 = 50
+tp_struggle_catalyst_gain_100 = 100
