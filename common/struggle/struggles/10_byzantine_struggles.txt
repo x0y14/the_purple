@@ -248,11 +248,11 @@
 				}
 				involved_county_modifier = {
 					# 建設にかかる期間増加
-					build_speed = 1.2
+					build_speed = 0.2
 					# 建設にかかるコストを増加
-					build_gold_cost = 1.2
+					build_gold_cost = 0.2
 					# 開発度成長速度 N倍
-					development_growth_factor = 0.7
+					development_growth_factor = -0.3
 				}
 				#### 侵入
 				#### 無関係
