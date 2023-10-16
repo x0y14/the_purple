@@ -1,28 +1,28 @@
 ﻿byzantine_struggle = {
 	cultures = {
 		# Byzantine
-		armenian
+		# armenian
 		greek
-		alan
-		georgian
-		assyrian
-		#Latin
-		italian
-		roman
-		cisalpine
-		sardinian
-		sicilian
-		lombard
-		langobard
-		# South-Slavic
-		croatian
-		bosnian
-		serbian
-		bulgarian
+		# alan
+		# georgian
+		# assyrian
+		# #Latin
+		# italian
+		# roman
+		# cisalpine
+		# sardinian
+		# sicilian
+		# lombard
+		# langobard
+		# # South-Slavic
+		# croatian
+		# bosnian
+		# serbian
+		# bulgarian
 	}
 	faiths = {
 		orthodox
-		# catholic
+		catholic
 		armenian_apostolic
 		iconoclast
 		hellenic_pagan
@@ -30,7 +30,7 @@
 	regions = {
 		custom_eastern_roman_empire
 	}
-	involvement_prerequisite_percentage = 0.8
+	involvement_prerequisite_percentage = 0.4
 	# Root = struggle
 	on_start = {
 		trigger_event = {
@@ -280,6 +280,8 @@
 				struggle_phase_byzantine_hostility = {
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_50
+						catalyst_becomes_rival_with_involved = tp_struggle_catalyst_gain_100
+						catalyst_gain_claim_on_title = tp_struggle_catalyst_gain_10
 					}
 				}
 				# 機会
@@ -287,6 +289,7 @@
 				struggle_phase_byzantine_opportunity = {
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_1
+						catalyst_became_friend_lover_with_character = tp_struggle_catalyst_gain_50
 					}
 				}
 			}
