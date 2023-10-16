@@ -99,7 +99,7 @@
 				#### 侵入
 				interloper_parameters = {
 					# # 包囲中に人質を取れるチャンスがアップ
-					# struggle_siege_capture_chance_add_25 = yes
+					struggle_siege_capture_chance_add_100 = yes
 				}
 				interloper_character_modifier = {
 					# 傭兵雇用コストの削減
@@ -196,8 +196,6 @@
 				struggle_phase_byzantine_prosperity = {
 					#these should be defined in common/struggle/catalyst
 					catalysts = {
-						catalysts_betrayed_alliance = 25
-						catalysts_something_something = 30
 					}
 				}
 				# 衰退
@@ -275,21 +273,104 @@
 				# より相応しい人物がその地位を狙うかもしれない
 				struggle_phase_byzantine_opportunity = {
 					catalysts = {
-						catalysts_betrayed_alliance = 25
-						catalysts_something_something = 30
 					}
 				}
 			}
 			war_effects = {
+				#### 共通
+				common_parameters = {
+				}
+
+				#### 関係
+				involved_parameters = {
+					# 包囲中に人質を取れるチャンスがアップ
+					struggle_siege_capture_chance_add_50 = yes
+				}
+				involved_character_modifier = {
+					# 防衛側アドバンテージ低下
+					defender_advantage = -50
+					# AIの戦争確率減少
+					# ai_war_chance = -0.95
+					# クールダウン増加
+					# ai_war_cooldown = 10
+				}
+
+				#### 侵入
+				interloper_parameters = {
+					# 包囲中に人質を取れるチャンスがアップ
+					struggle_siege_capture_chance_add_50 = yes
+				}
+				interloper_character_modifier = {
+					# 傭兵雇用コストの削減
+					mercenary_hire_cost_mult = -0.25
+					# 同じ文化の傭兵のコストが低下
+					same_culture_mercenary_hire_cost_mult = -0.5
+					# AIの戦争確率増加
+					ai_war_chance = 20
+					# クールダウン増加
+					ai_war_cooldown = -5
+					# 攻撃側の優位性
+					attacker_advantage = 30
+				}
+				#### 無関係
+				uninvolved_parameters = {
+					# 傭兵雇用コストの削減
+					mercenary_hire_cost_mult = -0.25
+					# AIの戦争確率増加
+					ai_war_chance = 20
+					# クールダウン増加
+					ai_war_cooldown = -5
+					# 攻撃側の優位性
+					attacker_advantage = 30
+				}
 			}
 			faith_effects = {
+				#### 共通
+				#### 関係
+				#### 侵入
+				#### 無関係
 			}
 			culture_effects = {
+				#### 共通
+				#### 関係
+				#### 侵入
+				#### 無関係
 			}
 			other_effects = {
+				#### 共通
+				#### 関係
 				involved_parameters = {
+					# 反乱の扇動可能
 					unlocks_incite_revolts_interaction = yes
+					# 有力な封臣が請求権を請求できる
+					powerful_vassal_can_claim_liege_titles = yes
 				}
+				involved_character_modifier = {
+					# 敵対的な策略に対する抵抗
+					hostile_scheme_resistance_add = -10
+					# 強力な封臣からの評価
+					powerful_vassal_opinion = -20
+					# 封臣からの評価
+					vassal_opinion = -10
+					# 領民の評価
+					county_opinion_add = -100
+					# 税金
+					tax_mult = -0.8
+					# 成長度
+					development_growth_factor = -2
+					# 建設速度
+					build_speed = 3
+					# 建設費用
+					build_gold_cost = 3
+					# 月間領土コントロール
+					monthly_county_control_change_add = -10
+					# 月間プレステージ
+					monthly_prestige = -5
+					# 一般的な意見
+					general_opinion = -10
+				}
+				#### 侵入
+				#### 無関係
 			}
 			ending_decisions = {
 				struggle_byzantine_ending_decay_decision
@@ -304,8 +385,6 @@
 				# 内紛は衰退を招くだろう
 				struggle_phase_byzantine_decay = {
 					catalysts = {
-						catalysts_betrayed_alliance = 25
-						catalysts_something_something = 30
 					}
 				}
 				# 機会
@@ -313,8 +392,6 @@
 				struggle_phase_byzantine_opportunity = {
 					#these should be defined in common/struggle/catalyst
 					catalysts = {
-						catalysts_betrayed_alliance = 25
-						catalysts_something_something = 30
 					}
 				}
 			}
