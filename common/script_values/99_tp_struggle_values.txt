@@ -113,3 +113,56 @@ tp_struggle_catalyst_yearly_emperor_leaning_gain = {
 	}
 
 }
+
+# todo
+# if cb target is e_byzantium, more point gain
+tp_struggle_catalyst_yearly_emperor_at_war_gain = {
+	value = 0
+	title:e_byzantium = {
+		holder = {
+			save_temporary_scope_as = byz_emperor
+		}
+	}
+	# attack war
+	if = {
+		limit = {
+			scope:byz_emperor = {
+				is_at_war = yes
+				any_character_war = {
+					is_attacker = scope:byz_emperor
+				}
+			}
+		}
+		add = 10
+	}
+	# defend war
+	if = {
+		limit = {
+			scope:byz_emperor = {
+				is_at_war = yes
+				any_character_war = {
+					is_defender = scope:byz_emperor
+					save_temporary_scope_as = defend_war
+				}
+			}
+		}
+		# normal defend war
+		if = {
+			limit = {
+				scope:defend_war = {
+					is_civil_war = no
+				}
+			}
+			add = 20
+		}
+		# civil defend war
+		else_if = {
+			limit = {
+				scope:defend_war = {
+					is_civil_war = yes
+				}
+			}
+			add = 30
+		}
+	}
+}
