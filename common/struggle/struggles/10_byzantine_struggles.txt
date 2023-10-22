@@ -64,16 +64,14 @@
 					catalysts = {
 						tp_catalyst_unnatural_death_emperor_character = emperor_unnatural_death_struggle_catalyst_gain
 						tp_catalyst_natural_death_emperor_character = emperor_natural_death_struggle_catalyst_gain
-						catalyst_passing_of_time = tp_struggle_catalyst_gain_100
+						catalyst_passing_of_time = tp_struggle_catalyst_gain_50
 					}
 				}
 				# 機会
 				# 現状で満足してはならない
 				struggle_phase_byzantine_opportunity = {
 					catalysts = {
-						tp_catalyst_unnatural_death_emperor_character = emperor_unnatural_death_struggle_catalyst_gain
-						tp_catalyst_natural_death_emperor_character = emperor_natural_death_struggle_catalyst_gain
-						catalyst_passing_of_time = tp_struggle_catalyst_gain_50
+						tp_catalyst_yearly_emperor_leaning_gain = tp_struggle_catalyst_yearly_emperor_leaning_gain
 					}
 				}
 			}
