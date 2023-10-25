@@ -12,3 +12,9 @@
  # 敵意
  struggle_phase_byzantine_hostility:0 "Hostility"
  struggle_phase_byzantine_hostility_desc:0 "TODO Hostility DESC HERE"
+
+# 毎年、皇帝の学習能力によって進捗を得る
+tp_catalyst_yearly_emperor_leaning_gain_desc:0 "Yearly drift towards depending on Emperor's Learning Skil"
+
+# 毎年、皇帝が戦争をしていた場合、進捗を得る
+tp_catalyst_yearly_emperor_at_war_desc:0 "Yearly drift towards if emperor at war"
