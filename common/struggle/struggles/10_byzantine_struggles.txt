@@ -86,6 +86,7 @@
 				involved_parameters = {
 					# 関係あるいは侵入勢力間の停戦の受け入れが簡単に
 					white_peace_acceptance_between_involved_or_interloper_with_region_easier = yes
+					involved_wars_on_prosperity_or_opportunity_more_expensive_presaige_costs = yes
 				}
 				involved_character_modifier = {
 					# 防衛側アドバンテージ低下
@@ -220,6 +221,9 @@
 				involved_character_modifier = {
 					# 防衛側アドバンテージ低下
 					# defender_advantage = -10
+				}
+				involved_parameters = {
+					involved_wars_on_prosperity_or_opportunity_more_expensive_presaige_costs = yes
 				}
 				#### 侵入
 				interloper_parameters = {
