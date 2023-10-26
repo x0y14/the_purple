@@ -1,4 +1,4 @@
-# 請求者反乱
+﻿# 請求者反乱
 # Triggers as a result of a Claimant Faction demand being refused
 claimant_faction_war = {
 	icon = claim_cb

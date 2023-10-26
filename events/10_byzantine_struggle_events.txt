@@ -1,4 +1,4 @@
-namespace = byzantine_struggle
+﻿namespace = byzantine_struggle
 
 byzantine_struggle.0010 = { # Fullscreen Intro Event
 	type = fullscreen_event

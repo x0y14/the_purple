@@ -1,4 +1,4 @@
-siege_base_capture_chance = {
+﻿siege_base_capture_chance = {
 	value = 35
 
 	# Dynasty Perk: Practiced Kidnappers

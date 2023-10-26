@@ -1,4 +1,4 @@
-e_byzantium = {
+﻿e_byzantium = {
 	20.1.1 = {
 		change_development_level = 6
 	}

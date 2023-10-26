@@ -1,4 +1,4 @@
-tp_catalyst_unnatural_death_emperor_character = {}
+﻿tp_catalyst_unnatural_death_emperor_character = {}
 tp_catalyst_natural_death_emperor_character = {}
 tp_catalyst_yearly_emperor_leaning_gain = {}
 tp_catalyst_yearly_emperor_at_war = {}

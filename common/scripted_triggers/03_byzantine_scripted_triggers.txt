@@ -1,4 +1,4 @@
-tp_character_any_involvement_byzantine_struggle_trigger = {
+﻿tp_character_any_involvement_byzantine_struggle_trigger = {
 	has_fp2_dlc_trigger = yes
 	OR = {
 		tp_character_involved_in_byzantine_trigger = yes

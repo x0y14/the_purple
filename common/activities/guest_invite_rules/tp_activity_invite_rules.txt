@@ -1,4 +1,4 @@
-# ### ACTIVITY INVITE RULES ###
+﻿# ### ACTIVITY INVITE RULES ###
 
 # # Friends, Best Friends
 # activity_invite_rule_friends = {

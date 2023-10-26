@@ -1,4 +1,4 @@
-county_struggle_cb = {
+﻿county_struggle_cb = {
 	group = struggle
 	icon = struggle
 	combine_into_one = yes
