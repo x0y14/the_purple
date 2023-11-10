@@ -5,7 +5,7 @@ tp_struggle_catalyst_gain_10 = 10
 tp_struggle_catalyst_gain_50 = 50
 tp_struggle_catalyst_gain_100 = 100
 
-tp_struggle_catalyst_yearly_emperor_leaning_gain = {
+catalyst_yearly_emperor_leaning_gain = {
 	value = 0
 	# The learning capacity of the emperor is the base value.
 	title:e_byzantium = {

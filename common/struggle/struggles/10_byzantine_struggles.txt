@@ -71,7 +71,7 @@
 				# 現状で満足してはならない
 				struggle_phase_byzantine_opportunity = {
 					catalysts = {
-						tp_catalyst_yearly_emperor_leaning_gain = tp_struggle_catalyst_yearly_emperor_leaning_gain
+						tp_catalyst_yearly_emperor_leaning_gain = catalyst_yearly_emperor_leaning_gain
 					}
 				}
 			}
@@ -202,8 +202,8 @@
 					#these should be defined in common/struggle/catalyst
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_1
-						tp_catalyst_yearly_emperor_leaning_gain = tp_struggle_catalyst_yearly_emperor_leaning_gain
-						
+						tp_catalyst_yearly_emperor_leaning_gain = catalyst_yearly_emperor_leaning_gain
+						tp_catalyst_emperor_won_at_war = tp_struggle_catalyst_gain_1
 					}
 				}
 				# 衰退
@@ -212,6 +212,7 @@
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_50
 						tp_catalyst_yearly_emperor_at_war = tp_struggle_catalyst_yearly_emperor_at_war_gain
+						tp_catalyst_emperor_lose_at_war = tp_struggle_catalyst_gain_50
 					}
 				}
 			}
