@@ -56,7 +56,6 @@
 		# 繁栄
 		# ルネサンスをイメージ
 		struggle_phase_byzantine_prosperity = {
-			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
 			future_phases = {
 				# 衰退
 				# 繁栄に衰退はつきものである
@@ -193,7 +192,6 @@
 		# ゲーム中でこの期間が一番長いです。
 		# この期間を長く続けることができれば、繁栄フェイズへと向かうことができるでしょう。
 		struggle_phase_byzantine_opportunity = {
-			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
 			# There has to be at least one.
 			future_phases = {
 				# 繁栄
@@ -279,7 +277,6 @@
 		}
 		# 衰退
 		struggle_phase_byzantine_decay = {
-			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
 			future_phases = {
 				# 敵意
 				# 原因となった者はその地位を追われるだろう
@@ -401,7 +398,6 @@
 		}
 		# 敵意
 		struggle_phase_byzantine_hostility = {
-			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
 			# There has to be at least one.
 			future_phases = {
 				# 衰退
