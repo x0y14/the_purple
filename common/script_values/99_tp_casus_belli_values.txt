@@ -63,8 +63,8 @@
 					# 	PARAMETER = involved_wars_on_prosperity_or_opportunity_more_expensive_presaige_costs
 					# }
 					OR = {
-						is_struggle_phase = struggle_phase_byzantine_prosperity
-						is_struggle_phase = struggle_phase_byzantine_opportunity
+						is_struggle_phase = struggle_byzantine_phase_prosperity
+						is_struggle_phase = struggle_byzantine_phase_opportunity
 					}
 				}
 			}

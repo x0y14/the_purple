@@ -1,17 +1,17 @@
 ﻿l_english:
  byzantine_struggle:0 "Byzantine Struggle"
  # 繁栄
- struggle_phase_byzantine_prosperity:0 "Prosperity"
- struggle_phase_byzantine_prosperity_desc:0 "TODO Prosperity DESC HERE"
+ struggle_byzantine_phase_prosperity:0 "Prosperity"
+ struggle_byzantine_phase_prosperity_desc:0 "TODO Prosperity DESC HERE"
  # 機会
- struggle_phase_byzantine_opportunity:0 "Opportunity"
- struggle_phase_byzantine_opportunity_desc:0 "TODO Opportunity DESC HERE"
+ struggle_byzantine_phase_opportunity:0 "Opportunity"
+ struggle_byzantine_phase_opportunity_desc:0 "TODO Opportunity DESC HERE"
  # 衰退
- struggle_phase_byzantine_decay:0 "Decay"
- struggle_phase_byzantine_decay_desc:0 "TODO Decay DESC HERE"
+ struggle_byzantine_phase_decay:0 "Decay"
+ struggle_byzantine_phase_decay_desc:0 "TODO Decay DESC HERE"
  # 敵意
- struggle_phase_byzantine_hostility:0 "Hostility"
- struggle_phase_byzantine_hostility_desc:0 "TODO Hostility DESC HERE"
+ struggle_byzantine_phase_hostility:0 "Hostility"
+ struggle_byzantine_phase_hostility_desc:0 "TODO Hostility DESC HERE"
 
  # 毎年、皇帝の学習能力によって進捗を得る
  tp_catalyst_yearly_emperor_leaning_gain_desc:0 "Yearly drift towards depending on Emperor's Learning Skil"

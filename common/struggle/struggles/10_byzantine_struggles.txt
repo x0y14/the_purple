@@ -51,15 +51,15 @@
 			trigger_event = byzantine_struggle.0010
 		}
 	}
-	start_phase = struggle_phase_byzantine_opportunity
+	start_phase = struggle_byzantine_phase_opportunity
 	phase_list = {
 		# 繁栄
 		# ルネサンスをイメージ
-		struggle_phase_byzantine_prosperity = {
+		struggle_byzantine_phase_prosperity = {
 			future_phases = {
 				# 衰退
 				# 繁栄に衰退はつきものである
-				struggle_phase_byzantine_decay = {
+				struggle_byzantine_phase_decay = {
 					catalysts = {
 						tp_catalyst_unnatural_death_emperor_character = emperor_unnatural_death_struggle_catalyst_gain
 						tp_catalyst_natural_death_emperor_character = emperor_natural_death_struggle_catalyst_gain
@@ -68,7 +68,7 @@
 				}
 				# 機会
 				# 現状で満足してはならない
-				struggle_phase_byzantine_opportunity = {
+				struggle_byzantine_phase_opportunity = {
 					catalysts = {
 						tp_catalyst_yearly_emperor_leaning_gain = catalyst_yearly_emperor_leaning_gain
 					}
@@ -191,12 +191,12 @@
 		# 機会
 		# ゲーム中でこの期間が一番長いです。
 		# この期間を長く続けることができれば、繁栄フェイズへと向かうことができるでしょう。
-		struggle_phase_byzantine_opportunity = {
+		struggle_byzantine_phase_opportunity = {
 			# There has to be at least one.
 			future_phases = {
 				# 繁栄
 				# 安定した政権は反映するだろう
-				struggle_phase_byzantine_prosperity = {
+				struggle_byzantine_phase_prosperity = {
 					#these should be defined in common/struggle/catalyst
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_1
@@ -206,7 +206,7 @@
 				}
 				# 衰退
 				# しっかりと政権運営できなければ衰退するかもしれない
-				struggle_phase_byzantine_decay = {
+				struggle_byzantine_phase_decay = {
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_50
 						tp_catalyst_yearly_emperor_at_war = tp_struggle_catalyst_yearly_emperor_at_war_gain
@@ -276,11 +276,11 @@
 			}
 		}
 		# 衰退
-		struggle_phase_byzantine_decay = {
+		struggle_byzantine_phase_decay = {
 			future_phases = {
 				# 敵意
 				# 原因となった者はその地位を追われるだろう
-				struggle_phase_byzantine_hostility = {
+				struggle_byzantine_phase_hostility = {
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_50
 						catalyst_becomes_rival_with_involved = tp_struggle_catalyst_gain_100
@@ -289,7 +289,7 @@
 				}
 				# 機会
 				# より相応しい人物がその地位を狙うかもしれない
-				struggle_phase_byzantine_opportunity = {
+				struggle_byzantine_phase_opportunity = {
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_1
 						catalyst_became_friend_lover_with_character = tp_struggle_catalyst_gain_50
@@ -397,12 +397,12 @@
 			}
 		}
 		# 敵意
-		struggle_phase_byzantine_hostility = {
+		struggle_byzantine_phase_hostility = {
 			# There has to be at least one.
 			future_phases = {
 				# 衰退
 				# 内紛は衰退を招くだろう
-				struggle_phase_byzantine_decay = {
+				struggle_byzantine_phase_decay = {
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_100
 						tp_catalyst_unnatural_death_emperor_character = emperor_unnatural_death_struggle_catalyst_gain
@@ -410,7 +410,7 @@
 				}
 				# 機会
 				# 新たな支配者はその地位に相応しいのだろうか
-				struggle_phase_byzantine_opportunity = {
+				struggle_byzantine_phase_opportunity = {
 					#these should be defined in common/struggle/catalyst
 					catalysts = {
 						catalyst_passing_of_time = tp_struggle_catalyst_gain_1

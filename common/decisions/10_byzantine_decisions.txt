@@ -48,7 +48,7 @@ struggle_byzantine_ending_decay_decision = {
 			any_character_struggle = {
 				involvement = involved
 				is_struggle_type = byzantine_struggle
-				is_struggle_phase = struggle_phase_byzantine_decay
+				is_struggle_phase = struggle_byzantine_phase_decay
 			}
 		}
 	}
@@ -96,10 +96,10 @@ struggle_byzantine_change_phase_prosperity_decision = {
 				is_ai = no
 				any_character_struggle = { is_struggle_type = byzantine_struggle }
 			}
-			# root = {change_struggle_phase = struggle_phase_byzantine_decay}
+			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
 			random_character_struggle = {
 				limit = { is_struggle_type = byzantine_struggle }
-				change_struggle_phase = struggle_phase_byzantine_prosperity
+				change_struggle_phase = struggle_byzantine_phase_prosperity
 			}
 		}
 	}
@@ -119,10 +119,10 @@ struggle_byzantine_change_phase_opportunity_decision = {
 				is_ai = no
 				any_character_struggle = { is_struggle_type = byzantine_struggle }
 			}
-			# root = {change_struggle_phase = struggle_phase_byzantine_decay}
+			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
 			random_character_struggle = {
 				limit = { is_struggle_type = byzantine_struggle }
-				change_struggle_phase = struggle_phase_byzantine_opportunity
+				change_struggle_phase = struggle_byzantine_phase_opportunity
 			}
 		}
 	}
@@ -142,10 +142,10 @@ struggle_byzantine_change_phase_decay_decision = {
 				is_ai = no
 				any_character_struggle = { is_struggle_type = byzantine_struggle }
 			}
-			# root = {change_struggle_phase = struggle_phase_byzantine_decay}
+			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
 			random_character_struggle = {
 				limit = { is_struggle_type = byzantine_struggle }
-				change_struggle_phase = struggle_phase_byzantine_decay
+				change_struggle_phase = struggle_byzantine_phase_decay
 			}
 		}
 	}
@@ -165,10 +165,10 @@ struggle_byzantine_change_phase_hostility_decision = {
 				is_ai = no
 				any_character_struggle = { is_struggle_type = byzantine_struggle }
 			}
-			# root = {change_struggle_phase = struggle_phase_byzantine_decay}
+			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
 			random_character_struggle = {
 				limit = { is_struggle_type = byzantine_struggle }
-				change_struggle_phase = struggle_phase_byzantine_hostility
+				change_struggle_phase = struggle_byzantine_phase_hostility
 			}
 		}
 	}

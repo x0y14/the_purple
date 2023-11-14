@@ -7,14 +7,14 @@ byzantine_struggle = {
 }
 # フェイズの定義
 # 機会フェイズ
-struggle_phase_byzantine_opportunity = {
-	texture = "gfx/interface/icons/struggle_types/struggle_phase_byzantine_opportunity.dds"
+struggle_byzantine_phase_opportunity = {
+	texture = "gfx/interface/icons/struggle_types/struggle_byzantine_phase_opportunity.dds"
 	parent = byzantine_struggle
 	requires_dlc_flag = the_fate_of_iberia
 }
 # 敵意
-struggle_phase_byzantine_hostility = {
-	texture = "gfx/interface/icons/struggle_types/struggle_phase_byzantine_hostility.dds"
+struggle_byzantine_phase_hostility = {
+	texture = "gfx/interface/icons/struggle_types/struggle_byzantine_phase_hostility.dds"
 	parent = byzantine_struggle
 	requires_dlc_flag = the_fate_of_iberia
 }
