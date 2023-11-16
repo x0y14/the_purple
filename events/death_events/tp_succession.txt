@@ -1,5 +1,6 @@
 ﻿namespace = tp_succession
 tp_succession.0001 = {
+	# root = primary_heir
 	hidden = yes
 
 	immediate = {
