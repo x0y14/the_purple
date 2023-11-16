@@ -27,8 +27,9 @@
  catalyst_basileus_died_naturally_tp_desc: "[GetTitleByKey('e_byzantium').GetHolder.GetName] died naturally"
  catalyst_basileus_died_violently_tp: "[GetTitleByKey('e_byzantium').GetHolder.GetName] died violently"
  catalyst_basileus_died_violently_tp_desc: "[GetTitleByKey('e_byzantium').GetHolder.GetName] died violently"
- catalyst_unpreferred_heir_tp: "Unpreferred Heir"
- catalyst_unpreferred_heir_tp_desc: "Unpreferred Heir"
+ # 好ましくない後継者
+ catalyst_unpreferred_heir_tp: "[GetTitleByKey('e_byzantium').GetName] was passed on to an [Concept('vassal_stance','unpreferred')|E] heir."
+ catalyst_unpreferred_heir_tp_desc: "[GetTitleByKey('e_byzantium').GetName] was passed on to an [Concept('vassal_stance','unpreferred')|E] heir."
  
 
  # game concept
