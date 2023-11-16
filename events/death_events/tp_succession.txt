@@ -1,0 +1,23 @@
+﻿namespace = tp_succession
+tp_succession.0001 = {
+	hidden = yes
+
+	immediate = {
+		every_vassal = {
+		save_temporary_scope_as = vas
+
+		limit = {
+			has_opinion_modifier = {
+				modifier = unpreferred_heir_opinion
+				target = root
+			}
+		}
+		struggle:byzantine_struggle = {
+			activate_struggle_catalyst = {
+				catalyst = catalyst_unpreferred_heir_tp
+				character = scope:vas
+				}
+			}
+		}
+	}
+}

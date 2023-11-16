@@ -1,0 +1,12 @@
+﻿### War
+catalyst_yearly_basileus_at_war_tp = {}
+catalyst_basileus_won_at_war_tp = {}
+catalyst_basileus_lose_at_war_tp = {}
+
+### Specific Character Death
+catalyst_basileus_died_naturally_tp = {}
+catalyst_basileus_died_violently_tp = {}
+catalyst_unpreferred_heir_tp = {}
+
+### Emperor Status
+catalyst_yearly_basileus_leaning_gain_tp = {}
