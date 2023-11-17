@@ -635,7 +635,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 						any_realm_county = {
 							NOT = { this = scope:recipient.capital_county }
 							any_neighboring_county = { holder.top_liege = scope:secondary_recipient.top_liege }
-							any_county_province = { geographical_region = custom_eastern_roman_empire }
+							any_county_province = { geographical_region = world_asia_minor }
 							NOR = {
 								holder = scope:actor
 								holder = { is_vassal_or_below_of = scope:actor }
@@ -646,7 +646,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 						limit = {
 							NOT = { this = scope:recipient.capital_county }
 							any_neighboring_county = { holder.top_liege = scope:secondary_recipient.top_liege }
-							any_county_province = { geographical_region = custom_eastern_roman_empire }
+							any_county_province = { geographical_region = world_asia_minor }
 							NOR = {
 								holder = scope:actor
 								holder = { is_vassal_or_below_of = scope:actor }
@@ -660,7 +660,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 						any_realm_county = {
 							NOT = { this = scope:recipient.capital_county }
 							any_neighboring_county = {
-								any_county_province = { geographical_region = custom_eastern_roman_empire }
+								any_county_province = { geographical_region = world_asia_minor }
 								NOT = {
 									holder.top_liege = prev.holder.top_liege
 								}
@@ -675,7 +675,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 						limit = {
 							NOT = { this = scope:recipient.capital_county }
 							any_neighboring_county = {
-								any_county_province = { geographical_region = custom_eastern_roman_empire }
+								any_county_province = { geographical_region = world_asia_minor }
 								NOT = {
 									holder.top_liege = prev.holder.top_liege
 								}
