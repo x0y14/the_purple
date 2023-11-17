@@ -36,7 +36,8 @@
 			future_phases = {
 				struggle_byzantium_phase_opportunity = {
 					catalysts = {
-						catalyst_passing_of_time = minimal_struggle_catalyst_gain
+						# catalyst_passing_of_time = minimal_struggle_catalyst_gain
+						catalyst_yearly_basileus_leaning_gain_tp = catalyst_yearly_emperor_leaning_gain
 					}
 				}
 				struggle_byzantium_phase_decay = {
@@ -266,6 +267,7 @@
 				struggle_byzantium_phase_opportunity = {
 					catalysts = {
 						catalyst_passing_of_time = minimal_struggle_catalyst_gain
+						catalyst_yearly_basileus_leaning_gain_tp = minimal_struggle_catalyst_gain
 					}
 				}
 				struggle_byzantium_phase_hostility = {

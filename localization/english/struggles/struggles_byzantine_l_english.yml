@@ -19,7 +19,8 @@
 
  ## Catalysts
  # 毎年、皇帝の学習能力によって進捗を得る
- tp_catalyst_yearly_emperor_leaning_gain_desc:0 "Yearly drift towards depending on Emperor's Learning Skil"
+ catalyst_yearly_basileus_leaning_gain_tp:0 "Yearly drift towards depending on Emperor's Learning Skil"
+ catalyst_yearly_basileus_leaning_gain_tp_desc:0 "Yearly drift towards depending on Emperor's Learning Skil"
  # 毎年、皇帝が戦争をしていた場合、進捗を得る
  tp_catalyst_yearly_emperor_at_war_desc:0 "Yearly drift towards if emperor at war"
  # 皇帝の死
