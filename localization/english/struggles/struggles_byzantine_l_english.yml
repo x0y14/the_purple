@@ -40,6 +40,8 @@
  # 称号取り消し
  catalyst_usurp_title_tp: "$catalyst_usurp_title_fp2$"
  catalyst_usurp_title_tp_desc: "Usurp a [title|E] which is part of the [de_jure|E] of $e_byzantium$"
+ catalyst_basileus_was_declared_war_tp: "[GetTitleByKey('e_byzantium').GetHolder.GetName] was declared war"
+ catalyst_basileus_was_declared_war_tp_desc: "[GetTitleByKey('e_byzantium').GetHolder.GetName] was declared war."
 
  ## Interaction
  fp3_request_turkic_invasion_interaction_tp: "$fp3_request_turkic_invasion_interaction$"

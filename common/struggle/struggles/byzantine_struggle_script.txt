@@ -280,6 +280,7 @@
 						catalyst_unpreferred_heir_tp = medium_struggle_catalyst_gain
 						catalyst_gain_claim_on_title_tp = medium_struggle_catalyst_gain
 						catalyst_usurp_title_tp = medium_struggle_catalyst_gain
+						catalyst_basileus_was_declared_war_tp = medium_struggle_catalyst_gain
 					}
 				}
 			}
