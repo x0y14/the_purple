@@ -40,7 +40,10 @@
  # 称号取り消し
  catalyst_usurp_title_tp: "$catalyst_usurp_title_fp2$"
  catalyst_usurp_title_tp_desc: "Usurp a [title|E] which is part of the [de_jure|E] of $e_byzantium$"
- 
+
+ ## Interaction
+ fp3_request_turkic_invasion_interaction_tp: "$fp3_request_turkic_invasion_interaction$"
+ fp3_request_turkic_invasion_interaction_tp_desc: "$fp3_request_turkic_invasion_interaction_desc$"
 
  # game concept
  game_concept_byzantine_struggle_desc:0 "TODO GameConcept ByzantineStruggle HERE"
