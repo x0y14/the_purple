@@ -10,3 +10,6 @@ catalyst_unpreferred_heir_tp = {}
 
 ### Emperor Status
 catalyst_yearly_basileus_leaning_gain_tp = {}
+
+### Title
+catalyst_gain_claim_on_title_tp = {}

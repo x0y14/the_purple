@@ -277,6 +277,7 @@
 						catalyst_basileus_died_naturally_tp = medium_struggle_catalyst_gain
 						catalyst_basileus_died_violently_tp = medium_struggle_catalyst_gain
 						catalyst_unpreferred_heir_tp = medium_struggle_catalyst_gain
+						catalyst_gain_claim_on_title_tp = medium_struggle_catalyst_gain
 					}
 				}
 			}
@@ -356,6 +357,8 @@
 					powerful_vassal_can_claim_liege_titles = yes
 					# 解体派閥が減少、請求者増加
 					less_dissolution_more_claimants = yes
+					# 有力な封臣が王位を請求できる
+					unlocks_claim_throne_for_powerful_vassals = yes
 				}
 				involved_character_modifier = {
 					# 敵対的な策略に対する抵抗

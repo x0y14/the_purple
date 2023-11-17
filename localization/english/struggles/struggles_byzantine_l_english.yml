@@ -31,6 +31,9 @@
  # 好ましくない後継者
  catalyst_unpreferred_heir_tp: "[GetTitleByKey('e_byzantium').GetName] was passed on to an [Concept('vassal_stance','unpreferred')|E] heir."
  catalyst_unpreferred_heir_tp_desc: "[GetTitleByKey('e_byzantium').GetName] was passed on to an [Concept('vassal_stance','unpreferred')|E] heir."
+ # ビザンツ帝国請求権の取得
+ catalyst_gain_claim_on_title_tp: "$catalyst_gain_claim_on_title_fp2$"
+ catalyst_gain_claim_on_title_tp_desc: "Acquire a [claim|E] on a [title|E] under the [de_jure|E] of $e_byzantium$"
  
 
  # game concept
