@@ -6,6 +6,7 @@ catalyst_basileus_lose_at_war_tp = {}
 ### Specific Character Death
 catalyst_basileus_died_naturally_tp = {}
 catalyst_basileus_died_violently_tp = {}
+catalyst_preferred_heir_tp = {}
 catalyst_unpreferred_heir_tp = {}
 
 ### Emperor Status

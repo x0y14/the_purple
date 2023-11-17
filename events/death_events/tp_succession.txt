@@ -4,6 +4,7 @@ tp_succession.0001 = {
 	hidden = yes
 
 	immediate = {
+		# 好ましくない後継者
 		every_vassal = {
 		save_temporary_scope_as = vas
 
@@ -20,5 +21,22 @@ tp_succession.0001 = {
 				}
 			}
 		}
+		# 好ましい後継者
+		every_vassal = {
+			save_temporary_scope_as = vas
+	
+			limit = {
+				has_opinion_modifier = {
+					modifier = preferred_heir_opinion
+					target = root
+				}
+			}
+			struggle:byzantine_struggle = {
+				activate_struggle_catalyst = {
+					catalyst = catalyst_preferred_heir_tp
+					character = scope:vas
+					}
+				}
+			}
 	}
 }

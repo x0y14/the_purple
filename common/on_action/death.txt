@@ -1176,7 +1176,7 @@ on_death = {
 		}
 
 		# -- the purple --
-		### Unpreferred Heir
+		### Preferred/Unpreferred Heir
 		if = {
 			limit = {
 				AND = {
