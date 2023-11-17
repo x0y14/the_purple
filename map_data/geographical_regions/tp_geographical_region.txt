@@ -1,0 +1,148 @@
+﻿# byzantium
+tp_k_venice = {
+	duchies = {
+		d_venice
+	}
+}
+
+tp_k_sicily = {
+	duchies = {
+		d_benevento d_capua d_salerno d_calabria d_sicily d_apulia
+	}
+}
+
+tp_k_croatia = {
+	duchies = {
+		d_usora d_dalmatia d_slavonia d_croatia d_ragusa d_lower_bosna d_bosna
+	}
+}
+
+tp_k_serbia = {
+	duchies = {
+		d_syrmia d_rashka d_duklja d_macva
+	}
+}
+
+tp_k_bulgaria = {
+	duchies = {
+		d_bulgaria d_dobrudja d_turnovo d_philippopolis d_vidin
+	}
+}
+
+tp_k_epirus = {
+	duchies = {
+		d_cephalonia d_dyrrachion d_epirus
+	}
+}
+
+tp_k_thessalonika = {
+	duchies = {
+		d_aegean_islands d_strymon d_thessaly d_thessalonika d_thrace
+	}
+}
+
+tp_k_hellas = {
+	duchies = {
+		d_achaia d_athens
+	}
+}
+
+tp_k_nikaea = {
+	duchies = {
+		d_bucellaria d_ephese d_opsikion d_optimatoi d_thracesia
+	}
+}
+
+tp_k_krete = {
+	duchies = {
+		d_krete
+	}
+}
+
+tp_k_anatolia = {
+	duchies = {
+		d_cilicia d_anatolia d_charsianon d_cappadocia d_cibyrrhaeot
+	}
+}
+
+tp_k_cyprus = {
+	duchies = {
+		d_cyprus
+	}
+}
+
+tp_k_pontus = {
+	duchies = {
+		d_armeniac d_chaldia d_paphlagonia d_sebasteia
+	}
+}
+
+tp_k_armenia = {
+	duchies = {
+		d_vaspurakan d_mesopotamia d_greater_armenia
+	}
+}
+
+tp_k_georgia = {
+	duchies = {
+		d_tao-klarjeti d_abkhazia d_georgia
+	}
+}
+
+# africa
+tp_k_africa = {
+	duchies = {
+		d_tripolitania d_gabes d_tunis d_jerid d_kairouan d_kroumerie d_syrte
+	}
+}
+
+# egypt
+tp_k_egypt = {
+	duchies = {
+		d_alexandria d_delta d_al-said d_al-wahat d_cairo d_cyrenaica d_eastern_desert d_sinai
+	}
+}
+
+# jerusalem
+tp_k_jerusalem = {
+	duchies = {
+		d_palestine d_urdunn d_oultrejourdain
+	}
+}
+
+# syria
+tp_k_syria = {
+	duchies	= {
+		d_aleppo d_damascus d_edessa d_palmyra d_lebanon d_antioch d_homs
+	}
+}
+
+tp_e_byzantium = {
+	regions = {
+		tp_k_venice
+		tp_k_sicily
+		tp_k_croatia
+		tp_k_serbia
+		tp_k_bulgaria
+		tp_k_epirus
+		tp_k_thessalonika
+		tp_k_hellas
+		tp_k_nikaea
+		tp_k_krete
+		tp_k_anatolia
+		tp_k_cyprus
+		tp_k_pontus
+		tp_k_armenia
+		tp_k_georgia
+	}
+}
+
+tp_byzantiune_struggle_region = {
+	regions = {
+		tp_e_byzantium
+		tp_k_africa
+		tp_k_egypt
+		tp_k_jerusalem
+		tp_k_syria
+	}
+}

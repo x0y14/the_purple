@@ -10,7 +10,7 @@
 		hellenic_pagan
 	}
 	regions = {
-		custom_eastern_roman_empire
+		tp_byzantiune_struggle_region
 	}
 	
 	involvement_prerequisite_percentage = 0.5
