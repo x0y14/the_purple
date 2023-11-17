@@ -300,7 +300,7 @@
 					# 防衛側アドバンテージ低下
 					defender_advantage = -25
 					attacker_advantage = -25
-					# levy_size = -0.25
+					levy_size = -0.1
 				}
 
 				#### 侵入
@@ -313,8 +313,6 @@
 					involved_or_interloper_wars_in_struggle_region_cheaper_piety_costs = yes
 					# 戦争コストが安くなる
 					involved_or_interloper_wars_in_struggle_region_cheaper_costs = yes
-					#
-					# struggle_cb_cost_minor = yes
 				}
 				interloper_character_modifier = {
 					# 傭兵雇用コストの削減
@@ -416,6 +414,12 @@
 					# general_opinion = -10
 				}
 				#### 侵入
+				interloper_parameters = {
+					# 聖戦の要求レベルが１つ下がる
+					# cb_lower_piety_level_requirement = yes
+				}
+				interloper_character_modifier = {
+				}
 				#### 無関係
 			}
 
