@@ -34,6 +34,9 @@
  # ビザンツ帝国請求権の取得
  catalyst_gain_claim_on_title_tp: "$catalyst_gain_claim_on_title_fp2$"
  catalyst_gain_claim_on_title_tp_desc: "Acquire a [claim|E] on a [title|E] under the [de_jure|E] of $e_byzantium$"
+ # 称号取り消し
+ catalyst_usurp_title_tp: "$catalyst_usurp_title_fp2$"
+ catalyst_usurp_title_tp_desc: "Usurp a [title|E] which is part of the [de_jure|E] of $e_byzantium$"
  
 
  # game concept
