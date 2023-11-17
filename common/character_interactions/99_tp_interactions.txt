@@ -529,10 +529,14 @@ fp3_request_turkic_invasion_interaction_tp = {
 		}
 		scope:recipient = {
 			is_landed = yes
-			OR = {
-				any_character_struggle = { is_struggle_type = byzantine_struggle }
-				title:e_byzantium.holder ?= this
+			any_character_struggle = {
+				involvement = involved
+				is_struggle_type = byzantine_struggle
 			}
+			# OR = {
+			# 	any_character_struggle = { is_struggle_type = byzantine_struggle }
+			# 	title:e_byzantium.holder ?= this
+			# }
 			is_independent_ruler = yes
 			is_ai = yes
 		}
