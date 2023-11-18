@@ -44,6 +44,9 @@
 					is_physically_able = yes
 					is_adult = yes
 					culture = { has_cultural_pillar = heritage_turkic }
+					NOT = { is_spouse_of = scope:attacker }
+					NOT = { is_close_or_extended_family_of = scope:attacker }
+					NOT = { is_primary_heir_of = scope:attacker }
 				}
 				add_to_list = invasion_beneficiary_candidates
 			}
