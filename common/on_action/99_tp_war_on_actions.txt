@@ -492,14 +492,17 @@
 		if = {
 			limit = {
 				scope:defender = {
-					any_character_struggle = {
-						is_struggle_type = byzantine_struggle
-						involvement = involved
-					}
+					# AND = {
+					# 	any_character_struggle = {
+					# 		is_struggle_type = byzantine_struggle
+					# 		involvement = involved
+					# 	}
+					# 	has_title = title:e_byzantium
+					# }
 					has_title = title:e_byzantium
 				}
 			}
-			activate_struggle_catalyst = {
+			activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
 				catalyst = catalyst_basileus_was_declared_war_tp
 				character = scope:attacker
 			}
