@@ -513,7 +513,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 	interface_priority = 100
 	common_interaction = yes
 	category = interaction_category_hostile
-	cooldown_against_recipient = { years = 2 }
+	cooldown_against_recipient = { years = 10 }
 
 	icon = request_mercenary
 	desc = fp3_request_turkic_invasion_interaction_desc
