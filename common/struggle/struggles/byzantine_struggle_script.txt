@@ -283,6 +283,7 @@
 						catalyst_usurp_title_tp = medium_struggle_catalyst_gain
 						catalyst_basileus_was_declared_war_tp = medium_struggle_catalyst_gain
 						catalyst_basileus_lost_at_war_tp = medium_struggle_catalyst_gain
+						catalyst_raided_involved = medium_struggle_catalyst_gain
 					}
 				}
 			}
