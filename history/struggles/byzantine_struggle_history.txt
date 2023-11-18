@@ -1,0 +1,11 @@
+﻿867.1.1 = {
+	effect = {
+		if = {
+			limit = { has_dlc_feature = the_fate_of_iberia }
+			start_struggle = {
+				struggle_type = byzantine_struggle
+				start_phase = struggle_byzantium_phase_decay
+			}
+		}
+	}
+}
