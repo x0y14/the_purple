@@ -185,9 +185,14 @@
 								has_doctrine_parameter = unreformed
 							}
 						}
+						exists = global_var:war_supporters_faith
+						
 					}
 					set_character_faith_with_conversion = global_var:war_supporters_faith
 					remove_global_variable = war_supporters_faith
+				}
+				else = {
+					set_character_faith_with_conversion = capital_county.faith
 				}
 			}
 		}
