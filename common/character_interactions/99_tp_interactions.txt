@@ -569,6 +569,11 @@ fp3_request_turkic_invasion_interaction_tp = {
 						this = scope:actor
 						this = scope:recipient
 					}
+					NOT = {
+						any_character_struggle = {
+							is_struggle_type = byzantine_struggle
+						}
+					}
 				}
 				add_to_list = characters
 			}
@@ -750,6 +755,12 @@ fp3_request_turkic_invasion_interaction_tp = {
 				}
 			}
 
+			# 支援者の宗教の保存
+			set_global_variable = {
+				name = war_supporters_faith
+				value = scope:actor.faith
+			}
+
 			scope:secondary_recipient = {
 				add_gold = {
 					value = {
@@ -772,7 +783,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 					# }
 				}
 				start_war = {
-					casus_belli = fp3_turkic_invasion_cb
+					casus_belli = fp3_turkic_invasion_cb_tp
 					target = scope:recipient
 					target_title = scope:invasion_target_title.duchy
 				}
