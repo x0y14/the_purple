@@ -85,9 +85,9 @@
 			culture = culture:turkish
 			faith = scope:attacker.var:supporters_faith
 			gender_female_chance = 0
-			save_scope_as = invasion_beneficiary
+			save_scope_as = tmp_invasion_beneficiary
 		}
-		scope:invasion_beneficiary = {
+		scope:tmp_invasion_beneficiary = {
 			add_trait = athletic
 			dynasty = {
 				add_dynasty_modifier = {
@@ -95,7 +95,24 @@
 					years = 10
 				}
 			}
+			add_to_list = invasion_beneficiary_candidates
+			ordered_in_list = {
+				list = invasion_beneficiary_candidates
+				order_by = {
+					value = 1
+				}
+				save_scope_as = invasion_beneficiary
+			}
 		}
+		# scope:invasion_beneficiary = {
+		# 	add_trait = athletic
+		# 	dynasty = {
+		# 		add_dynasty_modifier = {
+		# 			modifier = tp_legacy_of_nomad_modifier
+		# 			years = 10
+		# 		}
+		# 	}
+		# }
 
 		# # 受益者=攻撃者
 		# if = {
