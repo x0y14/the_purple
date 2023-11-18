@@ -35,8 +35,11 @@ tp_succession.0001 = {
 				activate_struggle_catalyst = {
 					catalyst = catalyst_preferred_heir_tp
 					character = scope:vas
-					}
 				}
 			}
+		}
+		add_character_modifier = {
+			modifier = fp3_struggle_caliph_super_suspicious_modifier
+		}
 	}
 }

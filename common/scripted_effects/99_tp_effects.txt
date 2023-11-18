@@ -1,0 +1,20 @@
+﻿# add_character_modifier = {
+# 	modifier = fp3_struggle_caliph_super_suspicious_modifier
+# }
+
+# basileus_super_suspicious_effect = {
+# 	if = {
+# 		limit = {
+# 			has_title = title:e_byzantium
+# 			# AND = {
+# 			# 	has_title = title:e_byzantium
+# 			# 	NOT = {
+# 			# 		has_character_modifier = fp3_struggle_caliph_super_suspicious_modifier
+# 			# 	}
+# 			# }
+# 		}
+# 		add_character_modifier = {
+# 			modifier = fp3_struggle_caliph_super_suspicious_modifier
+# 		}
+# 	}
+# }
