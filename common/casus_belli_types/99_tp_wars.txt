@@ -37,79 +37,90 @@
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
-		scope:attacker = {
-			add_to_list = invasion_beneficiary_candidates
-			every_courtier = {
-				limit = {
-					is_physically_able = yes
-					is_adult = yes
-					culture = { has_cultural_pillar = heritage_turkic }
-					NOT = { is_spouse_of = scope:attacker }
-					NOT = { is_close_or_extended_family_of = scope:attacker }
-					NOT = { is_primary_heir_of = scope:attacker }
+		# scope:attacker = {
+		# 	add_to_list = invasion_beneficiary_candidates
+		# 	every_courtier = {
+		# 		limit = {
+		# 			is_physically_able = yes
+		# 			is_adult = yes
+		# 			culture = { has_cultural_pillar = heritage_turkic }
+		# 			NOT = { is_spouse_of = scope:attacker }
+		# 			NOT = { is_close_or_extended_family_of = scope:attacker }
+		# 			NOT = { is_primary_heir_of = scope:attacker }
+		# 		}
+		# 		add_to_list = invasion_beneficiary_candidates
+		# 	}
+		# 	ordered_in_list = {
+		# 		list = invasion_beneficiary_candidates
+		# 		order_by = {
+		# 			value = 1
+		# 			if = {
+		# 				limit = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:attacker } }
+		# 				add = 20
+		# 			}
+		# 			if = {
+		# 				limit = { this = scope:attacker }
+		# 				multiply = 0.5
+		# 			}
+		# 			if = {
+		# 				limit = { is_heir_of = scope:attacker }
+		# 				add = -10
+		# 			}
+		# 			if = {
+		# 				limit = { is_spouse_of = scope:attacker }
+		# 				add = -10
+		# 			}
+		# 			if = {
+		# 				limit = { has_no_particular_noble_roots_trigger = yes }
+		# 				add = 10
+		# 			}
+		# 		}
+		# 		save_scope_as = invasion_beneficiary
+		# 	}
+		# }
+		create_character = {
+			age = { 20 30 }
+			employer = scope:attacker
+			random_traits = yes
+			culture = culture:turkish
+			faith = scope:attacker.var:supporters_faith
+			gender_female_chance = 0
+			save_scope_as = invasion_beneficiary
+		}
+		scope:invasion_beneficiary = {
+			add_trait = athletic
+			dynasty = {
+				add_dynasty_modifier = {
+					modifier = tp_legacy_of_nomad_modifier
+					years = 10
 				}
-				add_to_list = invasion_beneficiary_candidates
-			}
-			ordered_in_list = {
-				list = invasion_beneficiary_candidates
-				order_by = {
-					value = 1
-					if = {
-						limit = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:attacker } }
-						add = 20
-					}
-					if = {
-						limit = { this = scope:attacker }
-						multiply = 0.5
-					}
-					if = {
-						limit = { is_heir_of = scope:attacker }
-						add = -10
-					}
-					if = {
-						limit = { is_spouse_of = scope:attacker }
-						add = -10
-					}
-					if = {
-						limit = { has_no_particular_noble_roots_trigger = yes }
-						add = 10
-					}
-				}
-				save_scope_as = invasion_beneficiary
 			}
 		}
 
-		# 受益者=攻撃者
-		if = {
-			limit = {
-				scope:attacker = scope:invasion_beneficiary
-			}
-			create_character = {
-				age = { 20 30 }
-				employer = scope:attacker
-				random_traits = yes
-				culture = culture:turkish
-				faith = scope:attacker.var:supporters_faith
-				gender_female_chance = {
-					if = {
-						limit = {
-							scope:attacker.faith = { has_doctrine = doctrine_gender_male_dominated }
-						}
-						add = 0
-					}
-					else_if = {
-						limit = {
-							scope:attacker.faith = { has_doctrine = doctrine_gender_female_dominated }
-						}
-						add = 100
-					}
-					else = {
-						add = 50
-					}
-				}
-				save_scope_as = invasion_beneficiary
-			}
-		}
+		# # 受益者=攻撃者
+		# if = {
+		# 	limit = {
+		# 		scope:attacker = scope:invasion_beneficiary
+		# 	}
+		# 	create_character = {
+		# 		age = { 20 30 }
+		# 		employer = scope:attacker
+		# 		random_traits = yes
+		# 		culture = culture:turkish
+		# 		faith = scope:attacker.var:supporters_faith
+		# 		gender_female_chance = 0
+		# 		save_scope_as = invasion_beneficiary
+		# 	}
+		# 	scope:invasion_beneficiary = {
+		# 		add_trait = athletic
+		# 		dynasty = {
+		# 			add_dynasty_modifier = {
+		# 				modifier = fp1_legacy_of_piracy_modifier
+		# 				years = 10
+		# 			}
+		# 		}
+		# 	}
+		# }
 		
 		create_title_and_vassal_change = {
 			type = conquest

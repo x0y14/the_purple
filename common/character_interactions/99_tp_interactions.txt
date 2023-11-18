@@ -1063,7 +1063,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 
 		# faith diff
 		modifier = {
-			add = 50
+			add = 25
 			scope:actor.faith = {
 				faith_hostility_level = {
 					target = scope:recipient.faith
@@ -1073,7 +1073,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 		}
 		# evil
 		modifier = {
-			add = 100
+			add = 50
 			scope:actor.faith = {
 				faith_hostility_level = {
 					target = scope:recipient.faith

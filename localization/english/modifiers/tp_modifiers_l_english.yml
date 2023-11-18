@@ -1,0 +1,4 @@
+﻿l_english:
+ # Modifiers
+ tp_legacy_of_nomad_modifier: "Legacy of Nomad"
+ tp_legacy_of_nomad_modifier_desc: "This dynasty was nomadic not long ago. They will need some time to adapt to their new environment.\n\nCan [raid|E], regardless of [government|E] type"
