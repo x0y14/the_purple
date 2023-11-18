@@ -317,6 +317,8 @@
 					involved_or_interloper_wars_in_struggle_region_cheaper_costs = yes
 					# 国境紛争の許可
 					# unlocks_border_raid_casus_belli = yes
+					# 皇帝に対する支援侵攻が安く
+					cheaper_incursions_vs_basileus = yes
 				}
 				interloper_character_modifier = {
 					# 傭兵雇用コストの削減

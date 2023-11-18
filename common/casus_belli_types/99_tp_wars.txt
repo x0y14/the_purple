@@ -79,6 +79,38 @@
 			}
 		}
 
+		# 受益者=攻撃者
+		if = {
+			limit = {
+				scope:attacker = scope:invasion_beneficiary
+			}
+			create_character = {
+				age = { 20 30 }
+				employer = scope:attacker
+				random_traits = yes
+				culture = culture:turkish
+				faith = scope:attacker.var:supporters_faith
+				gender_female_chance = {
+					if = {
+						limit = {
+							scope:attacker.faith = { has_doctrine = doctrine_gender_male_dominated }
+						}
+						add = 0
+					}
+					else_if = {
+						limit = {
+							scope:attacker.faith = { has_doctrine = doctrine_gender_female_dominated }
+						}
+						add = 100
+					}
+					else = {
+						add = 50
+					}
+				}
+				save_scope_as = invasion_beneficiary
+			}
+		}
+		
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -150,7 +182,9 @@
 					random_list = {
 						75 = {}
 						25 = {
-							set_county_faith = global_var:war_supporters_faith
+							# set_county_faith = global_var:war_supporters_faith
+							# set_county_faith = $SUPPORTER_FAITH$
+							set_county_faith = scope:attacker.var:supporters_faith
 						}
 					}
 				}
@@ -188,18 +222,23 @@
 								has_doctrine_parameter = unreformed
 							}
 						}
-						exists = global_var:war_supporters_faith
+						# exists = global_var:war_supporters_faith
 						
 					}
-					set_character_faith_with_conversion = global_var:war_supporters_faith
-					remove_global_variable = war_supporters_faith
-				}
-				else_if = {
-					limit = {
-						NOT = { exists = global_var:war_supporters_faith }
+					set_character_faith_with_conversion = scope:attacker.var:supporters_faith
+					scope:attacker = {
+						remove_variable = supporters_faith
 					}
-					set_character_faith_with_conversion = capital_county.faith
+					# remove_variable = scope:attacker.var:supporters_faith
+					# set_character_faith_with_conversion = global_var:war_supporters_faith
+					# remove_global_variable = war_supporters_faith
 				}
+				# else_if = {
+				# 	limit = {
+				# 		NOT = { exists = global_var:war_supporters_faith }
+				# 	}
+				# 	set_character_faith_with_conversion = capital_county.faith
+				# }
 			}
 		}
 

@@ -624,13 +624,13 @@ fp3_request_turkic_invasion_interaction_tp = {
 					add = fp3_request_invasion_troop_value_estimate
 				}
 			}
-			# if = {
-			# 	limit = {
-			# 		scope:recipient = { has_title = title:d_sunni }
-			# 		struggle:persian_struggle = { has_struggle_phase_parameter = cheaper_incursions_vs_caliph }
-			# 	}
-			# 	divide = 2
-			# }
+			if = {
+				limit = {
+					scope:recipient = { has_title = title:e_byzantium }
+					struggle:byzantine_struggle = { has_struggle_phase_parameter = cheaper_incursions_vs_basileus }
+				}
+				divide = 2
+			}
 		}
 	}
 
@@ -756,10 +756,10 @@ fp3_request_turkic_invasion_interaction_tp = {
 			}
 
 			# 支援者の宗教の保存
-			set_global_variable = {
-				name = war_supporters_faith
-				value = scope:actor.faith
-			}
+			# set_global_variable = {
+			# 	name = war_supporters_faith
+			# 	value = scope:actor.faith
+			# }
 
 			scope:secondary_recipient = {
 				add_gold = {
@@ -782,10 +782,15 @@ fp3_request_turkic_invasion_interaction_tp = {
 					# 	divide = 2
 					# }
 				}
+				set_variable = {
+					name = supporters_faith
+					value = scope:actor.faith
+				}
 				start_war = {
 					casus_belli = fp3_turkic_invasion_cb_tp
 					target = scope:recipient
 					target_title = scope:invasion_target_title.duchy
+					# SUPPORTER_FAITH = scope:actor.faith
 				}
 				custom_tooltip = fp3_turkic_invasion_cb_result_tt
 				if = {
@@ -1052,6 +1057,40 @@ fp3_request_turkic_invasion_interaction_tp = {
 						target = scope:actor
 						value >= 45
 					}
+				}
+			}
+		}
+
+		# faith diff
+		modifier = {
+			add = 50
+			scope:actor.faith = {
+				faith_hostility_level = {
+					target = scope:recipient.faith
+					value = faith_hostile_level
+				}
+			}
+		}
+		# evil
+		modifier = {
+			add = 100
+			scope:actor.faith = {
+				faith_hostility_level = {
+					target = scope:recipient.faith
+					value = faith_evil_level
+				}
+			}
+		}
+
+		# zealous
+		modifier = {
+			factor = 1.5
+			scope:actor = {
+				OR = {
+					has_trait = pilgrim
+					has_trait = holy_warrior
+					has_trait = faith_warrior
+					has_trait = zealous
 				}
 			}
 		}

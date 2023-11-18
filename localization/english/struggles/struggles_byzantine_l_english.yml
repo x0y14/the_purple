@@ -56,6 +56,8 @@
  # CBs
  fp3_turkic_invasion_cb_tp: "$fp3_turkic_invasion_cb$"
 
+ # Effects
+ struggle_parameter_cheaper_incursions_vs_basileus: "The #V $fp3_request_turkic_invasion_interaction_tp$#! [interaction|E] is #P 50%#! cheaper against the Basileus"
 
  # game concept
  game_concept_byzantine_struggle_desc:0 "TODO GameConcept ByzantineStruggle HERE"
