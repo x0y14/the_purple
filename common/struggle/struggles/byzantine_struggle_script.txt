@@ -269,6 +269,7 @@
 						catalyst_passing_of_time = minimal_struggle_catalyst_gain
 						catalyst_yearly_basileus_leaning_gain_tp = minimal_struggle_catalyst_gain
 						catalyst_preferred_heir_tp = medium_struggle_catalyst_gain
+						catalyst_basileus_won_at_war_tp = medium_struggle_catalyst_gain
 					}
 				}
 				struggle_byzantium_phase_hostility = {
@@ -281,6 +282,7 @@
 						catalyst_gain_claim_on_title_tp = medium_struggle_catalyst_gain
 						catalyst_usurp_title_tp = medium_struggle_catalyst_gain
 						catalyst_basileus_was_declared_war_tp = medium_struggle_catalyst_gain
+						catalyst_basileus_lost_at_war_tp = medium_struggle_catalyst_gain
 					}
 				}
 			}

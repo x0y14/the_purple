@@ -42,6 +42,12 @@
  catalyst_usurp_title_tp_desc: "Usurp a [title|E] which is part of the [de_jure|E] of $e_byzantium$"
  catalyst_basileus_was_declared_war_tp: "[GetTitleByKey('e_byzantium').GetHolder.GetName] was declared war"
  catalyst_basileus_was_declared_war_tp_desc: "[GetTitleByKey('e_byzantium').GetHolder.GetName] was declared war."
+ # 戦争に勝つ
+ catalyst_basileus_won_at_war_tp: "[GetTitleByKey('e_byzantium').GetHolder.GetName] won at War"
+ catalyst_basileus_won_at_war_tp_desc: "$catalyst_basileus_won_at_war_tp$"
+ # 戦争に負ける
+ catalyst_basileus_lost_at_war_tp: "[GetTitleByKey('e_byzantium').GetHolder.GetName] lost at War"
+ catalyst_basileus_lost_at_war_tp_desc: "$catalyst_basileus_lost_at_war_tp$"
 
  ## Interaction
  fp3_request_turkic_invasion_interaction_tp: "$fp3_request_turkic_invasion_interaction$"
