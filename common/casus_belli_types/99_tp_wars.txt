@@ -37,73 +37,73 @@
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
-		# scope:attacker = {
-		# 	add_to_list = invasion_beneficiary_candidates
-		# 	every_courtier = {
-		# 		limit = {
-		# 			is_physically_able = yes
-		# 			is_adult = yes
-		# 			culture = { has_cultural_pillar = heritage_turkic }
-		# 			NOT = { is_spouse_of = scope:attacker }
-		# 			NOT = { is_close_or_extended_family_of = scope:attacker }
-		# 			NOT = { is_primary_heir_of = scope:attacker }
-		# 		}
-		# 		add_to_list = invasion_beneficiary_candidates
-		# 	}
-		# 	ordered_in_list = {
-		# 		list = invasion_beneficiary_candidates
-		# 		order_by = {
-		# 			value = 1
-		# 			if = {
-		# 				limit = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:attacker } }
-		# 				add = 20
-		# 			}
-		# 			if = {
-		# 				limit = { this = scope:attacker }
-		# 				multiply = 0.5
-		# 			}
-		# 			if = {
-		# 				limit = { is_heir_of = scope:attacker }
-		# 				add = -10
-		# 			}
-		# 			if = {
-		# 				limit = { is_spouse_of = scope:attacker }
-		# 				add = -10
-		# 			}
-		# 			if = {
-		# 				limit = { has_no_particular_noble_roots_trigger = yes }
-		# 				add = 10
-		# 			}
-		# 		}
-		# 		save_scope_as = invasion_beneficiary
-		# 	}
-		# }
-		create_character = {
-			age = { 20 30 }
-			employer = scope:attacker
-			random_traits = yes
-			culture = culture:turkish
-			faith = scope:attacker.var:supporters_faith
-			gender_female_chance = 0
-			save_scope_as = tmp_invasion_beneficiary
-		}
-		scope:tmp_invasion_beneficiary = {
-			add_trait = athletic
-			dynasty = {
-				add_dynasty_modifier = {
-					modifier = tp_legacy_of_nomad_modifier
-					years = 10
+		scope:attacker = {
+			# add_to_list = invasion_beneficiary_candidates
+			every_courtier = {
+				limit = {
+					is_physically_able = yes
+					is_adult = yes
+					culture = { has_cultural_pillar = heritage_turkic }
+					NOT = { is_spouse_of = scope:attacker }
+					NOT = { is_close_or_extended_family_of = scope:attacker }
+					NOT = { is_primary_heir_of = scope:attacker }
 				}
+				add_to_list = invasion_beneficiary_candidates
 			}
-			add_to_list = invasion_beneficiary_candidates
 			ordered_in_list = {
 				list = invasion_beneficiary_candidates
 				order_by = {
 					value = 1
+					if = {
+						limit = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:attacker } }
+						add = 20
+					}
+					if = {
+						limit = { this = scope:attacker }
+						multiply = 0.5
+					}
+					if = {
+						limit = { is_heir_of = scope:attacker }
+						add = -10
+					}
+					if = {
+						limit = { is_spouse_of = scope:attacker }
+						add = -10
+					}
+					if = {
+						limit = { has_no_particular_noble_roots_trigger = yes }
+						add = 10
+					}
 				}
 				save_scope_as = invasion_beneficiary
 			}
 		}
+		# create_character = {
+		# 	age = { 20 30 }
+		# 	employer = scope:attacker
+		# 	random_traits = yes
+		# 	culture = culture:turkish
+		# 	faith = scope:attacker.var:supporters_faith
+		# 	gender_female_chance = 0
+		# 	save_scope_as = tmp_invasion_beneficiary
+		# }
+		# scope:tmp_invasion_beneficiary = {
+		# 	add_trait = athletic
+		# 	dynasty = {
+		# 		add_dynasty_modifier = {
+		# 			modifier = tp_legacy_of_nomad_modifier
+		# 			years = 10
+		# 		}
+		# 	}
+		# 	add_to_list = invasion_beneficiary_candidates
+		# 	ordered_in_list = {
+		# 		list = invasion_beneficiary_candidates
+		# 		order_by = {
+		# 			value = 1
+		# 		}
+		# 		save_scope_as = invasion_beneficiary
+		# 	}
+		# }
 		# scope:invasion_beneficiary = {
 		# 	add_trait = athletic
 		# 	dynasty = {
@@ -241,26 +241,36 @@
 						name = turkic_tribal_event_troops
 					}
 				}
-				if = {
-					limit = {
-						faith = { has_doctrine_parameter = unreformed }
-						NOT = { has_trait = zealous }
-						capital_county.faith ?= {
-							NOT = {
-								has_doctrine_parameter = unreformed
-							}
-						}
-						# exists = global_var:war_supporters_faith
-						
-					}
-					set_character_faith_with_conversion = scope:attacker.var:supporters_faith
-					scope:attacker = {
+				set_character_faith_with_conversion = scope:attacker.var:supporters_faith
+				scope:attacker = {
 						remove_variable = supporters_faith
-					}
-					# remove_variable = scope:attacker.var:supporters_faith
-					# set_character_faith_with_conversion = global_var:war_supporters_faith
-					# remove_global_variable = war_supporters_faith
 				}
+				dynasty = {
+					add_dynasty_modifier = {
+						modifier = tp_legacy_of_nomad_modifier
+						years = 10
+					}
+				}
+				# if = {
+				# 	limit = {
+				# 		faith = { has_doctrine_parameter = unreformed }
+				# 		NOT = { has_trait = zealous }
+				# 		capital_county.faith ?= {
+				# 			NOT = {
+				# 				has_doctrine_parameter = unreformed
+				# 			}
+				# 		}
+				# 		# exists = global_var:war_supporters_faith
+						
+				# 	}
+				# 	set_character_faith_with_conversion = scope:attacker.var:supporters_faith
+				# 	scope:attacker = {
+				# 		remove_variable = supporters_faith
+				# 	}
+				# 	# remove_variable = scope:attacker.var:supporters_faith
+				# 	# set_character_faith_with_conversion = global_var:war_supporters_faith
+				# 	# remove_global_variable = war_supporters_faith
+				# }
 				# else_if = {
 				# 	limit = {
 				# 		NOT = { exists = global_var:war_supporters_faith }
