@@ -143,10 +143,10 @@
 				add_gold = 200
 				every_sub_realm_county = {
 					change_county_control = 100
-					add_county_modifier = {
-						modifier = court_chaplain_county_conversion_support_modifier
-						years = 3
-					}
+					# add_county_modifier = {
+					# 	modifier = court_chaplain_county_conversion_support_modifier
+					# 	years = 3
+					# }
 					random_list = {
 						75 = {}
 						25 = {
