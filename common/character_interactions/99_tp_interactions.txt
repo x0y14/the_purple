@@ -69,7 +69,7 @@
 				}
 				scope:actor = {
 					any_character_struggle = {
-						involvement = involved
+						involvement = interloper
 						is_struggle_type = byzantine_struggle
 					}
 				}

@@ -426,6 +426,8 @@
 				interloper_parameters = {
 					# 聖戦の要求レベルが１つ下がる
 					# cb_lower_piety_level_requirement = yes
+
+					unlocks_incite_revolts_interaction = yes
 				}
 				interloper_character_modifier = {
 					# 税金
@@ -621,6 +623,9 @@
 					# general_opinion = -5
 				}
 				#### 侵入
+				interloper_parameters = {
+					unlocks_incite_revolts_interaction = yes
+				}
 				#### 無関係
 			}
 
