@@ -27,7 +27,7 @@
 
 	on_join = {}
 
-	start_phase = struggle_byzantium_phase_decay
+	start_phase = struggle_byzantium_phase_hostility
 
 	phase_list = {
 		struggle_byzantium_phase_prosperity = {
@@ -444,6 +444,9 @@
 				struggle_byzantium_phase_decay = {
 					catalysts = {
 						catalyst_passing_of_time = minimal_struggle_catalyst_gain
+						
+						catalyst_basileus_was_deposed_tp = minimal_struggle_catalyst_gain
+						catalyst_support_for_new_basileus_tp = minimal_struggle_catalyst_gain
 					}
 				}
 				struggle_byzantium_ending_phase_collapse = {
@@ -452,6 +455,14 @@
 					}
 				}
 			}
+
+			# todo
+			# - 支援戦争格安
+			# - 支援戦争クールダウン減少
+			# - 他宗教の意見すごくマイナス
+			# - 侵入者がより戦争しやすく
+			# - 請求者戦争が頻繁に
+			# - 皇帝が退位させられるとフェイズをよくする
 
 			war_effects = {
 				name = WAR_EFFECTS_NAME

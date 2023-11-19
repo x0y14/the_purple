@@ -48,6 +48,12 @@
  # 戦争に負ける
  catalyst_basileus_lost_at_war_tp: "[GetTitleByKey('e_byzantium').GetHolder.GetName] lost at War"
  catalyst_basileus_lost_at_war_tp_desc: "$catalyst_basileus_lost_at_war_tp$"
+ # 皇帝強制退位
+ catalyst_basileus_was_deposed_tp: "[GetTitleByKey('e_byzantium').GetHolder.GetName] was deposed"
+ catalyst_basileus_was_deposed_tp_desc: "$catalyst_basileus_was_deposed_tp$"
+ # 新たな皇帝に対する支持
+ catalyst_support_for_new_basileus_tp: "Support for new basileus"
+ catalyst_support_for_new_basileus_tp_desc: "$catalyst_support_for_new_basileus_tp$"
 
  ## Interaction
  fp3_request_turkic_invasion_interaction_tp: "$fp3_request_turkic_invasion_interaction$"

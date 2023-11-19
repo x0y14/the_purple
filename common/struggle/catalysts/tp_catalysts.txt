@@ -16,3 +16,9 @@ catalyst_yearly_basileus_leaning_gain_tp = {}
 ### Title
 catalyst_gain_claim_on_title_tp = {}
 catalyst_usurp_title_tp = {}
+
+### Civil
+# 皇帝強制退位
+catalyst_basileus_was_deposed_tp = {}
+# 新たな皇帝に対する支持
+catalyst_support_for_new_basileus_tp = {}
