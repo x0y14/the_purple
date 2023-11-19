@@ -142,7 +142,7 @@ tp_byzantiune_struggle_region = {
 		tp_e_byzantium
 		tp_k_africa
 		tp_k_egypt
-		tp_k_jerusalem
-		tp_k_syria
+		# tp_k_jerusalem
+		# tp_k_syria
 	}
 }
