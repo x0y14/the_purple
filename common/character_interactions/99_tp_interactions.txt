@@ -1084,7 +1084,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 
 		# zealous
 		modifier = {
-			factor = 1.5
+			add = 50
 			scope:actor = {
 				OR = {
 					has_trait = pilgrim
@@ -1093,6 +1093,17 @@ fp3_request_turkic_invasion_interaction_tp = {
 					has_trait = zealous
 				}
 			}
+		}
+
+		# phase
+		modifier = {
+			add = 50
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_decay }
+		}
+		# phase
+		modifier = {
+			add = 100
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_hostility }
 		}
 	}
 }

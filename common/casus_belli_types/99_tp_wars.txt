@@ -36,9 +36,27 @@
 	}
 
 	on_victory = {
+		# hidden_effect = {
+		# 	create_character = {
+		# 		age = { 20 30 }
+		# 		employer = scope:attacker
+		# 		random_traits = yes
+		# 		culture = culture:turkish
+		# 		faith = scope:attacker.faith
+		# 		dynasty = generate
+		# 		gender_female_chance = 0
+		# 		save_scope_as = tmp_beneficiary
+		# 	}
+		# 	scope:tmp_beneficiary = {
+		# 		add_trait = athletic
+		# 		add_trait = zealous
+		# 	}
+		# }
+		
 		scope:attacker = { show_pow_release_message_effect = yes }
 		scope:attacker = {
 			# add_to_list = invasion_beneficiary_candidates
+			# scope:tmp_beneficiary = { add_to_list = invasion_beneficiary_candidates }
 			every_courtier = {
 				limit = {
 					is_physically_able = yes
@@ -181,10 +199,46 @@
 						name = turkic_tribal_event_troops
 					}
 				}
-				set_character_faith_with_conversion = scope:attacker.var:supporters_faith
-				scope:attacker = {
-						remove_variable = supporters_faith
+				# 支援者宗教が存在するけど、蛮族
+				if = {
+					limit = {
+						AND = {
+							exists = scope:attacker.var:supporters_faith
+							scope:attacker.var:supporters_faith = {
+								has_doctrine_parameter = unreformed
+							}
+						}
+					}
+					set_character_faith_with_conversion = faith:ashari
+					scope:attacker = {
+							remove_variable = supporters_faith
+					}
 				}
+				# 支援者宗教が存在する蛮族でない
+				if = {
+					limit = {
+						AND = {
+							exists = scope:attacker.var:supporters_faith
+							NOT = {
+								scope:attacker.var:supporters_faith = {
+									has_doctrine_parameter = unreformed
+								}
+							}
+						}
+					}
+					set_character_faith_with_conversion = scope:attacker.var:supporters_faith
+					scope:attacker = {
+							remove_variable = supporters_faith
+					}
+				}
+				# 支援者の宗教データ存在しない
+				if = {
+					limit = {
+						NOT = { exists = scope:attacker.var:supporters_faith }
+					}
+					set_character_faith_with_conversion = faith:ashari
+				}
+				# 襲撃可能
 				dynasty = {
 					add_dynasty_modifier = {
 						modifier = tp_legacy_of_nomad_modifier
