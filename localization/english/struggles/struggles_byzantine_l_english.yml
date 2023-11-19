@@ -73,8 +73,8 @@
  struggle_parameter_less_cooldown_incursions_vs_basileus: "Shorter The #V $fp3_request_turkic_invasion_interaction_tp$#! [interaction|E] cooldowns"
 
  # Modifiers
- tp_basileus_ai_war_chance_modifier: "Restoration of control"
- tp_basileus_ai_war_chance_modifier_desc: "$tp_basileus_ai_war_chance_modifier$ DESC HERE"
+ tp_struggle_basileus_super_suspicious_modifier: "$fp3_struggle_caliph_super_suspicious_modifier$"
+ tp_struggle_basileus_super_suspicious_modifier_desc: "$fp3_struggle_caliph_super_suspicious_modifier_desc$"
  
  # game concept
  game_concept_byzantine_struggle_desc:0 "TODO GameConcept ByzantineStruggle HERE"

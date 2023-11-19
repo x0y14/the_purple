@@ -19,13 +19,13 @@
 # 	}
 # }
 
-tp_basileus_ai_war_chance_up_effect = {
-	if = {
-		limit = {
-			has_title = title:e_byzantium
-		}
-		add_character_modifier = {
-			modifier = tp_basileus_ai_war_chance_modifier
-		}
-	}
-}
+# tp_basileus_ai_war_chance_up_effect = {
+# 	if = {
+# 		limit = {
+# 			has_title = title:e_byzantium
+# 		}
+# 		add_character_modifier = {
+# 			modifier = tp_struggle_basileus_super_suspicious_modifier
+# 		}
+# 	}
+# }
