@@ -41,5 +41,8 @@ tp_succession.0001 = {
 		add_character_modifier = {
 			modifier = fp3_struggle_caliph_super_suspicious_modifier
 		}
+		add_character_modifier = {
+			modifier = tp_basileus_ai_war_chance_modifier
+		}
 	}
 }
