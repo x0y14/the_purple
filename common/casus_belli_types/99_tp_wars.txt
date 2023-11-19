@@ -35,28 +35,29 @@
 		}
 	}
 
+	on_declaration = {
+		hidden_effect = {
+			create_character = {
+				age = { 20 30 }
+				employer = scope:attacker
+				random_traits = yes
+				culture = culture:turkish
+				faith = scope:attacker.faith
+				dynasty = generate
+				gender_female_chance = 0
+				save_scope_as = tmp_beneficiary
+			}
+			scope:tmp_beneficiary = {
+				add_trait = athletic
+				add_trait = zealous
+			}
+		}
+	}
+
 	on_victory = {
-		# hidden_effect = {
-		# 	create_character = {
-		# 		age = { 20 30 }
-		# 		employer = scope:attacker
-		# 		random_traits = yes
-		# 		culture = culture:turkish
-		# 		faith = scope:attacker.faith
-		# 		dynasty = generate
-		# 		gender_female_chance = 0
-		# 		save_scope_as = tmp_beneficiary
-		# 	}
-		# 	scope:tmp_beneficiary = {
-		# 		add_trait = athletic
-		# 		add_trait = zealous
-		# 	}
-		# }
-		
 		scope:attacker = { show_pow_release_message_effect = yes }
 		scope:attacker = {
 			# add_to_list = invasion_beneficiary_candidates
-			# scope:tmp_beneficiary = { add_to_list = invasion_beneficiary_candidates }
 			every_courtier = {
 				limit = {
 					is_physically_able = yes
@@ -215,7 +216,7 @@
 					}
 				}
 				# 支援者宗教が存在する蛮族でない
-				if = {
+				else_if = {
 					limit = {
 						AND = {
 							exists = scope:attacker.var:supporters_faith
@@ -232,7 +233,7 @@
 					}
 				}
 				# 支援者の宗教データ存在しない
-				if = {
+				else_if = {
 					limit = {
 						NOT = { exists = scope:attacker.var:supporters_faith }
 					}

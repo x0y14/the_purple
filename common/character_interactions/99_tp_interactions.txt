@@ -539,6 +539,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 			# }
 			is_independent_ruler = yes
 			is_ai = yes
+			NOT = { scope:actor.faith = scope:recipient.faith }
 		}
 		NOT = { scope:actor = scope:recipient }
 	}
