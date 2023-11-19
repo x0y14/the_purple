@@ -487,6 +487,9 @@
 						catalyst_usurp_title_tp = medium_struggle_catalyst_gain
 
 						catalyst_raided_involved = medium_struggle_catalyst_gain
+
+						# 僭称者の出現
+						catalyst_emergence_of_pretenders_tp = medium_struggle_catalyst_gain
 					}
 				}
 			}
