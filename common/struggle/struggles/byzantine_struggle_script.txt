@@ -288,6 +288,8 @@
 						catalyst_raided_involved = medium_struggle_catalyst_gain
 						# 不満
 						catalyst_complaints_against_basileus_tp = medium_struggle_catalyst_gain
+						# 僭称者の出現
+						catalyst_emergence_of_pretenders_tp = monumental_struggle_catalyst_gain
 					}
 				}
 			}
@@ -305,9 +307,9 @@
 				}
 				involved_character_modifier = {
 					# 防衛側アドバンテージ低下
-					defender_advantage = -25
-					attacker_advantage = -25
-					# levy_size = -0.1
+					defender_advantage = -100
+					# attacker_advantage = -25
+					levy_size = -0.1
 				}
 
 				#### 侵入
@@ -322,6 +324,8 @@
 					involved_or_interloper_wars_in_struggle_region_cheaper_costs = yes
 					# 国境紛争の許可
 					# unlocks_border_raid_casus_belli = yes
+					# 皇帝に対する支援侵攻が安く
+					cheaper_incursions_vs_basileus = yes
 				}
 				interloper_character_modifier = {
 					# 傭兵雇用コストの削減
@@ -329,7 +333,7 @@
 					# 同じ文化の傭兵のコストが低下
 					same_culture_mercenary_hire_cost_mult = -0.5
 					# AIの戦争確率増加
-					ai_war_chance = 20
+					ai_war_chance = 10
 					# クールダウン増加
 					ai_war_cooldown = -5
 					# 攻撃側の優位性
@@ -373,6 +377,9 @@
 			culture_effects = {
 				name = CULTURE_EFFECTS_NAME
 				#### 共通
+				involved_character_modifier = {
+					opinion_of_different_culture = -50
+				}
 				#### 関係
 				#### 侵入
 				interloper_parameters = {
@@ -406,22 +413,14 @@
 					powerful_vassal_opinion = -15
 					# 封臣からの評価
 					vassal_opinion = -10
-					# 領民の評価
-					county_opinion_add = -30
-					# 税金
-					tax_mult = -0.25
-					# 成長度
-					development_growth_factor = -0.25
-					# 建設速度
-					# build_speed = 3
-					# 建設費用
-					# build_gold_cost = 3
-					# 月間領土コントロール
-					monthly_county_control_change_add = -5
 					# 月間プレステージ
 					monthly_prestige = -5
 					# 一般的な意見
 					# general_opinion = -10
+				}
+				involved_county_modifier = {
+					# 領民からの評価
+					county_opinion_add = -30
 				}
 				#### 侵入
 				interloper_parameters = {
@@ -429,6 +428,14 @@
 					# cb_lower_piety_level_requirement = yes
 				}
 				interloper_character_modifier = {
+					# 税金
+					tax_mult = 0.25
+					# 成長度
+					development_growth_factor = 0.25
+					# 建設速度
+					build_speed = -0.25
+					# 建設費用
+					build_gold_cost = -0.25
 				}
 				#### 無関係
 			}
@@ -522,10 +529,10 @@
 					# 開発度成長速度 N倍
 					development_growth_factor = 2
 					# 領民からの評価
-					county_opinion_add = -300
+					county_opinion_add = -70
 					defender_holding_advantage = 10
 
-					monthly_county_control_change_at_war_add = 0.5
+					monthly_county_control_change_at_war_add = -0.1
 					monthly_county_control_change_at_war_mult = 2.0
 				}
 
@@ -602,7 +609,7 @@
 					# 封臣からの評価
 					opinion_of_vassal = -100
 					#
-					powerful_vassal_opinion = -300
+					powerful_vassal_opinion = -70
 					# 月間プレステージ
 					# monthly_prestige = 
 					# 一般的な意見

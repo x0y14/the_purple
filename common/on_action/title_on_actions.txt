@@ -813,7 +813,7 @@ on_explicit_claim_gain = {
 			}
 		}
 		# -- the purple --
-		else_if = {
+		if = {
 			limit = {
 				NOT = { scope:transfer_type = flag:inheritance }
 				root = {
@@ -823,6 +823,7 @@ on_explicit_claim_gain = {
 					}
 				}
 				title:e_byzantium = { any_in_de_jure_hierarchy = { this = scope:title } }
+				NOT = { scope:title = title:e_byzantium }
 			}
 			root = {
 				every_character_struggle = {
@@ -835,6 +836,34 @@ on_explicit_claim_gain = {
 					}
 					activate_struggle_catalyst = {
 						catalyst = catalyst_gain_claim_on_title_tp
+						character = root
+					}
+				}
+			}
+		}
+		# 帝位
+		if = {
+			limit = {
+				NOT = { scope:transfer_type = flag:inheritance }
+				root = {
+					any_character_struggle = {
+						is_struggle_type = byzantine_struggle
+						involvement = involved
+					}
+				}
+				scope:title = title:e_byzantium
+			}
+			root = {
+				every_character_struggle = {
+					involvement = involved
+					limit = {
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_emergence_of_pretenders_tp
+							CHAR = root
+						}
+					}
+					activate_struggle_catalyst = {
+						catalyst = catalyst_emergence_of_pretenders_tp
 						character = root
 					}
 				}

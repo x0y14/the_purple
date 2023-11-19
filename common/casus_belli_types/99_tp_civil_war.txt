@@ -81,7 +81,6 @@ claimant_faction_war = {
 			}
 		}
 		# ----------------
-
 		scope:attacker = { show_pow_release_message_effect = yes }
 
 		#EP2 Accolade glory gain from winning against higher ranked enemy
@@ -161,6 +160,41 @@ claimant_faction_war = {
 			add_dread = medium_dread_gain
 			add_achievement_flag_effect = { FLAG = achievement_know_your_place_flag }
 		}
+		# -- the purple --
+		# 皇帝への不満
+		if = {
+			limit = {
+				scope:defender = {
+					has_title = title:e_byzantium
+				}
+			}
+			scope:attacker = {
+				every_character_war = {
+					limit = {
+						is_attacker = scope:attacker
+					}
+					every_war_attacker = {
+						limit = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_complaints_against_basileus_tp
+								involvement = involved
+							}
+							# NOT = { this = scope:attacker }
+							is_vassal_or_below_of = title:e_byzantium.holder
+						}
+						save_temporary_scope_as = anti_basileus_er
+						every_character_struggle = {
+							involvement = involved
+							activate_struggle_catalyst = {
+								catalyst = catalyst_complaints_against_basileus_tp
+								character = scope:anti_basileus_er
+							}
+						}
+					}
+				}
+			}
+		}
+		# ----------------
 	}
 
 	check_attacker_inheritance_validity = no
@@ -223,6 +257,34 @@ depose_war = {
 				}
 			}
 		}
+
+		# -- the purple --
+		# 退位支援者
+		scope:attacker = {
+			every_character_war = {
+				limit = {
+					is_attacker = scope:attacker	
+				}
+				every_war_attacker = {
+					limit = {
+						any_character_struggle = {
+							phase_has_catalyst = catalyst_basileus_was_deposed_tp
+							involvement = involved
+						}
+						NOT = { this = scope:attacker }
+					}
+					save_temporary_scope_as = anti_basileus_er
+					every_character_struggle = {
+						involvement = involved
+						activate_struggle_catalyst = {
+							catalyst = catalyst_basileus_was_deposed_tp
+							character = scope:anti_basileus_er
+						}
+					}
+				}
+			}
+		}
+		# ----------------
 	}
 
 	on_victory_desc = {
@@ -252,34 +314,6 @@ depose_war = {
 	}
 
 	on_victory = {
-		# -- the purple --
-		# 退位支援者
-		scope:attacker = {
-			every_character_war = {
-				limit = {
-					is_attacker = scope:attacker	
-				}
-				every_war_attacker = {
-					limit = {
-						any_character_struggle = {
-							phase_has_catalyst = catalyst_basileus_was_deposed_tp
-							involvement = involved
-						}
-						NOT = { this = scope:attacker }
-					}
-					save_temporary_scope_as = anti_basileus_er
-					every_character_struggle = {
-						involvement = involved
-						activate_struggle_catalyst = {
-							catalyst = catalyst_basileus_was_deposed_tp
-							character = scope:anti_basileus_er
-						}
-					}
-				}
-			}
-		}
-		# ----------------
-
 		scope:attacker = { show_pow_release_message_effect = yes }
 		hidden_effect = {
 			scope:attacker = {
@@ -539,7 +573,6 @@ liberty_faction_war = {
 				}
 			}
 		}
-
 		# -- the purple --
 		# 皇帝への不満
 		if = {
@@ -658,6 +691,41 @@ liberty_faction_war = {
 			add_achievement_flag_effect = { FLAG = achievement_know_your_place_flag }
 		}
 		on_lost_faction_revolt_war = yes
+		# -- the purple --
+		# 皇帝への不満
+		if = {
+			limit = {
+				scope:defender = {
+					has_title = title:e_byzantium
+				}
+			}
+			scope:attacker = {
+				every_character_war = {
+					limit = {
+						is_attacker = scope:attacker
+					}
+					every_war_attacker = {
+						limit = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_complaints_against_basileus_tp
+								involvement = involved
+							}
+							# NOT = { this = scope:attacker }
+							is_vassal_or_below_of = title:e_byzantium.holder
+						}
+						save_temporary_scope_as = anti_basileus_er
+						every_character_struggle = {
+							involvement = involved
+							activate_struggle_catalyst = {
+								catalyst = catalyst_complaints_against_basileus_tp
+								character = scope:anti_basileus_er
+							}
+						}
+					}
+				}
+			}
+		}
+		# ----------------
 	}
 
 	on_invalidated_desc = msg_invalidate_war_title
