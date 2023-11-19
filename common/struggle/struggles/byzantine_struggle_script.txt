@@ -431,11 +431,11 @@
 					# 税金
 					tax_mult = 0.25
 					# 成長度
-					development_growth_factor = 0.25
-					# 建設速度
-					build_speed = -0.25
-					# 建設費用
-					build_gold_cost = -0.25
+					# development_growth_factor = 0.25
+					# # 建設速度
+					# build_speed = -0.25
+					# # 建設費用
+					# build_gold_cost = -0.25
 				}
 				#### 無関係
 			}
@@ -516,9 +516,9 @@
 				involved_character_modifier = {
 					# 防衛側アドバンテージ
 					advantage = 50
-					levy_size = 2.0
+					levy_size = 0.5
 					levy_reinforcement_rate_same_faith = 2.0
-					garrison_size = 2.0
+					garrison_size = 0.5
 					# AIの戦争確率減少
 					# ai_war_chance = 50
 					# クールダウン増加
