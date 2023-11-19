@@ -2,7 +2,6 @@
 	icon = horse_dead_positive
 	# This modifier gives access to raiding & overseas raiding.
 	raid_speed = 0.5
-	embarkation_cost_mult = -0.5
 }
 
 tp_struggle_basileus_super_suspicious_modifier = {
