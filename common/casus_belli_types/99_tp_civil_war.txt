@@ -50,25 +50,31 @@ claimant_faction_war = {
 	on_victory = {
 		# -- the purple --
 		# 請求者反乱に参加した他の封臣は、新たな皇帝を支持しているはず
-		scope:attacker = {
-			every_character_war = {
-				limit = {
-					is_attacker = scope:attacker	
-				}
-				every_war_attacker = {
+		if = {
+			limit = { 
+				title:e_byzantium = { is_in_list = target_titles }
+			}
+			scope:attacker = {
+				every_character_war = {
 					limit = {
-						any_character_struggle = {
-							phase_has_catalyst = catalyst_support_for_new_basileus_tp
-							involvement = involved
-						}
-						NOT = { this = scope:attacker.joined_faction.special_character }
+						is_attacker = scope:attacker	
 					}
-					save_temporary_scope_as = new_basileus_supporter
-					every_character_struggle = {
-						involvement = involved
-						activate_struggle_catalyst = {
-							catalyst = catalyst_support_for_new_basileus_tp
-							character = scope:new_basileus_supporter
+					every_war_attacker = {
+						limit = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_support_for_new_basileus_tp
+								involvement = involved
+							}
+							NOT = { this = scope:attacker.joined_faction.special_character }
+							is_vassal_or_below_of = title:e_byzantium.holder
+						}
+						save_temporary_scope_as = new_basileus_supporter
+						every_character_struggle = {
+							involvement = involved
+							activate_struggle_catalyst = {
+								catalyst = catalyst_support_for_new_basileus_tp
+								character = scope:new_basileus_supporter
+							}
 						}
 					}
 				}
@@ -536,25 +542,33 @@ liberty_faction_war = {
 
 		# -- the purple --
 		# 皇帝への不満
-		scope:attacker = {
-			every_character_war = {
-				limit = {
-					is_attacker = scope:attacker	
+		if = {
+			limit = {
+				scope:defender = {
+					has_title = title:e_byzantium
 				}
-				every_war_attacker = {
+			}
+			scope:attacker = {
+				every_character_war = {
 					limit = {
-						any_character_struggle = {
-							phase_has_catalyst = catalyst_complaints_against_basileus_tp
-							involvement = involved
-						}
-						NOT = { this = scope:attacker }
+						is_attacker = scope:attacker
 					}
-					save_temporary_scope_as = anti_basileus_er
-					every_character_struggle = {
-						involvement = involved
-						activate_struggle_catalyst = {
-							catalyst = catalyst_complaints_against_basileus_tp
-							character = scope:anti_basileus_er
+					every_war_attacker = {
+						limit = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_complaints_against_basileus_tp
+								involvement = involved
+							}
+							# NOT = { this = scope:attacker }
+							is_vassal_or_below_of = title:e_byzantium.holder
+						}
+						save_temporary_scope_as = anti_basileus_er
+						every_character_struggle = {
+							involvement = involved
+							activate_struggle_catalyst = {
+								catalyst = catalyst_complaints_against_basileus_tp
+								character = scope:anti_basileus_er
+							}
 						}
 					}
 				}
