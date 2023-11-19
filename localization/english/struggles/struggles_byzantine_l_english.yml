@@ -54,7 +54,9 @@
  # 新たな皇帝に対する支持
  catalyst_support_for_new_basileus_tp: "Support for new basileus"
  catalyst_support_for_new_basileus_tp_desc: "$catalyst_support_for_new_basileus_tp$"
-
+ # 皇帝への不満
+ catalyst_complaints_against_basileus_tp: "Complaints against Basileus"
+ catalyst_complaints_against_basileus_tp_desc: "$catalyst_complaints_against_basileus_tp$"
  ## Interaction
  fp3_request_turkic_invasion_interaction_tp: "$fp3_request_turkic_invasion_interaction$"
  fp3_request_turkic_invasion_interaction_tp_desc: "$fp3_request_turkic_invasion_interaction_desc$"
@@ -64,6 +66,7 @@
 
  # Effects
  struggle_parameter_cheaper_incursions_vs_basileus: "The #V $fp3_request_turkic_invasion_interaction_tp$#! [interaction|E] is #P 50%#! cheaper against the Basileus"
+ struggle_parameter_less_cooldown_incursions_vs_basileus: "Shorter The #V $fp3_request_turkic_invasion_interaction_tp$#! [interaction|E] cooldowns"
  
  # game concept
  game_concept_byzantine_struggle_desc:0 "TODO GameConcept ByzantineStruggle HERE"

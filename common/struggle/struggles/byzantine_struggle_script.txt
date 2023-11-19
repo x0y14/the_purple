@@ -441,7 +441,7 @@
 			future_phases = {
 				struggle_byzantium_phase_decay = {
 					catalysts = {
-						catalyst_passing_of_time = major_struggle_catalyst_gain
+						catalyst_passing_of_time = medium_struggle_catalyst_gain
 						# 皇帝位
 						catalyst_basileus_was_deposed_tp = minimal_struggle_catalyst_gain
 						catalyst_support_for_new_basileus_tp = massive_struggle_catalyst_gain
@@ -462,7 +462,9 @@
 						# 戦争を仕掛けられる
 						catalyst_basileus_was_declared_war_tp = major_struggle_catalyst_gain
 						# 戦争敗北
-						catalyst_basileus_lost_at_war_tp = major_struggle_catalyst_gain
+						catalyst_basileus_lost_at_war_tp = massive_struggle_catalyst_gain
+						# 不満
+						catalyst_complaints_against_basileus_tp = medium_struggle_catalyst_gain
 
 						# 皇帝の死
 						catalyst_basileus_died_naturally_tp = major_struggle_catalyst_gain
@@ -505,6 +507,8 @@
 					# struggle_siege_capture_chance_add_50 = yes
 					# 皇帝に対する支援侵攻が安く
 					cheaper_incursions_vs_basileus = yes
+					# 皇帝に対する支援侵攻のクールダウン短く
+					less_cooldown_incursions_vs_basileus = yes
 				}
 				interloper_character_modifier = {
 					# 傭兵雇用コストの削減

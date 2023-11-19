@@ -22,3 +22,5 @@ catalyst_usurp_title_tp = {}
 catalyst_basileus_was_deposed_tp = {}
 # 新たな皇帝に対する支持
 catalyst_support_for_new_basileus_tp = {}
+# 皇帝への不満
+catalyst_complaints_against_basileus_tp = {}
