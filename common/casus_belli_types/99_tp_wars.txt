@@ -152,7 +152,7 @@
 		scope:defender = {
 			add_character_modifier = {
 				modifier = fp3_incursion_instability
-				years = 20
+				years = 5
 			}
 		}
 		

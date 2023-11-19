@@ -1063,7 +1063,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 
 		# faith diff
 		modifier = {
-			add = 25
+			add = 15
 			scope:actor.faith = {
 				faith_hostility_level = {
 					target = scope:recipient.faith
@@ -1073,7 +1073,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 		}
 		# evil
 		modifier = {
-			add = 50
+			add = 25
 			scope:actor.faith = {
 				faith_hostility_level = {
 					target = scope:recipient.faith
@@ -1084,7 +1084,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 
 		# zealous
 		modifier = {
-			add = 50
+			add = 35
 			scope:actor = {
 				OR = {
 					has_trait = pilgrim
@@ -1097,12 +1097,12 @@ fp3_request_turkic_invasion_interaction_tp = {
 
 		# phase
 		modifier = {
-			add = 50
+			add = 25
 			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_decay }
 		}
 		# phase
 		modifier = {
-			add = 100
+			add = 50
 			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_hostility }
 		}
 	}
