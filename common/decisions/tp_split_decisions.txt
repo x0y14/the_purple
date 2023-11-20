@@ -1,0 +1,88 @@
+﻿### Bulgaria
+# Approve Bulgaria.
+tp_approve_bulgaria_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+
+	desc = tp_approve_bulgaria_decision_desc
+	selection_tooltip = tp_approve_bulgaria_decision_tooltip
+
+	major = yes
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		has_title = title:e_byzantium
+
+		NOT = {  #Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:tp_approve_bulgaria_decision
+			}
+		}
+
+		OR = {
+			government_has_flag = government_is_feudal
+			government_has_flag = government_is_republic
+			government_has_flag = government_is_clan
+		}
+
+		AND = {
+			exists = title:k_bulgaria.holder
+			title:k_bulgaria.holder = { is_independent_ruler = yes }
+		}
+	}
+
+	is_valid = {
+		AND = {
+			NOT = { title:k_bulgaria.holder = title:e_byzantium.holder }
+			NOT = { title:k_bulgaria.holder = { is_vassal_or_below_of = title:e_byzantium.holder } }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_independent_ruler = yes
+
+		AND = {
+			title:e_byzantium.holder = { faith = faith:orthodox }
+			title:k_bulgaria.holder = { faith = faith:orthodox }
+		}
+
+		AND = {
+			title:e_byzantium.holder = { is_at_war = no }
+			title:k_bulgaria.holder = { is_at_war = no }
+		}
+	}
+
+	effect = {
+		custom_tooltip = tp_approve_bulgaria_decision_effect_tooltip
+		# show_as_tooltip = {
+		# 	tp_elevate_bulgaria_to_empire_effect = yes
+		# }
+		tp_elevate_bulgaria_to_empire_effect = yes
+		# trigger_event = {
+		# 	id = roman_restoration.0003
+		# }
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:tp_approve_bulgaria_decision
+			}
+			set_global_variable = {
+				name = tp_approve_bulgaria_decision
+				value = root
+			}
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

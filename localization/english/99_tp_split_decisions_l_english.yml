@@ -1,0 +1,8 @@
+﻿l_english:
+  ### Bulgaria
+  tp_approve_bulgaria_decision:0 "Approve Bulgaria"
+  tp_approve_bulgaria_decision_confirm:0 "Approve"
+  tp_approve_bulgaria_decision_tooltip:0 "Bulgaria is recognised as an empire."
+  tp_approve_bulgaria_decision_desc:0 "tp_approve_bulgaria_decision DESC HERE"
+  tp_approve_bulgaria_decision_tt:0 "tp_approve_bulgaria_decision tt HERE"
+  tp_approve_bulgaria_decision_effect_tooltip:0 "tp_approve_bulgaria_decision_effect_tooltip HERE"
