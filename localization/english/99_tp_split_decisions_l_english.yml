@@ -1,8 +1,33 @@
 ﻿l_english:
+  ### Template
+  # Independence
+  # tp_independence_TITLE_decision:0 "Make TITLE independent"
+  # tp_independence_TITLE_decision_confirm:0 "Independent"
+  # tp_independence_TITLE_decision_tooltip:0 "TITLE becomes independent from the Empire"
+  # tp_independence_TITLE_decision_decs:0 "tp_independence_TITLE_decision DESC HERE"
+  # tp_independence_TITLE_decision_tt:0 "tp_independence_TITLE_decision tt HERE"
+  # tp_independence_TITLE_decision_effect_tooltip:0 "tp_independence_TITLE_decision effect tooltip HERE"
+  # Recovery
+  # tp_recovery_TITLE_decision:0 "Recovery TITLE"
+  # tp_recovery_TITLE_decision_confirm:0 "Recovery"
+  # tp_recovery_TITLE_decision_tooltip:0 "TITLE becomes an imperial territory again"
+  # tp_recovery_TITLE_decision_desc:0 "tp_recovery_TITLE_decision DESC HERE"
+  # tp_recovery_TITLE_decision_tt:0 "tp_recovery_TITLE_decision tt HERE"
+  # tp_recovery_TITLE_decision_effect_tooltip:0 "tp_recovery_TITLE_decision effect tooltip HERE"
+
+
   ### Bulgaria
+  # Independence(Historical?)
   tp_approve_bulgaria_decision:0 "Approve Bulgaria"
   tp_approve_bulgaria_decision_confirm:0 "Approve"
   tp_approve_bulgaria_decision_tooltip:0 "Bulgaria is recognised as an empire."
   tp_approve_bulgaria_decision_desc:0 "tp_approve_bulgaria_decision DESC HERE"
   tp_approve_bulgaria_decision_tt:0 "tp_approve_bulgaria_decision tt HERE"
   tp_approve_bulgaria_decision_effect_tooltip:0 "tp_approve_bulgaria_decision_effect_tooltip HERE"
+  # Recovery
+  tp_recovery_bulgaria_decision:0 "Recovery Bulgaria"
+  tp_recovery_bulgaria_decision_confirm:0 "Recovery"
+  tp_recovery_bulgaria_decision_tooltip:0 "Bulgaria becomes an imperial territory again"
+  tp_recovery_bulgaria_decision_desc:0 "tp_recovery_bulgaria_decision DESC HERE"
+  tp_recovery_bulgaria_decision_tt:0 "tp_recovery_bulgaria_decision tt HERE"
+  tp_recovery_bulgaria_decision_effect_tooltip:0 "tp_recovery_bulgaria_decision effect tooltip HERE"

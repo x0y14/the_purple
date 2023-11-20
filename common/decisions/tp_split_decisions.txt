@@ -1,4 +1,98 @@
-﻿### Bulgaria
+﻿### TEMPLATE
+# tp_independent_TITLE_only_create_decision = {
+# 	hidden_effect = {
+# 		title:k_TITLE = {
+# 			add_to_list = kingdom_empire
+# 			save_scope_as = old_title
+# 			create_dynamic_title = {
+# 				tier = empire
+# 				name = NEW_CREATED_TITLE_NAME
+# 			}
+# 			scope:old_title = { set_de_jure_liege_title = scope:new_title }
+# 			scope:new_title = {
+# 				add_to_list = new_empire_list
+# 				set_coa = scope:old_title
+# 				set_color_from_title = scope:old_title
+# 				set_capital_county = scope:old_title.title_capital_county
+# 				save_scope_as = title_e_TITLE
+# 			}
+# 		}
+# 	}
+# }
+
+# tp_recovery_TITLE_decision = {
+# 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+# 	desc = tp_recovery_TITLE_decision_desc
+# 	selection_tooltip = tp_recovery_TITLE_decision_tooltip
+
+# 	major = yes
+
+# 	ai_check_interval = 120
+
+# 	is_shown = {
+# 		is_ruler = yes
+# 		is_landed = yes
+# 		has_title = title:e_byzantium
+
+# 		# 独立済みであること
+# 		is_target_in_global_variable_list = {
+# 			name = unavailable_unique_decisions
+# 			target = flag:tp_independent_TITLE_decision
+# 		}
+
+# 		OR = {
+# 			government_has_flag = government_is_feudal
+# 			government_has_flag = government_is_republic
+# 			government_has_flag = government_is_clan
+# 		}
+# 	}
+
+# 	is_valid = {
+# 		AND = {
+# 			exists = title:k_TITLE.holder
+# 			OR = {
+# 				title:e_byzantium.holder = title:k_TITLE.holder
+# 				title:k_TITLE.holder = { is_vassal_or_below_of = title:e_byzantium.holder }
+# 			}
+# 		}
+# 	}
+
+# 	is_valid_showing_failures_only = {
+# 		is_capable_adult = yes
+# 		is_imprisoned = no
+# 		is_independent_ruler = yes
+
+# 		title:e_byzantium.holder = { is_at_war = no }
+# 	}
+
+# 	effect = {
+# 		custom_tooltip = tp_recovery_TITLE_decision_effect_tooltip
+
+# 		tp_recovery_TITLE_decision = yes
+
+# 		hidden_effect = {
+# 			add_to_global_variable_list = {
+# 				name = unavailable_unique_decisions
+# 				target = flag:tp_recovery_TITLE_decision
+# 			}
+# 			set_global_variable = {
+# 				name = tp_recovery_TITLE_decision
+# 				value = root
+# 			}
+# 		}
+# 	}
+
+# 	ai_potential = {
+# 		always = no
+# 	}
+
+# 	ai_will_do = {
+# 		base = 0
+# 	}
+# }
+
+
+### Bulgaria
 # Approve Bulgaria.
 tp_approve_bulgaria_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
@@ -73,6 +167,84 @@ tp_approve_bulgaria_decision = {
 			}
 			set_global_variable = {
 				name = tp_approve_bulgaria_decision
+				value = root
+			}
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+
+tp_recovery_bulgaria_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	desc = tp_recovery_bulgaria_decision_desc
+	selection_tooltip = tp_recovery_bulgaria_decision_tooltip
+
+	major = yes
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		has_title = title:e_byzantium
+
+		# 独立済みであること
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:tp_approve_bulgaria_decision
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:tp_recovery_bulgaria_decision
+			}
+		}
+
+		OR = {
+			government_has_flag = government_is_feudal
+			government_has_flag = government_is_republic
+			government_has_flag = government_is_clan
+		}
+	}
+
+	is_valid = {
+		AND = {
+			exists = title:k_bulgaria.holder
+			OR = {
+				title:e_byzantium.holder = title:k_bulgaria.holder
+				title:k_bulgaria.holder = { is_vassal_or_below_of = title:e_byzantium.holder }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_independent_ruler = yes
+
+		title:e_byzantium.holder = { is_at_war = no }
+	}
+
+	effect = {
+		custom_tooltip = tp_recovery_bulgaria_decision_effect_tooltip
+
+		tp_recovery_bulgaria_effect = yes
+
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:tp_recovery_bulgaria_decision
+			}
+			set_global_variable = {
+				name = tp_recovery_bulgaria_decision
 				value = root
 			}
 		}
