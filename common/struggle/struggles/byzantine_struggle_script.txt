@@ -331,15 +331,15 @@
 					# 傭兵雇用コストの削減
 					mercenary_hire_cost_mult = -0.25
 					# 同じ文化の傭兵のコストが低下
-					same_culture_mercenary_hire_cost_mult = -0.5
+					same_culture_mercenary_hire_cost_mult = -0.25
 					# AIの戦争確率増加
 					ai_war_chance = 10
 					# クールダウン増加
 					ai_war_cooldown = -5
 					# 攻撃側の優位性
-					attacker_advantage = 30
+					attacker_advantage = 20
 					#? 
-					led_by_owner_extra_advantage_add = 20
+					# led_by_owner_extra_advantage_add = 15
 				}
 				#### 無関係
 				uninvolved_parameters = {
@@ -457,7 +457,7 @@
 						catalyst_passing_of_time = medium_struggle_catalyst_gain
 						# 皇帝位
 						catalyst_basileus_was_deposed_tp = minimal_struggle_catalyst_gain
-						catalyst_support_for_new_basileus_tp = massive_struggle_catalyst_gain
+						catalyst_support_for_new_basileus_tp = monumental_struggle_catalyst_gain
 						# 後継者
 						catalyst_preferred_heir_tp = massive_struggle_catalyst_gain
 						# # 戦争を仕掛けられる

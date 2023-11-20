@@ -867,13 +867,24 @@ on_explicit_claim_gain = {
 						character = root
 					}
 				}
-				# もし敵対フェイズなら即時ライバル化
+				# もし衰退フェイズなら即時ライバル化
 				if = {
+					limit = {
+						struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_decay }
+					}
+					title:e_byzantium.holder = {
+						set_relation_rival = {
+							target = root
+							reason = rival_claimed_throne
+						}
+					}
+				}
+				else_if = {
 					limit = {
 						struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_hostility }
 					}
 					title:e_byzantium.holder = {
-						set_relation_rival = {
+						set_relation_nemesis = {
 							target = root
 							reason = rival_claimed_throne
 						}
