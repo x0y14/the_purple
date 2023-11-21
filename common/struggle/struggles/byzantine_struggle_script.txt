@@ -16,11 +16,10 @@
 	involvement_prerequisite_percentage = 0.5
 
 	on_start = {
-		trigger_event = {
-			on_action = fp2_iberian_struggle_starting_events
-		}
+		# Start the over-time catalysts.
+		trigger_event = neutral_struggle.0001
+		trigger_event = tp_yearly_struggle.0001
 	}
-
 	transition_state_duration = { months = 3 } # ?
 
 	on_change_phase = {}
@@ -267,11 +266,21 @@
 				struggle_byzantium_phase_opportunity = {
 					catalysts = {
 						catalyst_passing_of_time = minimal_struggle_catalyst_gain
-						catalyst_yearly_basileus_leaning_gain_tp = minimal_struggle_catalyst_gain
+						catalyst_yearly_basileus_leaning_gain_tp = catalyst_yearly_emperor_leaning_gain
+						### 継承
 						catalyst_preferred_heir_tp = medium_struggle_catalyst_gain
-						catalyst_basileus_won_at_war_tp = medium_struggle_catalyst_gain
-
-						catalyst_support_for_new_basileus_tp = massive_struggle_catalyst_gain
+						catalyst_support_for_new_basileus_tp = medium_struggle_catalyst_gain
+						### WAR
+						catalyst_basileus_won_at_war_tp = massive_struggle_catalyst_gain
+						### 関係
+						catalyst_became_friend_lover_with_character = medium_struggle_catalyst_gain
+						catalyst_became_best_friend_soulmate_with_very_important_character = major_struggle_catalyst_gain
+						catalyst_yearly_vassal_opinion_tp = catalyst_yearly_vassal_opinion_tp_gain
+						catalyst_yearly_ally_with_vassal_tp = catalyst_yearly_ally_with_vassal_tp_gain
+						### 領土
+						catalyst_new_building_in_city = minimal_struggle_catalyst_gain
+						catalyst_new_building_in_castle = minimal_struggle_catalyst_gain
+						# catalyst_new_building_in_temple = medium_struggle_catalyst_gain
 					}
 				}
 				struggle_byzantium_phase_hostility = {
@@ -457,14 +466,23 @@
 						catalyst_passing_of_time = medium_struggle_catalyst_gain
 						# 皇帝位
 						catalyst_basileus_was_deposed_tp = minimal_struggle_catalyst_gain
-						catalyst_support_for_new_basileus_tp = monumental_struggle_catalyst_gain
 						# 後継者
+						catalyst_support_for_new_basileus_tp = monumental_struggle_catalyst_gain
 						catalyst_preferred_heir_tp = massive_struggle_catalyst_gain
-						# # 戦争を仕掛けられる
-						# catalyst_basileus_was_declared_war_tp = minimal_struggle_catalyst_gain
 
-						# 戦争勝利
+						### 戦争
 						catalyst_basileus_won_at_war_tp = massive_struggle_catalyst_gain 
+
+						### 関係
+						catalyst_became_friend_lover_with_character = medium_struggle_catalyst_gain
+						catalyst_became_best_friend_soulmate_with_very_important_character = major_struggle_catalyst_gain
+						catalyst_yearly_vassal_opinion_tp = catalyst_yearly_vassal_opinion_tp_gain
+						catalyst_yearly_ally_with_vassal_tp = catalyst_yearly_ally_with_vassal_tp_gain
+
+						### 領土
+						catalyst_new_building_in_city = minimal_struggle_catalyst_gain
+						catalyst_new_building_in_castle = minimal_struggle_catalyst_gain
+						# catalyst_new_building_in_temple = medium_struggle_catalyst_gain
 					}
 				}
 				struggle_byzantium_ending_phase_collapse = {

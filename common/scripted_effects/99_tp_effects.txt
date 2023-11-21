@@ -62,7 +62,7 @@ tp_struggle_ending_collapse_effects = {
 			# resolve_title_and_vassal_change = scope:change
 
 			scope:powerful_vassal = {
-				make_claim_strong = title:e_byzantium
+				make_claim_weak = title:e_byzantium
 			}
 
 			# hidden_effect = {

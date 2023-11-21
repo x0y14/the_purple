@@ -25,3 +25,7 @@ catalyst_basileus_was_deposed_tp = {}
 catalyst_support_for_new_basileus_tp = {}
 # 皇帝への不満
 catalyst_complaints_against_basileus_tp = {}
+
+### Relation
+catalyst_yearly_vassal_opinion_tp = {}
+catalyst_yearly_ally_with_vassal_tp = {}

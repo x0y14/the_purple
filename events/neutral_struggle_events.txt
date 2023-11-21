@@ -1,0 +1,28 @@
+﻿namespace = tp_yearly_struggle
+
+tp_yearly_struggle.0001 = {
+	hidden = yes
+	scope = struggle
+
+	immediate = {
+		# Byzantine Struggle
+		if = {
+			limit = { phase_has_catalyst = catalyst_yearly_basileus_leaning_gain_tp }
+			activate_struggle_catalyst = catalyst_yearly_basileus_leaning_gain_tp
+		}
+		if = {
+			limit = { phase_has_catalyst = catalyst_yearly_vassal_opinion_tp }
+			activate_struggle_catalyst = catalyst_yearly_vassal_opinion_tp
+		}
+		if = {
+			limit = { phase_has_catalyst = catalyst_yearly_ally_with_vassal_tp }
+			activate_struggle_catalyst = catalyst_yearly_ally_with_vassal_tp
+		}
+
+		# Finally, queue the event up again for a year hence.
+		trigger_event = {
+			id = tp_yearly_struggle.0001
+			years = 1
+		}
+	}
+}

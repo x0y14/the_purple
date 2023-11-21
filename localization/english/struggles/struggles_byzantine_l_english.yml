@@ -19,8 +19,8 @@
 
  ## Catalysts
  # 毎年、皇帝の学習能力によって進捗を得る
- catalyst_yearly_basileus_leaning_gain_tp:0 "Yearly drift towards depending on Emperor's Learning Skil"
- catalyst_yearly_basileus_leaning_gain_tp_desc:0 "Yearly drift towards depending on Emperor's Learning Skil"
+ catalyst_yearly_basileus_leaning_gain_tp: "Yearly Draft: The intelligence of Basileus."
+ catalyst_yearly_basileus_leaning_gain_tp_desc: "Yearly Draft: The intelligence of Basileus."
  # 毎年、皇帝が戦争をしていた場合、進捗を得る
  tp_catalyst_yearly_emperor_at_war_desc:0 "Yearly drift towards if emperor at war"
  # 皇帝の死
@@ -60,6 +60,10 @@
  # 僭称者の出現
  catalyst_emergence_of_pretenders_tp: "Emergence of pretenders"
  catalyst_emergence_of_pretenders_tp_desc: "$catalyst_emergence_of_pretenders_tp$"
+
+ # 封臣との関係
+ catalyst_yearly_vassal_opinion_tp_desc: "Yearly Draft: Friendship with Vassals"
+ catalyst_yearly_ally_with_vassal_tp_desc: "Yearly Draft: Alliances with Vassals"
 
  ## Interaction
  fp3_request_turkic_invasion_interaction_tp: "$fp3_request_turkic_invasion_interaction$"
