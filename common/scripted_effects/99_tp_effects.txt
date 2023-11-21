@@ -31,6 +31,7 @@
 # }
 
 tp_struggle_ending_collapse_effects = {
+	custom_tooltip = tp_struggle_ending_collapse_start_war_tooltip
 	title:e_byzantium.holder = {
 		# 関係するすべての有力な封臣
 		every_powerful_vassal = {
@@ -49,57 +50,67 @@ tp_struggle_ending_collapse_effects = {
 
 			save_temporary_scope_as = powerful_vassal
 
-			# # 独立
-			create_title_and_vassal_change = {
-				type = independency
-				save_scope_as = change
-			}
-			change_liege_or_become_independent = {
-				CHANGE = scope:change
-				VASSAL = scope:powerful_vassal
-			}
-			resolve_title_and_vassal_change = scope:change
+			# 独立
+			# create_title_and_vassal_change = {
+			# 	type = independency
+			# 	save_scope_as = change
+			# }
+			# change_liege_or_become_independent = {
+			# 	CHANGE = scope:change
+			# 	VASSAL = scope:powerful_vassal
+			# }
+			# resolve_title_and_vassal_change = scope:change
 
 			scope:powerful_vassal = {
 				make_claim_strong = title:e_byzantium
 			}
 
+			# hidden_effect = {
+			# 	# 皇帝とネメシス状態になる
+			# 	title:e_byzantium.holder = {
+			# 		set_relation_nemesis = {
+			# 			target = scope:powerful_vassal
+			# 			reason = rival_claimed_throne
+			# 		}
+			# 	}
+			# }
+
 			hidden_effect = {
-				# 皇帝とネメシス状態になる
-				title:e_byzantium.holder = {
-					set_relation_nemesis = {
-						target = scope:powerful_vassal
-						reason = rival_claimed_throne
+				if = {
+					limit = {
+						exists = capital_province
+					}
+					spawn_army = {
+						men_at_arms = {
+							type = mubarizun
+							stacks = 50
+						}
+						location = capital_province
+						uses_supply = no
+						inheritable = no
+						name = tp_struggle_event_troops
 					}
 				}
 			}
 
-			if = {
-				limit = {
-					exists = capital_province
-				}
-				spawn_army = {
-					men_at_arms = {
-						type = mubarizun
-						stacks = 50
+			hidden_effect = {
+				random_list = {
+					70 = {
+						title:e_byzantium.holder = {
+							set_relation_rival = {
+								target = scope:powerful_vassal
+								reason = rival_claimed_throne
+							}
+						}
+						start_war = {
+							cb = tp_claim_cb
+							target = title:e_byzantium.holder
+							claimant = scope:powerful_vassal
+							target_title = title:e_byzantium
+						}
 					}
-					location = capital_province
-					uses_supply = no
-					inheritable = no
-					name = tp_struggle_event_troops
+					30 = {}
 				}
-			}
-
-			random_list = {
-				70 = {
-					start_war = {
-						cb = tp_claim_cb
-						target = title:e_byzantium.holder
-						claimant = scope:powerful_vassal
-						target_title = title:e_byzantium
-					}
-				}
-				30 = {}
 			}
 		}
 	}
