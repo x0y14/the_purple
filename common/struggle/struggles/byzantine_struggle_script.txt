@@ -27,7 +27,7 @@
 
 	on_join = {}
 
-	start_phase = struggle_byzantium_phase_hostility
+	start_phase = struggle_byzantium_phase_decay
 
 	phase_list = {
 		struggle_byzantium_phase_prosperity = {
