@@ -186,7 +186,7 @@ tp_end_byzantine_struggle_decision = {
 
 # Debug
 struggle_byzantium_change_phase_prosperity_decision = {
-	major = yes
+	# major = yes
 	title = struggle_byzantium_change_phase_prosperity_decision
 	is_invisible = no
 	is_shown = {
@@ -209,7 +209,7 @@ struggle_byzantium_change_phase_prosperity_decision = {
 
 # Debug
 struggle_byzantium_change_phase_opportunity_decision = {
-	major = yes
+	# major = yes
 	title = struggle_byzantium_change_phase_opportunity_decision
 	is_invisible = no
 	is_shown = {
@@ -231,7 +231,7 @@ struggle_byzantium_change_phase_opportunity_decision = {
 }
 
 struggle_byzantium_change_phase_decay_decision = {
-	major = yes
+	# major = yes
 	title = struggle_byzantium_change_phase_decay_decision
 	is_invisible = no
 	is_shown = {
@@ -253,7 +253,7 @@ struggle_byzantium_change_phase_decay_decision = {
 }
 
 struggle_byzantium_change_phase_hostility_decision = {
-	major = yes
+	# major = yes
 	title = struggle_byzantium_change_phase_hostility_decision
 	is_invisible = no
 	is_shown = {
@@ -274,17 +274,17 @@ struggle_byzantium_change_phase_hostility_decision = {
 	}
 }
 
-struggle_byzantium_force_collapse_ending_decision = {
-	major = yes
-	title = struggle_byzantium_force_collapse_ending_decision
-	is_invisible = no
-	is_shown = {
-		debug_only = yes
-	}
-	effect = {
-		tp_struggle_ending_collapse_effects = yes
-	}
-}
+# struggle_byzantium_force_collapse_ending_decision = {
+# 	# major = yes
+# 	title = struggle_byzantium_force_collapse_ending_decision
+# 	is_invisible = no
+# 	is_shown = {
+# 		debug_only = yes
+# 	}
+# 	effect = {
+# 		tp_struggle_ending_collapse_effects = yes
+# 	}
+# }
 
 # struggle_byzantium_change_phase_collapse_decision = {
 # 	major = yes
