@@ -27,7 +27,7 @@
 
 	on_join = {}
 
-	start_phase = struggle_byzantium_phase_decay
+	start_phase = struggle_byzantium_phase_hostility
 
 	phase_list = {
 		struggle_byzantium_phase_prosperity = {
@@ -638,16 +638,20 @@
 		struggle_byzantium_ending_phase_collapse = { # todo
 			save_progress = yes
 			on_start = {
-				fp3_struggle_ending_concession_effects = yes
-				# Save Sunni caliph or previous one as scope:struggle_liege
-				fp3_save_sunni_caliph_or_previous_effect = yes
+				# fp3_struggle_ending_concession_effects = yes
+				# # Save Sunni caliph or previous one as scope:struggle_liege
+				# fp3_save_sunni_caliph_or_previous_effect = yes
 
-				fp3_end_persian_struggle_effect = {
-					ENDING = yes
-					EVENT = fp3_struggle.0082
-					FLAG = flag:fp3_struggle_concession_ending
-				}
+				# fp3_end_persian_struggle_effect = {
+				# 	ENDING = yes
+				# 	EVENT = fp3_struggle.0082
+				# 	FLAG = flag:fp3_struggle_concession_ending
+				# }
+				tp_struggle_ending_collapse_effects = yes
 			}
 		}
+	}
+
+	on_end = {
 	}
 }

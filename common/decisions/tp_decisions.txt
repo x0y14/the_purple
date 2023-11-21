@@ -182,3 +182,179 @@ tp_end_byzantine_struggle_decision = {
 
 	ai_check_interval = 0
 }
+
+
+# Debug
+struggle_byzantium_change_phase_prosperity_decision = {
+	major = yes
+	title = struggle_byzantium_change_phase_prosperity_decision
+	is_invisible = no
+	is_shown = {
+		debug_only = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				is_ai = no
+				any_character_struggle = { is_struggle_type = byzantine_struggle }
+			}
+			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
+			random_character_struggle = {
+				limit = { is_struggle_type = byzantine_struggle }
+				change_struggle_phase = struggle_byzantine_phase_prosperity
+			}
+		}
+	}
+}
+
+# Debug
+struggle_byzantium_change_phase_opportunity_decision = {
+	major = yes
+	title = struggle_byzantium_change_phase_opportunity_decision
+	is_invisible = no
+	is_shown = {
+		debug_only = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				is_ai = no
+				any_character_struggle = { is_struggle_type = byzantine_struggle }
+			}
+			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
+			random_character_struggle = {
+				limit = { is_struggle_type = byzantine_struggle }
+				change_struggle_phase = struggle_byzantium_phase_opportunity
+			}
+		}
+	}
+}
+
+struggle_byzantium_change_phase_decay_decision = {
+	major = yes
+	title = struggle_byzantium_change_phase_decay_decision
+	is_invisible = no
+	is_shown = {
+		debug_only = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				is_ai = no
+				any_character_struggle = { is_struggle_type = byzantine_struggle }
+			}
+			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
+			random_character_struggle = {
+				limit = { is_struggle_type = byzantine_struggle }
+				change_struggle_phase = struggle_byzantium_phase_decay
+			}
+		}
+	}
+}
+
+struggle_byzantium_change_phase_hostility_decision = {
+	major = yes
+	title = struggle_byzantium_change_phase_hostility_decision
+	is_invisible = no
+	is_shown = {
+		debug_only = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				is_ai = no
+				any_character_struggle = { is_struggle_type = byzantine_struggle }
+			}
+			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
+			random_character_struggle = {
+				limit = { is_struggle_type = byzantine_struggle }
+				change_struggle_phase = struggle_byzantium_phase_hostility
+			}
+		}
+	}
+}
+
+struggle_byzantium_force_collapse_ending_decision = {
+	major = yes
+	title = struggle_byzantium_force_collapse_ending_decision
+	is_invisible = no
+	is_shown = {
+		debug_only = yes
+	}
+	effect = {
+		tp_struggle_ending_collapse_effects = yes
+	}
+}
+
+# struggle_byzantium_change_phase_collapse_decision = {
+# 	major = yes
+# 	title = struggle_byzantium_change_phase_collapse_decision
+# 	is_invisible = no
+# 	is_shown = {
+# 		debug_only = yes
+# 	}
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				is_ai = no
+# 				any_character_struggle = { is_struggle_type = byzantine_struggle }
+# 			}
+# 			# root = {change_struggle_phase = struggle_byzantine_phase_decay}
+# 			random_character_struggle = {
+# 				limit = { is_struggle_type = byzantine_struggle }
+# 				change_struggle_phase = struggle_byzantium_phase_collapse
+# 			}
+# 		}
+# 	}
+# }
+
+
+# struggle_byzantium_ending_coup_decision = {
+# 	major = yes
+# 	title = struggle_byzantium_ending_recognize_the_end_of_empire
+# 	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+# 	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
+# 	desc = struggle_persia_ending_rekindle_iran_decision_desc
+# 	selection_tooltip = struggle_persia_ending_rekindle_iran_tooltip
+# 	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
+# 	is_invisible = yes
+# 	sort_order = 80
+
+# 	# is_shown = {
+# 	# 	has_fp2_dlc_trigger = yes
+# 	# 	OR = {
+# 	# 		any_character_struggle = {
+# 	# 			involvement = involved
+# 	# 			is_struggle_type = byzantium_struggle
+# 	# 		}
+# 	# 	}
+# 	# }
+
+# 	is_valid_showing_failures_only = {
+# 		is_available_adult = yes
+# 		# Independent
+# 		is_independent_ruler = yes
+# 	}
+
+# 	is_valid = {
+# 		exists = title:e_byzantium.holder
+# 		any_character_struggle = {
+# 			involvement = involved
+# 			is_struggle_type = byzantium_struggle
+# 		}
+# 		has_title = { title:e_byzantium }
+# 	}
+
+# 	effect = {
+# 		# tp_struggle_ending_destroy_byzantium_effect = yes
+# 		# tp_struggle_ending_destroy_byzantium_effect_after = yes
+# 	}
+
+# 	cost = {}
+
+# 	ai_check_interval = 120
+
+# 	ai_potential = { always = yes }
+
+# 	ai_will_do = { base = 100 }
+# }

@@ -1,0 +1,12 @@
+﻿namespace = byzantine_struggle_events
+
+# restart struggle
+byzantine_struggle_events.1000 = {
+	hidden = yes
+	immediate = {
+		start_struggle = {
+			struggle_type = byzantine_struggle
+			start_phase = struggle_byzantium_phase_decay
+		}
+	}
+}

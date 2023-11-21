@@ -29,3 +29,86 @@
 # 		}
 # 	}
 # }
+
+tp_struggle_ending_collapse_effects = {
+	title:e_byzantium.holder = {
+		# 関係するすべての有力な封臣
+		every_powerful_vassal = {
+			limit = {
+				OR = {
+					any_character_struggle = {
+						is_struggle_type = byzantine_struggle
+						involvement = involved
+					}
+					any_character_struggle = {
+						is_struggle_type = byzantine_struggle
+						involvement = interloper
+					}
+				}
+			}
+
+			save_temporary_scope_as = powerful_vassal
+
+			# # 独立
+			create_title_and_vassal_change = {
+				type = independency
+				save_scope_as = change
+			}
+			change_liege_or_become_independent = {
+				CHANGE = scope:change
+				VASSAL = scope:powerful_vassal
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			scope:powerful_vassal = {
+				make_claim_strong = title:e_byzantium
+			}
+
+			hidden_effect = {
+				# 皇帝とネメシス状態になる
+				title:e_byzantium.holder = {
+					set_relation_nemesis = {
+						target = scope:powerful_vassal
+						reason = rival_claimed_throne
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					exists = capital_province
+				}
+				spawn_army = {
+					men_at_arms = {
+						type = mubarizun
+						stacks = 50
+					}
+					location = capital_province
+					uses_supply = no
+					inheritable = no
+					name = tp_struggle_event_troops
+				}
+			}
+
+			random_list = {
+				70 = {
+					start_war = {
+						cb = tp_claim_cb
+						target = title:e_byzantium.holder
+						claimant = scope:powerful_vassal
+						target_title = title:e_byzantium
+					}
+				}
+				30 = {}
+			}
+		}
+	}
+	struggle:byzantine_struggle = { end_struggle = yes }
+
+	# title:e_byzantium.holder = {
+	# 	start_struggle = {
+	# 		struggle_type = byzantine_struggle
+	# 		start_phase = struggle_byzantium_phase_decay
+	# 	}
+	# }
+}
