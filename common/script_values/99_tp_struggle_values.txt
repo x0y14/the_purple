@@ -113,7 +113,7 @@ catalyst_yearly_emperor_leaning_gain = {
 		multiply = 2.0
 	}
 
-	divide = 2
+	divide = 3
 }
 
 catalyst_yearly_vassal_opinion_tp_gain = {

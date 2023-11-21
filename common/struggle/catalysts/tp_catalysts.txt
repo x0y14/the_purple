@@ -29,3 +29,6 @@ catalyst_complaints_against_basileus_tp = {}
 ### Relation
 catalyst_yearly_vassal_opinion_tp = {}
 catalyst_yearly_ally_with_vassal_tp = {}
+
+### 経済
+catalyst_yearly_deficit_tp = {}

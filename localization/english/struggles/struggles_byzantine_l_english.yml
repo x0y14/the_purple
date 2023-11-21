@@ -65,6 +65,9 @@
  catalyst_yearly_vassal_opinion_tp_desc: "Yearly Draft: Friendship with Vassals"
  catalyst_yearly_ally_with_vassal_tp_desc: "Yearly Draft: Alliances with Vassals"
 
+ # 経済
+ catalyst_yearly_deficit_tp_desc: "Yearly Draft: Imperial deficit"
+
  ## Interaction
  fp3_request_turkic_invasion_interaction_tp: "$fp3_request_turkic_invasion_interaction$"
  fp3_request_turkic_invasion_interaction_tp_desc: "$fp3_request_turkic_invasion_interaction_desc$"

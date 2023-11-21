@@ -273,8 +273,8 @@
 						### WAR
 						catalyst_basileus_won_at_war_tp = massive_struggle_catalyst_gain
 						### 関係
-						catalyst_became_friend_lover_with_character = medium_struggle_catalyst_gain
-						catalyst_became_best_friend_soulmate_with_very_important_character = major_struggle_catalyst_gain
+						catalyst_became_friend_lover_with_character = minor_struggle_catalyst_gain
+						catalyst_became_best_friend_soulmate_with_very_important_character = medium_struggle_catalyst_gain
 						catalyst_yearly_vassal_opinion_tp = catalyst_yearly_vassal_opinion_tp_gain
 						catalyst_yearly_ally_with_vassal_tp = catalyst_yearly_ally_with_vassal_tp_gain
 						### 領土
@@ -285,7 +285,7 @@
 				}
 				struggle_byzantium_phase_hostility = {
 					catalysts = {
-						catalyst_passing_of_time = medium_struggle_catalyst_gain
+						catalyst_passing_of_time = major_struggle_catalyst_gain
 						catalyst_becomes_rival_with_involved = medium_struggle_catalyst_gain
 						catalyst_basileus_died_naturally_tp = medium_struggle_catalyst_gain
 						catalyst_basileus_died_violently_tp = medium_struggle_catalyst_gain
@@ -293,12 +293,14 @@
 						catalyst_gain_claim_on_title_tp = medium_struggle_catalyst_gain
 						catalyst_usurp_title_tp = medium_struggle_catalyst_gain
 						catalyst_basileus_was_declared_war_tp = medium_struggle_catalyst_gain
-						catalyst_basileus_lost_at_war_tp = medium_struggle_catalyst_gain
+						catalyst_basileus_lost_at_war_tp = massive_struggle_catalyst_gain
 						catalyst_raided_involved = medium_struggle_catalyst_gain
 						# 不満
 						catalyst_complaints_against_basileus_tp = medium_struggle_catalyst_gain
 						# 僭称者の出現
 						catalyst_emergence_of_pretenders_tp = monumental_struggle_catalyst_gain
+						# 経済
+						catalyst_yearly_deficit_tp = medium_struggle_catalyst_gain
 					}
 				}
 			}
@@ -474,8 +476,8 @@
 						catalyst_basileus_won_at_war_tp = massive_struggle_catalyst_gain 
 
 						### 関係
-						catalyst_became_friend_lover_with_character = medium_struggle_catalyst_gain
-						catalyst_became_best_friend_soulmate_with_very_important_character = major_struggle_catalyst_gain
+						catalyst_became_friend_lover_with_character = minor_struggle_catalyst_gain
+						catalyst_became_best_friend_soulmate_with_very_important_character = medium_struggle_catalyst_gain
 						catalyst_yearly_vassal_opinion_tp = catalyst_yearly_vassal_opinion_tp_gain
 						catalyst_yearly_ally_with_vassal_tp = catalyst_yearly_ally_with_vassal_tp_gain
 
@@ -510,6 +512,8 @@
 
 						# 僭称者の出現
 						catalyst_emergence_of_pretenders_tp = medium_struggle_catalyst_gain
+						# 経済
+						catalyst_yearly_deficit_tp = medium_struggle_catalyst_gain
 					}
 				}
 			}
