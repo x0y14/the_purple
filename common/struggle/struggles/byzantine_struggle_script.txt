@@ -8,6 +8,8 @@
 		armenian_apostolic
 		iconoclast
 		hellenic_pagan
+		bogomilist
+		paulician
 	}
 	regions = {
 		tp_byzantiune_struggle_region
