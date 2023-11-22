@@ -456,8 +456,11 @@
 			}
 
 			ending_decisions = {
-				struggle_byzantium_ending_recognize_the_end_of_empire
-				struggle_byzantium_ending_recognize_the_end_of_empire_2
+				# ビザンツ皇帝かその封臣
+				struggle_byzantium_ending_strategic_retreat_decision
+				# 侵入
+				struggle_byzantium_ending_successor_of_the_empire_decision
+				struggle_byzantium_ending_the_dawm_of_a_new_era_decision
 			}
 		}
 

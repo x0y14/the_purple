@@ -22,7 +22,7 @@ tp_yearly_struggle.0001 = {
 			limit = {
 				phase_has_catalyst = catalyst_yearly_deficit_tp
 				AND = {
-					exists = { title:e_byzantium.holder }
+					exists = title:e_byzantium.holder
 					title:e_byzantium.holder.gold < 0
 				}
 			}

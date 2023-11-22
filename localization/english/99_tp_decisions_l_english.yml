@@ -6,3 +6,17 @@
   # tp_approve_bulgaria_decision_tt:0 "tp_approve_bulgaria_decision tt HERE"
   # tp_approve_bulgaria_decision_effect_tooltip:0 "tp_approve_bulgaria_decision_effect_tooltip HERE"
   # tp_elevate_bulgaria_to_empire_effect_tt:1 "[title_d_porto.GetNameNoTier], [title_d_coimbra.GetNameNoTier], [title_d_beja.GetNameNoTier], and [title_d_algarve.GetNameNoTier] become [de_jure|E] part of the #V [title_k_portugal.GetName]#! "
+
+  struggle_byzantium_ending_strategic_retreat: "Strategic retreat"
+  struggle_byzantium_ending_strategic_retreat_tooltip: "For Byzanitum"
+  struggle_byzantium_ending_strategic_retreat_decision_desc: "Control of Anatolia is shaky. It would be a wise decision to withdraw to the Balkans and regroup. To do so, they must be confident that they will not be attacked from behind."
+
+  # struggle_byzantium_ending_rump_state: "Rump state"
+
+  struggle_byzantium_ending_successor_of_the_empire: "Successor of the Empire"
+  struggle_byzantium_ending_successor_of_the_empire_tooltip: "Bulgaria or other independent orthodox (not only) Country"
+  struggle_byzantium_ending_successor_of_the_empire_decision_desc: "The former empire is barely alive. It is time to put an end to it."
+
+  struggle_byzantium_ending_the_dawm_of_a_new_era: "The Dowm of A New Era"
+  struggle_byzantium_ending_the_dawm_of_a_new_era_tooltip: "For Islam or other"
+  struggle_byzantium_ending_the_dawm_of_a_new_era_decision_desc: "We found a good settlement, Anatolia. (Here is our campsite!)"
