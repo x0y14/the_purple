@@ -23,7 +23,7 @@
   tp_approve_bulgaria_decision_tooltip:0 "Bulgaria is recognised as an empire."
   tp_approve_bulgaria_decision_desc:0 "Granting them permission to be crowned will ensure that our backs are secure while we withstand attacks from the east."
   tp_approve_bulgaria_decision_tt:0 "tp_approve_bulgaria_decision tt HERE"
-  tp_approve_bulgaria_decision_effect_tooltip:0 "Burgalia becomes an [empire|E]"
+  tp_approve_bulgaria_decision_effect_tooltip:0 "Bulgaria becomes an [empire|E]"
   # Recovery
   tp_recovery_bulgaria_decision:0 "Recovery Bulgaria"
   tp_recovery_bulgaria_decision_confirm:0 "Recovery"
