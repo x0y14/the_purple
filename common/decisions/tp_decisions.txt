@@ -5,6 +5,12 @@
 		debug_only = yes
 	}
 
+	is_valid_showing_failures_only = {
+		NOT = {
+			exists = struggle:byzantine_struggle
+		}
+	}
+
 	effect = {
 		custom_tooltip = "start byzantine struggle"
 		if = {
@@ -24,6 +30,10 @@ tp_end_byzantine_struggle_decision = {
 
 	is_shown = {
 		debug_only = yes
+	}
+
+	is_valid_showing_failures_only = {
+		exists = struggle:byzantine_struggle
 	}
 
 	effect = {

@@ -62,8 +62,8 @@
  catalyst_emergence_of_pretenders_tp_desc: "$catalyst_emergence_of_pretenders_tp$"
 
  # 封臣との関係
- catalyst_yearly_vassal_good_opinion_tp_desc: "Yearly Draft: Good Opinion from Vassals"
- catalyst_yearly_vassal_bad_opinion_tp_desc: "Yearly Draft: Bad Opinion from Vassals"
+ catalyst_yearly_vassal_good_opinion_tp_desc: "Yearly Draft: Good Opinion from Vassals (opinion > 0)"
+ catalyst_yearly_vassal_bad_opinion_tp_desc: "Yearly Draft: Bad Opinion from Vassals (-50 >= opinion)"
  catalyst_yearly_ally_with_vassal_tp_desc: "Yearly Draft: Alliances with Vassals"
 
  # 経済
