@@ -116,7 +116,7 @@ catalyst_yearly_emperor_leaning_gain = {
 	divide = 3
 }
 
-catalyst_yearly_vassal_opinion_tp_gain = {
+catalyst_yearly_vassal_good_opinion_tp_gain = {
 	value = 0
 	title:e_byzantium.holder = {
 		every_vassal_or_below = {
@@ -124,6 +124,20 @@ catalyst_yearly_vassal_opinion_tp_gain = {
 				opinion = {
 					target = title:e_byzantium.holder
 					value >= 30
+				}
+			}
+			add = 1
+		}
+	}
+}
+catalyst_yearly_vassal_bad_opinion_tp_gain = {
+	value = 0
+	title:e_byzantium.holder = {
+		every_vassal_or_below = {
+			limit = {
+				opinion = {
+					target = title:e_byzantium.holder
+					value < 0
 				}
 			}
 			add = 1

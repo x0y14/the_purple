@@ -275,9 +275,9 @@
 						### WAR
 						catalyst_basileus_won_at_war_tp = massive_struggle_catalyst_gain
 						### 関係
-						catalyst_became_friend_lover_with_character = minor_struggle_catalyst_gain
-						catalyst_became_best_friend_soulmate_with_very_important_character = medium_struggle_catalyst_gain
-						catalyst_yearly_vassal_opinion_tp = catalyst_yearly_vassal_opinion_tp_gain
+						catalyst_became_friend_lover_with_character = minimal_struggle_catalyst_gain
+						catalyst_became_best_friend_soulmate_with_very_important_character = minor_struggle_catalyst_gain
+						catalyst_yearly_vassal_good_opinion_tp = catalyst_yearly_vassal_good_opinion_tp_gain
 						catalyst_yearly_ally_with_vassal_tp = catalyst_yearly_ally_with_vassal_tp_gain
 						### 領土
 						catalyst_new_building_in_city = minimal_struggle_catalyst_gain
@@ -303,6 +303,8 @@
 						catalyst_emergence_of_pretenders_tp = monumental_struggle_catalyst_gain
 						# 経済
 						catalyst_yearly_deficit_tp = medium_struggle_catalyst_gain
+						# 関係
+						catalyst_yearly_vassal_bad_opinion_tp = catalyst_yearly_vassal_bad_opinion_tp_gain
 					}
 				}
 			}
@@ -483,7 +485,7 @@
 						### 関係
 						catalyst_became_friend_lover_with_character = minor_struggle_catalyst_gain
 						catalyst_became_best_friend_soulmate_with_very_important_character = medium_struggle_catalyst_gain
-						catalyst_yearly_vassal_opinion_tp = catalyst_yearly_vassal_opinion_tp_gain
+						catalyst_yearly_vassal_good_opinion_tp = catalyst_yearly_vassal_good_opinion_tp_gain
 						catalyst_yearly_ally_with_vassal_tp = catalyst_yearly_ally_with_vassal_tp_gain
 
 						### 領土
@@ -519,6 +521,8 @@
 						catalyst_emergence_of_pretenders_tp = medium_struggle_catalyst_gain
 						# 経済
 						catalyst_yearly_deficit_tp = medium_struggle_catalyst_gain
+						# 関係
+						catalyst_yearly_vassal_bad_opinion_tp = catalyst_yearly_vassal_bad_opinion_tp_gain
 					}
 				}
 			}
