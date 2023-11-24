@@ -320,6 +320,61 @@ struggle_byzantium_ending_strategic_retreat_decision = {
 # 	ai_will_do = { base = 0 }
 # }
 
+# 退位
+struggle_byzantium_ending_abdication_decision = {
+	major = yes
+	title = struggle_byzantium_ending_abdication
+	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
+	desc = struggle_byzantium_ending_abdication_decision_desc
+	selection_tooltip = struggle_byzantium_ending_abdication_tooltip
+	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
+	is_invisible = yes
+	sort_order = 80
+
+	is_valid_showing_failures_only = {
+		# Independent
+		is_independent_ruler = yes
+		root.primary_heir ?= {
+			age >= 16
+		}
+	}
+
+	is_valid = {
+		exists = title:e_byzantium.holder
+		has_title = title:e_byzantium
+		exists = primary_heir
+	}
+
+	effect = {
+		root.primary_heir = { save_scope_as = new_basileus }
+		depose = yes
+		scope:new_basileus = {
+			trigger_event = {
+				id = tp_succession.0001
+				delayed = yes
+			}
+		}
+		root.dynasty = {
+			add_dynasty_prestige_level = -1
+		}
+		root = {
+			add_prestige_level = -5
+			add_trait = devoted
+			# add_trait = blind
+		}
+	}
+
+	cost = {}
+
+	ai_check_interval = 0
+
+	ai_potential = { always = no }
+
+	ai_will_do = { base = 0 }
+
+}
+
 ### 侵入勢力
 # 帝国の後継者
 struggle_byzantium_ending_successor_of_the_empire_decision = {
