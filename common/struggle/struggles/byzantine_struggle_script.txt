@@ -520,7 +520,7 @@
 						# 僭称者の出現
 						catalyst_emergence_of_pretenders_tp = medium_struggle_catalyst_gain
 						# 経済
-						catalyst_yearly_deficit_tp = medium_struggle_catalyst_gain
+						catalyst_yearly_deficit_tp = massive_struggle_catalyst_gain
 						# 関係
 						catalyst_yearly_vassal_bad_opinion_tp = catalyst_yearly_vassal_bad_opinion_tp_gain
 					}
@@ -580,6 +580,8 @@
 					cheaper_incursions_vs_basileus = yes
 					# 皇帝に対する支援侵攻のクールダウン短く
 					less_cooldown_incursions_vs_basileus = yes
+					
+					# unlocks_tp_request_turkic_invasion_interaction = yes
 				}
 				interloper_character_modifier = {
 					# 傭兵雇用コストの削減

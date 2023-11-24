@@ -526,6 +526,9 @@ fp3_request_turkic_invasion_interaction_tp = {
 				involvement = interloper
 			}
 			NOT = { is_vassal_of = title:e_byzantium.holder }
+			any_character_struggle = {
+				has_struggle_phase_parameter = unlocks_tp_request_turkic_invasion_interaction
+			}
 		}
 		scope:recipient = {
 			is_landed = yes
