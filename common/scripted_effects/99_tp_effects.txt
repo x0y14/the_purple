@@ -50,71 +50,66 @@ tp_struggle_ending_collapse_effects = {
 
 			save_temporary_scope_as = powerful_vassal
 
-			# 独立
-			# create_title_and_vassal_change = {
-			# 	type = independency
-			# 	save_scope_as = change
-			# }
-			# change_liege_or_become_independent = {
-			# 	CHANGE = scope:change
-			# 	VASSAL = scope:powerful_vassal
-			# }
-			# resolve_title_and_vassal_change = scope:change
-
 			scope:powerful_vassal = {
 				make_claim_weak = title:e_byzantium
 			}
 
-			# hidden_effect = {
-			# 	# 皇帝とネメシス状態になる
-			# 	title:e_byzantium.holder = {
-			# 		set_relation_nemesis = {
-			# 			target = scope:powerful_vassal
-			# 			reason = rival_claimed_throne
-			# 		}
-			# 	}
-			# }
-
-			hidden_effect = {
-				if = {
-					limit = {
-						exists = capital_province
+			if = {
+				limit = {
+					exists = capital_province
+				}
+				spawn_army = {
+					men_at_arms = {
+						type = mubarizun
+						stacks = 10
 					}
-					spawn_army = {
-						men_at_arms = {
-							type = mubarizun
-							stacks = 50
-						}
-						location = capital_province
-						uses_supply = no
-						inheritable = no
-						name = tp_struggle_event_troops
-					}
+					location = capital_province
+					uses_supply = no
+					inheritable = no
+					name = tp_struggle_event_troops
 				}
 			}
 
-			hidden_effect = {
-				random_list = {
-					70 = {
-						title:e_byzantium.holder = {
-							set_relation_rival = {
-								target = scope:powerful_vassal
-								reason = rival_claimed_throne
-							}
-						}
-						start_war = {
-							cb = tp_claim_cb
-							target = title:e_byzantium.holder
-							claimant = scope:powerful_vassal
-							target_title = title:e_byzantium
+			if = {
+				limit = { is_ai = yes }
+				if = {
+					limit = {
+						# 宣戦布告できる
+						# scope:powerful_vassal = {
+						# 	can_declare_war = {
+						# 		defender = title:e_byzantium.holder
+						# 		claimant = scope:powerful_vassal
+						# 		casus_belli = claim_cb
+						# 		target_titles = title:e_byzantium
+						# 	}
+						# }
+						# 同盟を組んでいない
+						NOT = { scope:powerful_vassal = { is_allied_to = title:e_byzantium.holder } }
+						# 停戦がない
+						NOT = { scope:powerful_vassal = { has_truce = title:e_byzantium.holder } }
+					}
+
+					# ネメシスになる
+					title:e_byzantium.holder = {
+						set_relation_nemesis = {
+							target = scope:powerful_vassal
+							reason = rival_claimed_throne
 						}
 					}
-					30 = {}
+
+					start_war = {
+						cb = claim_cb
+						target = title:e_byzantium.holder
+						claimant = scope:powerful_vassal
+						target_title = title:e_byzantium
+					}
+	
 				}
 			}
 		}
 	}
-	struggle:byzantine_struggle = { end_struggle = yes }
+	# struggle:byzantine_struggle = { end_struggle = yes }
+	struggle:byzantine_struggle = { change_struggle_phase = { struggle_phase = struggle_byzantium_phase_decay } }
 
 	# title:e_byzantium.holder = {
 	# 	start_struggle = {

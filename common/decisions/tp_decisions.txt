@@ -19,6 +19,9 @@
 				struggle_type = byzantine_struggle
 				start_phase = struggle_byzantium_phase_decay
 			}
+			struggle:byzantine_struggle = {
+				trigger_event = neutral_struggle.0001
+			}
 		}
 	}
 

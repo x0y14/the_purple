@@ -705,6 +705,14 @@ on_war_started = {
 						}
 						has_title = title:e_byzantium
 					}
+					trigger_if = {
+						limit = {
+							exists = struggle:byzantine_struggle
+						}
+						struggle:byzantine_struggle ?= {
+							phase_has_catalyst = catalyst_basileus_was_declared_war_tp
+						}
+					}
 				}
 				every_character_struggle = {
 					# is_struggle_type = byzantine_struggle

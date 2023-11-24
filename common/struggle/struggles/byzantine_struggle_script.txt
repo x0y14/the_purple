@@ -28,7 +28,11 @@
 
 	on_join = {}
 
-	start_phase = struggle_byzantium_phase_decay
+	on_monthly = {
+		# trigger_event = neutral_struggle.0001
+	}
+
+	start_phase = struggle_byzantium_phase_hostility
 
 	phase_list = {
 		struggle_byzantium_phase_prosperity = {
@@ -497,7 +501,7 @@
 				}
 				struggle_byzantium_ending_phase_collapse = {
 					catalysts = {
-						catalyst_passing_of_time = minimal_struggle_catalyst_gain
+						catalyst_passing_of_time = 300
 						# 後継者
 						catalyst_unpreferred_heir_tp = medium_struggle_catalyst_gain
 						# 戦争を仕掛けられる
@@ -664,23 +668,18 @@
 			}
 
 			ending_decisions = {
-				struggle_byzantium_ending_recognize_the_end_of_empire
-				struggle_byzantium_ending_recognize_the_end_of_empire_2
+				# ビザンツ皇帝かその封臣
+				# struggle_byzantium_ending_strategic_retreat_decision
+				struggle_byzantium_ending_abdication_decision
+				# 侵入
+				struggle_byzantium_ending_successor_of_the_empire_decision
+				struggle_byzantium_ending_the_dawm_of_a_new_era_decision
 			}
 		}
 
 		struggle_byzantium_ending_phase_collapse = { # todo
-			save_progress = yes
+			save_progress = no
 			on_start = {
-				# fp3_struggle_ending_concession_effects = yes
-				# # Save Sunni caliph or previous one as scope:struggle_liege
-				# fp3_save_sunni_caliph_or_previous_effect = yes
-
-				# fp3_end_persian_struggle_effect = {
-				# 	ENDING = yes
-				# 	EVENT = fp3_struggle.0082
-				# 	FLAG = flag:fp3_struggle_concession_ending
-				# }
 				tp_struggle_ending_collapse_effects = yes
 			}
 		}
