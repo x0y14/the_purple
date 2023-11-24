@@ -418,6 +418,18 @@ on_title_gain = {
 			}
 			add_trait = fp3_struggle_supporter
 		}
+
+		if = {
+			limit = {
+				scope:title = title:e_byzantium
+			}
+			# 継承が完了してからでないと好ましい後継者であるか不明であるため、
+			# イベントにして、裏で遅延発火してる
+			trigger_event = {
+				id = tp_succession.0001
+				delayed = yes
+			}
+		}
 	}
 	events = {
 		roman_restoration.0005		#New Roman Emperor gets Augustus trait. (old holder, if still alive, loses it)

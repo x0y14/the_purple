@@ -1175,25 +1175,25 @@ on_death = {
 			}
 		}
 
-		# -- the purple --
-		### Preferred/Unpreferred Heir
-		if = {
-			limit = {
-				AND = {
-					has_title = title:e_byzantium
-					exists = primary_heir
-				}
-			}
-			# 継承が完了してからでないと好ましい後継者であるか不明であるため、
-			# イベントにして、裏で遅延発火してる
-			primary_heir = {
-				trigger_event = {
-					id = tp_succession.0001
-					delayed = yes
-				}
-			}
-		}
-		# ----------------
+		# # -- the purple --
+		# ### Preferred/Unpreferred Heir
+		# if = {
+		# 	limit = {
+		# 		AND = {
+		# 			has_title = title:e_byzantium
+		# 			exists = primary_heir
+		# 		}
+		# 	}
+		# 	# 継承が完了してからでないと好ましい後継者であるか不明であるため、
+		# 	# イベントにして、裏で遅延発火してる
+		# 	primary_heir = {
+		# 		trigger_event = {
+		# 			id = tp_succession.0001
+		# 			delayed = yes
+		# 		}
+		# 	}
+		# }
+		# # ----------------
 	}
 	events = {
 		death_management.0096	# Updates marriage opinions of other spouses if relevant.
