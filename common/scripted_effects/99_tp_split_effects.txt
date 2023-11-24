@@ -69,6 +69,10 @@ tp_elevate_bulgaria_to_empire_effect = {
 			}
 		}
 		resolve_title_and_vassal_change = scope:change
+		set_global_variable = {
+			name = title_e_bulgaria
+			value = scope:title_e_bulgaria
+		}
 	}
 }
 

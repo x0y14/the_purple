@@ -142,7 +142,7 @@ struggle_byzantium_ending_recognize_the_end_of_empire_2 = {
 
 
 ### Byzantium 
-# ビザンツ皇帝か、封臣からしか見えない
+# ビザンツ皇帝か、封臣
 # 戦略的撤退
 struggle_byzantium_ending_strategic_retreat_decision = {
 	major = yes
@@ -155,10 +155,6 @@ struggle_byzantium_ending_strategic_retreat_decision = {
 	is_invisible = yes
 	sort_order = 80
 
-	is_shown = {
-		has_fp2_dlc_trigger = yes
-	}
-
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
 		# Independent
@@ -166,15 +162,115 @@ struggle_byzantium_ending_strategic_retreat_decision = {
 	}
 
 	is_valid = {
+		# ビザンツ皇帝である
 		exists = title:e_byzantium
 		title:e_byzantium.holder = root
+
 		# trigger_if = {
-		# 	limit = { exists = title:e_byzantium.holder }
-		# 	NOT = { title:e_byzantium.holder = root }
+		# 	limit = { exists = title:k_bulgaria.holder }
+		# }
+
+		# ブルガリアが存在し、ビザンツ皇帝がそれを持っていないのであれば
+		trigger_if = {
+			limit = {
+				exists = title:k_bulgaria.holder
+				NOT = {
+					title:e_byzantium.holder = { has_title = title:k_bulgaria }
+				}
+			}
+
+			OR = {
+				# ブルガリア王国がビザンツの封臣でないのであれば
+				trigger_if = {
+					limit = {
+						NOT = { title:k_bulgaria.holder = { is_vassal_or_below_of = title:e_byzantium.holder } }
+					}
+					# 帝位を承認していて
+					custom_tooltip = {
+						text = tp_recovery_bulgaria_decision_already_approved_tt
+						is_target_in_global_variable_list = {
+							name = unavailable_unique_decisions
+							target = flag:tp_approve_bulgaria_decision
+						}
+					}
+					OR = {
+						title:e_byzantium.holder ?= {
+							is_allied_to = title:k_bulgaria.holder.liege
+						}
+						title:e_byzantium.holder ?= {
+								has_truce = title:k_bulgaria.holder.liege
+						}
+					}
+				}
+			}
+		}
+
+		trigger_if = {
+			limit = {
+				custom_tooltip = {
+					text = tp_recovery_bulgaria_decision_already_approved_tt
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:tp_approve_bulgaria_decision
+					}
+				}
+				title:e_byzantium.holder = { has_title = title:k_bulgaria }
+			}
+			custom_tooltip = {
+				text = tp_recovery_bulgaria_decision_not_yet_approved_tt
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:tp_recovery_bulgaria_decision
+				}
+			}
+		}
+		# アナトリアの50%を喪失している
+		# custom_tooltip = {
+		# 	text = struggle_byzantium_ending_strategic_retreat_50_percent_anatolia_is_not_under_control_tt
+		# 	title:e_byzantium.holder = {
+		# 		tp_struggle_ending_percent_anatolia_trigger = yes
+		# 	}
 		# }
 	}
 
 	effect = {
+		# アナトリアの封臣の独立
+		title:e_byzantium.holder = {
+			every_vassal = {
+				limit = {
+					any_county_in_region = {
+						region = ghw_region_anatolia
+						holder = prev
+					}
+				}
+				create_title_and_vassal_change = {
+					type = independency
+					save_scope_as = change
+					add_claim_on_loss = no
+				}
+				becomes_independent = { change = scope:change }
+				resolve_title_and_vassal_change = scope:change
+			}
+		}
+		# ギリシャ地域にバフ
+		# ghw_region_mainland_greece
+		title:e_byzantium.holder = {
+			# every_county_in_region = {
+			# 	region = ghw_region_mainland_greece
+			# 	limit = { holder.top_liege = prev }
+			# 	add_county_modifier = {
+			# 		modifier = tp_strategic_retreat_county_modifier
+			# 		years = 20
+			# 	}
+			# }
+			every_county = {
+				limit = { holder.top_liege = prev }
+				add_county_modifier = {
+					modifier = tp_strategic_retreat_county_modifier
+					years = 20
+				}
+			}
+		}
 	}
 
 	cost = {}
@@ -237,11 +333,6 @@ struggle_byzantium_ending_successor_of_the_empire_decision = {
 	is_invisible = yes
 	sort_order = 80
 
-	is_shown = {
-		has_fp2_dlc_trigger = yes
-		# exists = title:e_byzantium
-	}
-
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
 		# Independent
@@ -281,11 +372,6 @@ struggle_byzantium_ending_the_dawm_of_a_new_era_decision = {
 	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
 	is_invisible = yes
 	sort_order = 80
-
-	is_shown = {
-		has_fp2_dlc_trigger = yes
-		# exists = title:e_byzantium
-	}
 
 	is_valid_showing_failures_only = {
 		is_available_adult = yes

@@ -1,0 +1,9 @@
+﻿tp_strategic_retreat_county_modifier = {
+	icon = county_modifier_development_positive
+	monthly_county_control_change_add = 1
+	development_growth_factor = 1
+	levy_size = 1
+	levy_reinforcement_rate = 1
+	county_opinion_add = 50
+	tax_mult = 1
+}

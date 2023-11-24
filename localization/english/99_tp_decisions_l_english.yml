@@ -9,7 +9,8 @@
 
   struggle_byzantium_ending_strategic_retreat: "Strategic retreat"
   struggle_byzantium_ending_strategic_retreat_tooltip: "For Byzanitum"
-  struggle_byzantium_ending_strategic_retreat_decision_desc: "Control of Anatolia is shaky. It would be a wise decision to withdraw to the Balkans and regroup. To do so, they must be confident that they will not be attacked from behind."
+  struggle_byzantium_ending_strategic_retreat_decision_desc: "Control of Anatolia is shaky. It would be a wise decision to withdraw to the Balkans and regroup. To do so, they must be confident that they will not be attacked from behind.\n(The conquests supported only cover the Anatolian peninsula. So you should be able to escape from too frequent attacks.)"
+  struggle_byzantium_ending_strategic_retreat_50_percent_anatolia_is_not_under_control_tt: "More than 50% of Anatolia is not under control. (Current: [SCOPE.ScriptValue('struggle_byzantium_ending_strategic_retreat_decision_region_owned_percent_value')|0]%)"
 
   # struggle_byzantium_ending_rump_state: "Rump state"
 

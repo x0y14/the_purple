@@ -6,3 +6,12 @@ can_raid_dynasty_modifiers_that_enable_raiding_overseas_list_trigger = {
 		has_dynasty_modifier = tp_legacy_of_nomad_modifier
 	}
 }
+
+
+tp_struggle_ending_percent_anatolia_trigger = {
+	any_county_in_region = {
+		region = ghw_region_anatolia
+		percent < tp_struggle_strategic_retreat_owned_percent_decimal_value 
+		holder.top_liege = root
+	}
+}

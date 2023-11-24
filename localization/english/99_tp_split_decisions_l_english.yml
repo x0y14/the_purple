@@ -31,3 +31,6 @@
   tp_recovery_bulgaria_decision_desc:0 "tp_recovery_bulgaria_decision DESC HERE"
   tp_recovery_bulgaria_decision_tt:0 "tp_recovery_bulgaria_decision tt HERE"
   tp_recovery_bulgaria_decision_effect_tooltip:0 "Destroy An [empire|E] of Bulgaria"
+
+  tp_recovery_bulgaria_decision_already_approved_tt: "An Empire of Bulgaria already created"
+  tp_recovery_bulgaria_decision_not_yet_approved_tt: "An Empire of Bulgaria not yet created"

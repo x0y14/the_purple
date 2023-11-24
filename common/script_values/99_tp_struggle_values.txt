@@ -155,3 +155,36 @@ catalyst_yearly_ally_with_vassal_tp_gain = {
 		}
 	}
 }
+
+tp_struggle_strategic_retreat_owned_percent_value = 40
+
+tp_struggle_strategic_retreat_owned_percent_decimal_value = {
+	value = tp_struggle_strategic_retreat_owned_percent_value
+	divide = 100
+	max = 1
+}
+
+struggle_byzantium_ending_strategic_retreat_decision_region_total_value = {
+	value = 0
+	every_county_in_region = {
+		region = ghw_region_anatolia
+		add = 1
+	}
+}
+
+# Counter for controlled counties in Anatolia
+struggle_byzantium_ending_strategic_retreat_decision_region_owned_value = {
+	value = 0
+	every_county_in_region = {
+		region = ghw_region_anatolia
+		limit = { holder.top_liege = root }
+		add = 1
+	}
+}
+
+# Percentage of Anatolia counties owned
+struggle_byzantium_ending_strategic_retreat_decision_region_owned_percent_value = {
+	value = struggle_byzantium_ending_strategic_retreat_decision_region_owned_value
+	divide = struggle_byzantium_ending_strategic_retreat_decision_region_total_value
+	multiply = 100
+}
