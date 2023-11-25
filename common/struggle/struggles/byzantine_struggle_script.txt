@@ -77,7 +77,7 @@
 						# 経済
 						catalyst_yearly_deficit_tp = massive_struggle_catalyst_gain
 						# 関係
-						catalyst_yearly_vassal_bad_opinion_tp = catalyst_yearly_vassal_bad_opinion_tp_gain
+						catalyst_yearly_vassal_bad_opinion_10_tp = catalyst_yearly_vassal_bad_opinion_10_tp_gain
 					}
 				}
 			}
@@ -250,7 +250,7 @@
 						# 経済
 						catalyst_yearly_deficit_tp = medium_struggle_catalyst_gain
 						# 関係
-						catalyst_yearly_vassal_bad_opinion_tp = catalyst_yearly_vassal_bad_opinion_tp_gain
+						catalyst_yearly_vassal_bad_opinion_30_tp = catalyst_yearly_vassal_bad_opinion_30_tp_gain
 					}
 				}
 			}
@@ -371,7 +371,7 @@
 						# 経済
 						catalyst_yearly_deficit_tp = medium_struggle_catalyst_gain
 						# 関係
-						catalyst_yearly_vassal_bad_opinion_tp = catalyst_yearly_vassal_bad_opinion_tp_gain
+						catalyst_yearly_vassal_bad_opinion_50_tp = catalyst_yearly_vassal_bad_opinion_50_tp_gain
 					}
 				}
 			}
@@ -592,7 +592,7 @@
 						# 経済
 						catalyst_yearly_deficit_tp = massive_struggle_catalyst_gain
 						# 関係
-						catalyst_yearly_vassal_bad_opinion_tp = catalyst_yearly_vassal_bad_opinion_tp_gain
+						catalyst_yearly_vassal_bad_opinion_50_tp = catalyst_yearly_vassal_bad_opinion_50_tp_gain
 					}
 				}
 			}

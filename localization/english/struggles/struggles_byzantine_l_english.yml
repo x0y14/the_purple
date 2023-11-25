@@ -63,7 +63,9 @@
 
  # 封臣との関係
  catalyst_yearly_vassal_good_opinion_tp_desc: "Yearly Draft: Good Opinion from Vassals (opinion > 0)"
- catalyst_yearly_vassal_bad_opinion_tp_desc: "Yearly Draft: Bad Opinion from Vassals (-50 >= opinion)"
+ catalyst_yearly_vassal_bad_opinion_10_tp_desc: "Yearly Draft: Bad Opinion from Vassals (-10 >= opinion)"
+ catalyst_yearly_vassal_bad_opinion_30_tp_desc: "Yearly Draft: Bad Opinion from Vassals (-30 >= opinion)"
+ catalyst_yearly_vassal_bad_opinion_50_tp_desc: "Yearly Draft: Bad Opinion from Vassals (-50 >= opinion)"
  catalyst_yearly_ally_with_vassal_tp_desc: "Yearly Draft: Alliances with Vassals"
 
  # 経済

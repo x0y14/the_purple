@@ -130,7 +130,35 @@ catalyst_yearly_vassal_good_opinion_tp_gain = {
 		}
 	}
 }
-catalyst_yearly_vassal_bad_opinion_tp_gain = {
+catalyst_yearly_vassal_bad_opinion_10_tp_gain = {
+	value = 0
+	title:e_byzantium.holder = {
+		every_vassal = {
+			limit = {
+				opinion = {
+					target = title:e_byzantium.holder
+					value <= -10
+				}
+			}
+			add = 1
+		}
+	}
+}
+catalyst_yearly_vassal_bad_opinion_30_tp_gain = {
+	value = 0
+	title:e_byzantium.holder = {
+		every_vassal = {
+			limit = {
+				opinion = {
+					target = title:e_byzantium.holder
+					value <= -30
+				}
+			}
+			add = 1
+		}
+	}
+}
+catalyst_yearly_vassal_bad_opinion_50_tp_gain = {
 	value = 0
 	title:e_byzantium.holder = {
 		every_vassal = {
