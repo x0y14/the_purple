@@ -203,8 +203,9 @@
 			}
 
 			ending_decisions = {
-				struggle_byzantium_ending_recognize_the_end_of_empire
-				struggle_byzantium_ending_recognize_the_end_of_empire_2
+				struggle_byzantium_ending_renaissance_decision
+				struggle_byzantium_ending_strategy_meeting_decision
+				struggle_byzantium_ending_surprise_attack_decision
 			}
 		}
 
@@ -322,8 +323,9 @@
 			}
 
 			ending_decisions = {
-				struggle_byzantium_ending_recognize_the_end_of_empire
-				struggle_byzantium_ending_recognize_the_end_of_empire_2
+				struggle_byzantium_ending_renaissance_decision
+				struggle_byzantium_ending_strategy_meeting_decision
+				struggle_byzantium_ending_surprise_attack_decision
 			}
 		}
 

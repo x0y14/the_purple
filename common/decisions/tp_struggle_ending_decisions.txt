@@ -1,305 +1,16 @@
-﻿struggle_byzantium_ending_recognize_the_end_of_empire = {
-	major = yes
-	title = struggle_byzantium_ending_recognize_the_end_of_empire
-	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
-	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
-	desc = struggle_persia_ending_rekindle_iran_decision_desc
-	selection_tooltip = struggle_persia_ending_rekindle_iran_tooltip
-	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
-	is_invisible = yes
-	sort_order = 80
-
-	is_shown = {
-		has_fp2_dlc_trigger = yes
-	}
-
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-		# Independent
-		is_independent_ruler = yes
-	}
-
-	# is_valid = {
-	# 	# 関係勢力であること
-	# 	is_independent_ruler = yes
-
-	# 	# コンスタンティノープルを関係勢力以外が所有していること
-
-	# 	# コンスタンティノープルの宗教が正教会/聖像破壊派でないこと
-	# 	# または
-	# 	# 関係勢力以外の文化であること
-
-	# 	# ビザンツ帝国の称号を誰も持っていないこと
-	# 	custom_tooltip = {
-	# 		text = struggle_byzantine_ending_decay_decision_not_exists_e_byzantium_tt
-	# 		NOR = {
-	# 			any_held_title = { this = title:e_byzantium }
-	# 			exists = title:e_byzantium
-	# 		}
-	# 	}
-
-	# 	# ビザンツ帝国の請求権を誰も持っていないこと
-	# 	# ビザンツ帝国のタイトルが破壊されてからN年以上経過していること
-	# 	custom_tooltip = {
-	# 		text = struggle_byzantine_ending_decay_decision_padded_Nyears_since_destroyed_tt
-	# 	}
-
-	# 	# 関係勢力であること
-	# 	custom_tooltip = {
-	# 		text = struggle_byzantine_ending_decay_decision_in_decay_phase_tt
-	# 		any_character_struggle = {
-	# 			involvement = involved
-	# 			is_struggle_type = byzantine_struggle
-	# 			# is_struggle_phase = struggle_byzantium_phase_decay
-	# 		}
-	# 	}
-	# }
-
-	effect = {
-		# tp_struggle_ending_destroy_byzantium_effect = yes
-		# tp_struggle_ending_destroy_byzantium_effect_after = yes
-	}
-
-	cost = {}
-
-	ai_check_interval = 120
-
-	ai_potential = { always = yes }
-
-	ai_will_do = { base = 100 }
-}
-
-struggle_byzantium_ending_recognize_the_end_of_empire_2 = {
-	major = yes
-	title = struggle_byzantium_ending_recognize_the_end_of_empire
-	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
-	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
-	desc = struggle_persia_ending_rekindle_iran_decision_desc
-	selection_tooltip = struggle_persia_ending_rekindle_iran_tooltip
-	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
-	is_invisible = yes
-	sort_order = 80
-
-	is_shown = {
-		has_fp2_dlc_trigger = yes
-	}
-
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-		# Independent
-		is_independent_ruler = yes
-	}
-
-	# is_valid = {
-	# 	# 関係勢力であること
-	# 	is_independent_ruler = yes
-
-	# 	# コンスタンティノープルを関係勢力以外が所有していること
-
-	# 	# コンスタンティノープルの宗教が正教会/聖像破壊派でないこと
-	# 	# または
-	# 	# 関係勢力以外の文化であること
-
-	# 	# ビザンツ帝国の称号を誰も持っていないこと
-	# 	custom_tooltip = {
-	# 		text = struggle_byzantine_ending_decay_decision_not_exists_e_byzantium_tt
-	# 		NOR = {
-	# 			any_held_title = { this = title:e_byzantium }
-	# 			exists = title:e_byzantium
-	# 		}
-	# 	}
-
-	# 	# ビザンツ帝国の請求権を誰も持っていないこと
-	# 	# ビザンツ帝国のタイトルが破壊されてからN年以上経過していること
-	# 	custom_tooltip = {
-	# 		text = struggle_byzantine_ending_decay_decision_padded_Nyears_since_destroyed_tt
-	# 	}
-
-	# 	# 関係勢力であること
-	# 	custom_tooltip = {
-	# 		text = struggle_byzantine_ending_decay_decision_in_decay_phase_tt
-	# 		any_character_struggle = {
-	# 			involvement = involved
-	# 			is_struggle_type = byzantine_struggle
-	# 			# is_struggle_phase = struggle_byzantium_phase_decay
-	# 		}
-	# 	}
-	# }
-
-	effect = {
-		# tp_struggle_ending_destroy_byzantium_effect = yes
-		# tp_struggle_ending_destroy_byzantium_effect_after = yes
-	}
-
-	cost = {}
-
-	ai_check_interval = 120
-
-	ai_potential = { always = yes }
-
-	ai_will_do = { base = 100 }
-}
-
-
-### Byzantium 
-# ビザンツ皇帝か、封臣
-# 戦略的撤退
-struggle_byzantium_ending_strategic_retreat_decision = {
-	major = yes
-	title = struggle_byzantium_ending_strategic_retreat
-	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
-	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
-	desc = struggle_byzantium_ending_strategic_retreat_decision_desc
-	selection_tooltip = struggle_byzantium_ending_strategic_retreat_tooltip
-	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
-	is_invisible = yes
-	sort_order = 80
-
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-		# Independent
-		is_independent_ruler = yes
-	}
-
-	is_valid = {
-		# ビザンツ皇帝である
-		exists = title:e_byzantium
-		title:e_byzantium.holder = root
-
-		# trigger_if = {
-		# 	limit = { exists = title:k_bulgaria.holder }
-		# }
-
-		# ブルガリアが存在し、ビザンツ皇帝がそれを持っていないのであれば
-		trigger_if = {
-			limit = {
-				exists = title:k_bulgaria.holder
-				NOT = {
-					title:e_byzantium.holder = { has_title = title:k_bulgaria }
-				}
-			}
-
-			OR = {
-				# ブルガリア王国がビザンツの封臣でないのであれば
-				trigger_if = {
-					limit = {
-						NOT = { title:k_bulgaria.holder = { is_vassal_or_below_of = title:e_byzantium.holder } }
-					}
-					# 帝位を承認していて
-					custom_tooltip = {
-						text = tp_recovery_bulgaria_decision_already_approved_tt
-						is_target_in_global_variable_list = {
-							name = unavailable_unique_decisions
-							target = flag:tp_approve_bulgaria_decision
-						}
-					}
-					OR = {
-						title:e_byzantium.holder ?= {
-							is_allied_to = title:k_bulgaria.holder.liege
-						}
-						title:e_byzantium.holder ?= {
-								has_truce = title:k_bulgaria.holder.liege
-						}
-					}
-				}
-			}
-		}
-
-		trigger_if = {
-			limit = {
-				custom_tooltip = {
-					text = tp_recovery_bulgaria_decision_already_approved_tt
-					is_target_in_global_variable_list = {
-						name = unavailable_unique_decisions
-						target = flag:tp_approve_bulgaria_decision
-					}
-				}
-				title:e_byzantium.holder = { has_title = title:k_bulgaria }
-			}
-			custom_tooltip = {
-				text = tp_recovery_bulgaria_decision_not_yet_approved_tt
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:tp_recovery_bulgaria_decision
-				}
-			}
-		}
-		# アナトリアの50%を喪失している
-		# custom_tooltip = {
-		# 	text = struggle_byzantium_ending_strategic_retreat_50_percent_anatolia_is_not_under_control_tt
-		# 	title:e_byzantium.holder = {
-		# 		tp_struggle_ending_percent_anatolia_trigger = yes
-		# 	}
-		# }
-	}
-
-	effect = {
-		# アナトリアの封臣の独立
-		title:e_byzantium.holder = {
-			every_vassal = {
-				limit = {
-					any_county_in_region = {
-						region = ghw_region_anatolia
-						holder = prev
-					}
-				}
-				create_title_and_vassal_change = {
-					type = independency
-					save_scope_as = change
-					add_claim_on_loss = no
-				}
-				becomes_independent = { change = scope:change }
-				resolve_title_and_vassal_change = scope:change
-			}
-		}
-		# ギリシャ地域にバフ
-		# ghw_region_mainland_greece
-		title:e_byzantium.holder = {
-			# every_county_in_region = {
-			# 	region = ghw_region_mainland_greece
-			# 	limit = { holder.top_liege = prev }
-			# 	add_county_modifier = {
-			# 		modifier = tp_strategic_retreat_county_modifier
-			# 		years = 20
-			# 	}
-			# }
-			every_county = {
-				limit = { holder.top_liege = prev }
-				add_county_modifier = {
-					modifier = tp_strategic_retreat_county_modifier
-					years = 20
-				}
-			}
-		}
-	}
-
-	cost = {}
-
-	ai_check_interval = 0
-
-	ai_potential = { always = no }
-
-	ai_will_do = { base = 0 }
-}
-# 残存国家
-# struggle_byzantium_ending_rump_state_decision = {
+﻿# struggle_byzantium_ending_recognize_the_end_of_empire = {
 # 	major = yes
-# 	title = struggle_byzantium_ending_rump_state
+# 	title = struggle_byzantium_ending_recognize_the_end_of_empire
 # 	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
 # 	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
-# 	desc = struggle_byzantium_ending_rump_state_decision_desc
-# 	selection_tooltip = struggle_byzantium_ending_rump_state_tooltip
+# 	desc = struggle_persia_ending_rekindle_iran_decision_desc
+# 	selection_tooltip = struggle_persia_ending_rekindle_iran_tooltip
 # 	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
 # 	is_invisible = yes
 # 	sort_order = 80
 
 # 	is_shown = {
 # 		has_fp2_dlc_trigger = yes
-# 		exists = title:e_byzantium
-# 		OR = {
-# 			root = title:e_byzantium.holder
-# 			is_vassal_or_below_of = title:e_byzantium.holder
-# 		}
 # 	}
 
 # 	is_valid_showing_failures_only = {
@@ -308,7 +19,258 @@ struggle_byzantium_ending_strategic_retreat_decision = {
 # 		is_independent_ruler = yes
 # 	}
 
+# 	# is_valid = {
+# 	# 	# 関係勢力であること
+# 	# 	is_independent_ruler = yes
+
+# 	# 	# コンスタンティノープルを関係勢力以外が所有していること
+
+# 	# 	# コンスタンティノープルの宗教が正教会/聖像破壊派でないこと
+# 	# 	# または
+# 	# 	# 関係勢力以外の文化であること
+
+# 	# 	# ビザンツ帝国の称号を誰も持っていないこと
+# 	# 	custom_tooltip = {
+# 	# 		text = struggle_byzantine_ending_decay_decision_not_exists_e_byzantium_tt
+# 	# 		NOR = {
+# 	# 			any_held_title = { this = title:e_byzantium }
+# 	# 			exists = title:e_byzantium
+# 	# 		}
+# 	# 	}
+
+# 	# 	# ビザンツ帝国の請求権を誰も持っていないこと
+# 	# 	# ビザンツ帝国のタイトルが破壊されてからN年以上経過していること
+# 	# 	custom_tooltip = {
+# 	# 		text = struggle_byzantine_ending_decay_decision_padded_Nyears_since_destroyed_tt
+# 	# 	}
+
+# 	# 	# 関係勢力であること
+# 	# 	custom_tooltip = {
+# 	# 		text = struggle_byzantine_ending_decay_decision_in_decay_phase_tt
+# 	# 		any_character_struggle = {
+# 	# 			involvement = involved
+# 	# 			is_struggle_type = byzantine_struggle
+# 	# 			# is_struggle_phase = struggle_byzantium_phase_decay
+# 	# 		}
+# 	# 	}
+# 	# }
+
 # 	effect = {
+# 		# tp_struggle_ending_destroy_byzantium_effect = yes
+# 		# tp_struggle_ending_destroy_byzantium_effect_after = yes
+# 	}
+
+# 	cost = {}
+
+# 	ai_check_interval = 120
+
+# 	ai_potential = { always = yes }
+
+# 	ai_will_do = { base = 100 }
+# }
+
+# struggle_byzantium_ending_recognize_the_end_of_empire_2 = {
+# 	major = yes
+# 	title = struggle_byzantium_ending_recognize_the_end_of_empire
+# 	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+# 	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
+# 	desc = struggle_persia_ending_rekindle_iran_decision_desc
+# 	selection_tooltip = struggle_persia_ending_rekindle_iran_tooltip
+# 	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
+# 	is_invisible = yes
+# 	sort_order = 80
+
+# 	is_shown = {
+# 		has_fp2_dlc_trigger = yes
+# 	}
+
+# 	is_valid_showing_failures_only = {
+# 		is_available_adult = yes
+# 		# Independent
+# 		is_independent_ruler = yes
+# 	}
+
+# 	# is_valid = {
+# 	# 	# 関係勢力であること
+# 	# 	is_independent_ruler = yes
+
+# 	# 	# コンスタンティノープルを関係勢力以外が所有していること
+
+# 	# 	# コンスタンティノープルの宗教が正教会/聖像破壊派でないこと
+# 	# 	# または
+# 	# 	# 関係勢力以外の文化であること
+
+# 	# 	# ビザンツ帝国の称号を誰も持っていないこと
+# 	# 	custom_tooltip = {
+# 	# 		text = struggle_byzantine_ending_decay_decision_not_exists_e_byzantium_tt
+# 	# 		NOR = {
+# 	# 			any_held_title = { this = title:e_byzantium }
+# 	# 			exists = title:e_byzantium
+# 	# 		}
+# 	# 	}
+
+# 	# 	# ビザンツ帝国の請求権を誰も持っていないこと
+# 	# 	# ビザンツ帝国のタイトルが破壊されてからN年以上経過していること
+# 	# 	custom_tooltip = {
+# 	# 		text = struggle_byzantine_ending_decay_decision_padded_Nyears_since_destroyed_tt
+# 	# 	}
+
+# 	# 	# 関係勢力であること
+# 	# 	custom_tooltip = {
+# 	# 		text = struggle_byzantine_ending_decay_decision_in_decay_phase_tt
+# 	# 		any_character_struggle = {
+# 	# 			involvement = involved
+# 	# 			is_struggle_type = byzantine_struggle
+# 	# 			# is_struggle_phase = struggle_byzantium_phase_decay
+# 	# 		}
+# 	# 	}
+# 	# }
+
+# 	effect = {
+# 		# tp_struggle_ending_destroy_byzantium_effect = yes
+# 		# tp_struggle_ending_destroy_byzantium_effect_after = yes
+# 	}
+
+# 	cost = {}
+
+# 	ai_check_interval = 120
+
+# 	ai_potential = { always = yes }
+
+# 	ai_will_do = { base = 100 }
+# }
+
+
+### Byzantium 
+# ビザンツ皇帝か、封臣
+# 戦略的撤退
+# struggle_byzantium_ending_strategic_retreat_decision = {
+# 	major = yes
+# 	title = struggle_byzantium_ending_strategic_retreat
+# 	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+# 	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
+# 	desc = struggle_byzantium_ending_strategic_retreat_decision_desc
+# 	selection_tooltip = struggle_byzantium_ending_strategic_retreat_tooltip
+# 	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
+# 	is_invisible = yes
+# 	sort_order = 80
+
+# 	is_valid_showing_failures_only = {
+# 		is_available_adult = yes
+# 		# Independent
+# 		is_independent_ruler = yes
+# 	}
+
+# 	is_valid = {
+# 		# ビザンツ皇帝である
+# 		exists = title:e_byzantium
+# 		title:e_byzantium.holder = root
+
+# 		# trigger_if = {
+# 		# 	limit = { exists = title:k_bulgaria.holder }
+# 		# }
+
+# 		# ブルガリアが存在し、ビザンツ皇帝がそれを持っていないのであれば
+# 		trigger_if = {
+# 			limit = {
+# 				exists = title:k_bulgaria.holder
+# 				NOT = {
+# 					title:e_byzantium.holder = { has_title = title:k_bulgaria }
+# 				}
+# 			}
+
+# 			OR = {
+# 				# ブルガリア王国がビザンツの封臣でないのであれば
+# 				trigger_if = {
+# 					limit = {
+# 						NOT = { title:k_bulgaria.holder = { is_vassal_or_below_of = title:e_byzantium.holder } }
+# 					}
+# 					# 帝位を承認していて
+# 					custom_tooltip = {
+# 						text = tp_recovery_bulgaria_decision_already_approved_tt
+# 						is_target_in_global_variable_list = {
+# 							name = unavailable_unique_decisions
+# 							target = flag:tp_approve_bulgaria_decision
+# 						}
+# 					}
+# 					OR = {
+# 						title:e_byzantium.holder ?= {
+# 							is_allied_to = title:k_bulgaria.holder.liege
+# 						}
+# 						title:e_byzantium.holder ?= {
+# 								has_truce = title:k_bulgaria.holder.liege
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		trigger_if = {
+# 			limit = {
+# 				custom_tooltip = {
+# 					text = tp_recovery_bulgaria_decision_already_approved_tt
+# 					is_target_in_global_variable_list = {
+# 						name = unavailable_unique_decisions
+# 						target = flag:tp_approve_bulgaria_decision
+# 					}
+# 				}
+# 				title:e_byzantium.holder = { has_title = title:k_bulgaria }
+# 			}
+# 			custom_tooltip = {
+# 				text = tp_recovery_bulgaria_decision_not_yet_approved_tt
+# 				is_target_in_global_variable_list = {
+# 					name = unavailable_unique_decisions
+# 					target = flag:tp_recovery_bulgaria_decision
+# 				}
+# 			}
+# 		}
+# 		# アナトリアの50%を喪失している
+# 		# custom_tooltip = {
+# 		# 	text = struggle_byzantium_ending_strategic_retreat_50_percent_anatolia_is_not_under_control_tt
+# 		# 	title:e_byzantium.holder = {
+# 		# 		tp_struggle_ending_percent_anatolia_trigger = yes
+# 		# 	}
+# 		# }
+# 	}
+
+# 	effect = {
+# 		# アナトリアの封臣の独立
+# 		title:e_byzantium.holder = {
+# 			every_vassal = {
+# 				limit = {
+# 					any_county_in_region = {
+# 						region = ghw_region_anatolia
+# 						holder = prev
+# 					}
+# 				}
+# 				create_title_and_vassal_change = {
+# 					type = independency
+# 					save_scope_as = change
+# 					add_claim_on_loss = no
+# 				}
+# 				becomes_independent = { change = scope:change }
+# 				resolve_title_and_vassal_change = scope:change
+# 			}
+# 		}
+# 		# ギリシャ地域にバフ
+# 		# ghw_region_mainland_greece
+# 		title:e_byzantium.holder = {
+# 			# every_county_in_region = {
+# 			# 	region = ghw_region_mainland_greece
+# 			# 	limit = { holder.top_liege = prev }
+# 			# 	add_county_modifier = {
+# 			# 		modifier = tp_strategic_retreat_county_modifier
+# 			# 		years = 20
+# 			# 	}
+# 			# }
+# 			every_county = {
+# 				limit = { holder.top_liege = prev }
+# 				add_county_modifier = {
+# 					modifier = tp_strategic_retreat_county_modifier
+# 					years = 20
+# 				}
+# 			}
+# 		}
 # 	}
 
 # 	cost = {}
@@ -567,6 +529,13 @@ struggle_byzantium_ending_successor_of_the_empire_decision = {
 		is_independent_ruler = yes
 	}
 
+	is_shown = {
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_decay }
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_hostility }
+		}
+	}
+
 	is_valid = {
 		trigger_if = {
 			limit = { exists = title:e_byzantium.holder }
@@ -607,6 +576,13 @@ struggle_byzantium_ending_the_dawm_of_a_new_era_decision = {
 		is_independent_ruler = yes
 	}
 
+	is_shown = {
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_decay }
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_hostility }
+		}
+	}
+
 	is_valid = {
 		trigger_if = {
 			limit = { exists = title:e_byzantium.holder }
@@ -616,6 +592,130 @@ struggle_byzantium_ending_the_dawm_of_a_new_era_decision = {
 			limit = { exists = title:e_byzantium.holder }
 			NOT = { is_vassal_or_below_of = title:e_byzantium.holder }
 		}
+	}
+
+	effect = {
+	}
+
+	cost = {}
+
+	ai_check_interval = 0
+
+	ai_potential = { always = no }
+
+	ai_will_do = { base = 0 }
+}
+
+
+### 繁栄, 機会
+## Byzantium
+# ルネサンス
+struggle_byzantium_ending_renaissance_decision = {
+	major = yes
+	title = struggle_byzantium_ending_renaissance
+	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
+	desc = struggle_byzantium_ending_renaissance_decision_desc
+	selection_tooltip = struggle_byzantium_ending_renaissance_tooltip
+	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
+	is_invisible = yes
+	sort_order = 80
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		# Independent
+		is_independent_ruler = yes
+	}
+
+	is_shown = {
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_prosperity }
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_opportunity }
+		}
+	}
+
+	is_valid = {
+	}
+
+	effect = {
+	}
+
+	cost = {}
+
+	ai_check_interval = 0
+
+	ai_potential = { always = no }
+
+	ai_will_do = { base = 0 }
+}
+
+# 軍事会議
+struggle_byzantium_ending_strategy_meeting_decision = {
+	major = yes
+	title = struggle_byzantium_ending_strategy_meeting
+	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
+	desc = struggle_byzantium_ending_strategy_meeting_decision_desc
+	selection_tooltip = struggle_byzantium_ending_strategy_meeting_tooltip
+	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
+	is_invisible = yes
+	sort_order = 80
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		# Independent
+		is_independent_ruler = yes
+	}
+
+	is_shown = {
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_prosperity }
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_opportunity }
+		}
+	}
+
+	is_valid = {
+	}
+
+	effect = {
+	}
+
+	cost = {}
+
+	ai_check_interval = 0
+
+	ai_potential = { always = no }
+
+	ai_will_do = { base = 0 }
+}
+
+## 侵略
+# 奇襲
+struggle_byzantium_ending_surprise_attack_decision = {
+	major = yes
+	title = struggle_byzantium_ending_surprise_attack
+	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	extra_picture = "gfx/interface/illustrations/struggle_decisions_buttons/fp3_decision_foundation.dds"
+	desc = struggle_byzantium_ending_surprise_attack_decision_desc
+	selection_tooltip = struggle_byzantium_ending_surprise_attack_tooltip
+	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
+	is_invisible = yes
+	sort_order = 80
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		# Independent
+		is_independent_ruler = yes
+	}
+
+	is_shown = {
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_prosperity }
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_opportunity }
+		}
+	}
+
+	is_valid = {
 	}
 
 	effect = {
