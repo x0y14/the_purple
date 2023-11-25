@@ -99,10 +99,10 @@
 					# involved_wars_on_prosperity_or_opportunity_more_expensive_presaige_costs = yes
 				}
 				involved_character_modifier = {
-					# 防衛側アドバンテージ低下
-					defender_advantage = -5
-					# AIの戦争確率減少
-					ai_war_chance = -0.95
+					# # 防衛側アドバンテージ低下
+					# defender_advantage = -5
+					# # AIの戦争確率減少
+					# ai_war_chance = -0.95
 					# クールダウン増加
 					ai_war_cooldown = 10
 				}
@@ -116,10 +116,10 @@
 					# 傭兵雇用コストの削減
 					# mercenary_hire_cost_mult = -0.5
 					# 同じ文化の傭兵のコストが低下
-					same_culture_mercenary_hire_cost_mult = -0.25
-					# AIの戦争確率増加
-					ai_war_chance = 5
-					# クールダウン増加
+					# same_culture_mercenary_hire_cost_mult = -0.25
+					# # AIの戦争確率増加
+					# ai_war_chance = 5
+					# # クールダウン増加
 					ai_war_cooldown = 10
 				}
 
