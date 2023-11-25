@@ -344,6 +344,8 @@ struggle_byzantium_ending_abdication_decision = {
 		exists = title:e_byzantium.holder
 		has_title = title:e_byzantium
 		exists = primary_heir
+		is_close_or_extended_family_of = primary_heir
+		dynasty = primary_heir.dynasty
 	}
 
 	effect = {
@@ -363,15 +365,175 @@ struggle_byzantium_ending_abdication_decision = {
 			add_trait = devoted
 			# add_trait = blind
 		}
+
+		struggle:byzantine_struggle = { change_struggle_phase = { struggle_phase = struggle_byzantium_phase_decay } }
 	}
 
 	cost = {}
 
-	ai_check_interval = 0
+	ai_check_interval = 30
 
-	ai_potential = { always = no }
+	ai_potential = { always = yes }
 
-	ai_will_do = { base = 0 }
+	ai_will_do = {
+		base = -100
+		# 健康でない場合
+		modifier = {
+			add = 10
+			NOT = { is_healthy = yes }
+		}
+		# 皇帝が高貴な生まれを持っておらず、後継者が持っているとき
+		modifier = {
+			add = 50
+			AND = {
+				primary_heir = { has_trait = born_in_the_purple }
+				NOT = { has_trait = born_in_the_purple }
+			}
+		}
+		# 封臣にライバル、ネメシスがいる場合
+		modifier = {
+			add = {
+				value = 0
+				every_vassal = {
+					limit = {
+						has_relation_rival = root
+						opinion = {
+							target = root
+							value < 0
+						}
+					}
+					add = 1
+					if = {
+						limit = { has_relation_rival = root }
+						add = 5
+						if = {
+							limit = { has_trait = brave }
+							add = -5
+						}
+						if = {
+							limit = { has_trait = arrogant }
+							add = -5
+						}
+						if = {
+							limit = { has_trait = arbitrary }
+							add = -5
+						}
+						if = {
+							limit = { has_trait = craven }
+							add = 20
+						}
+					}
+					if = {
+						limit = { has_relation_nemesis = root }
+						add = 10
+						if = {
+							limit = { has_trait = brave }
+							add = -10
+						}
+						if = {
+							limit = { has_trait = arrogant }
+							add = -10
+						}
+						if = {
+							limit = { has_trait = arbitrary }
+							add = -10
+						}
+						if = {
+							limit = { has_trait = craven }
+							add = 30
+						}
+					}
+				}
+			}
+		}
+
+		# 勇敢
+		modifier = {
+			add = -30
+			has_trait = brave
+		}
+		# 傲慢
+		modifier = {
+			add = -30
+			has_trait = arrogant
+		}
+		# 独善的
+		modifier = {
+			add = -30
+			has_trait = arbitrary
+		}
+		# 臆病
+		modifier = {
+			add = 30
+			has_trait = craven
+		}
+		# 破門
+		modifier = {
+			add = 10
+			has_trait = excommunicated
+		}
+		# 狂信的(修道院にはいるので)
+		modifier = {
+			add = 100
+			has_trait = zealous
+		}
+		# 封臣のから後継者に対する評価
+		modifier = {
+			add = {
+				value = 0
+				every_vassal = {
+					if = {
+						limit = {
+							opinion ?= {
+								target = root.primary_heir
+								value > 0
+							}
+						}
+						# 高評価なら
+						add = 1
+					}
+					if = {
+						limit = {
+							opinion ?= {
+								target = root.primary_heir
+								value < 0
+							}
+						}
+						# 低評価なら
+						add = -2
+					}
+				}
+			}
+		}
+
+		# 自分から後継者に対する評価
+		modifier = {
+			add = {
+				value = 0
+				if = {
+					limit = {
+						opinion = {
+							target = root.primary_heir
+							value < 0
+						}
+					}
+					add = -100
+				}
+				if = {
+					limit = {
+						has_relation_rival = root.primary_heir
+					}
+					add = -1000
+				}
+				if = {
+					limit = {
+						has_relation_nemesis = root.primary_heir
+					}
+					add = -1000
+				}
+			}
+		}
+	}
 
 }
 

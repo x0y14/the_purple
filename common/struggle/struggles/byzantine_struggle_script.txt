@@ -32,7 +32,7 @@
 		# trigger_event = neutral_struggle.0001
 	}
 
-	start_phase = struggle_byzantium_phase_hostility
+	start_phase = struggle_byzantium_phase_opportunity
 
 	phase_list = {
 		struggle_byzantium_phase_prosperity = {
@@ -212,7 +212,7 @@
 			duration = { points = 1000 }
 
 			future_phases = {
-				struggle_byzantine_phase_prosperity = {
+				struggle_byzantium_phase_prosperity = {
 					catalysts = {
 						catalyst_yearly_basileus_leaning_gain_tp = catalyst_yearly_emperor_leaning_gain
 						### 継承
@@ -231,17 +231,17 @@
 						# catalyst_new_building_in_temple = medium_struggle_catalyst_gain
 					}
 				}
-				struggle_byzantine_phase_decay = {
+				struggle_byzantium_phase_decay = {
 					catalysts = {
 						catalyst_passing_of_time = major_struggle_catalyst_gain
 						catalyst_becomes_rival_with_involved = medium_struggle_catalyst_gain
 						catalyst_basileus_died_naturally_tp = medium_struggle_catalyst_gain
-						catalyst_basileus_died_violently_tp = medium_struggle_catalyst_gain
+						catalyst_basileus_died_violently_tp = monumental_struggle_catalyst_gain
 						catalyst_unpreferred_heir_tp = medium_struggle_catalyst_gain
 						catalyst_gain_claim_on_title_tp = medium_struggle_catalyst_gain
 						catalyst_usurp_title_tp = medium_struggle_catalyst_gain
-						catalyst_basileus_was_declared_war_tp = medium_struggle_catalyst_gain
-						catalyst_basileus_lost_at_war_tp = massive_struggle_catalyst_gain
+						catalyst_basileus_was_declared_war_tp = massive_struggle_catalyst_gain
+						catalyst_basileus_lost_at_war_tp = monumental_struggle_catalyst_gain
 						catalyst_raided_involved = medium_struggle_catalyst_gain
 						# 不満
 						catalyst_complaints_against_basileus_tp = medium_struggle_catalyst_gain
@@ -298,6 +298,7 @@
 				common_parameters = {
 					# 反乱の扇動可能
 					unlocks_incite_revolts_interaction = yes
+					unlocks_tp_request_turkic_invasion_interaction = yes
 				}
 				#### 関係
 				involved_parameters = {

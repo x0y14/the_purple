@@ -525,7 +525,14 @@ fp3_request_turkic_invasion_interaction_tp = {
 				is_struggle_type = byzantine_struggle
 				involvement = interloper
 			}
-			NOT = { is_vassal_of = title:e_byzantium.holder }
+			trigger_if = {
+				limit = {
+					exists = title:e_byzantium.holder
+				}
+				NOT = {
+					is_vassal_of = title:e_byzantium.holder
+				}
+			}
 			any_character_struggle = {
 				has_struggle_phase_parameter = unlocks_tp_request_turkic_invasion_interaction
 			}
@@ -791,7 +798,7 @@ fp3_request_turkic_invasion_interaction_tp = {
 					value = scope:actor.faith
 				}
 				start_war = {
-					casus_belli = fp3_turkic_invasion_cb_tp
+					casus_belli = tp_turkic_plundering_cb
 					target = scope:recipient
 					target_title = scope:invasion_target_title.duchy
 					# SUPPORTER_FAITH = scope:actor.faith
@@ -1110,4 +1117,208 @@ fp3_request_turkic_invasion_interaction_tp = {
 			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_hostility }
 		}
 	}
+}
+
+
+blind_interaction = {
+	interface_priority = 30
+	icon = blind
+
+	category = interaction_category_prison
+	desc = blind_interaction_desc
+
+	is_shown = {
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+			NOT = { has_trait = blind }
+		}
+		scope:actor = {
+			is_adult = yes
+			culture = { has_cultural_parameter = can_blind_prisoners }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			custom_description = {
+				text = "currently_being_tortured"
+				NOT = { has_character_flag = is_being_tortured }
+			}
+		}
+		cannot_release_former_regent_whilst_old_regent_holds_power_trigger = {
+			PRISONER = scope:recipient
+			REGENT = scope:recipient.var:imprisoned_by_diarch
+		}
+	}
+
+	is_highlighted = {
+		OR = {
+			scope:actor = { has_trait = sadistic }
+			scope:actor = { has_relation_rival = scope:recipient }
+			scope:recipient = {
+				any_claim = {
+					holder = scope:actor
+				}
+			}
+			scope:actor = {
+				culture = { has_cultural_parameter = merciful_blinding }
+				OR = {
+					has_execute_reason = scope:recipient
+					has_banish_reason = scope:recipient
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = {
+				flag = is_being_tortured
+				months = 6 # Players in MP can keep the event window open...
+			}
+		}
+
+		blind_and_castrate_actor_effect = yes #Stress & dread
+
+		show_as_tooltip = {
+			scope:recipient = {
+				add_trait = blind
+				release_from_prison = yes
+			}
+		}
+
+		# Merciful Blindings
+		scope:actor = {
+			if = {
+				limit = {
+					culture = { has_cultural_parameter = merciful_blinding }
+					OR = {
+						has_execute_reason = scope:recipient
+						has_banish_reason = scope:recipient
+					}
+				}
+				add_piety = medium_piety_gain
+			}
+		}
+		
+		torture_blind_castrate_opinion_effect = { VERB = blinded }
+
+		scope:actor = {
+			trigger_event = {
+				id = prison.1020
+				days = 1
+			}
+		}
+
+		# If we're a clan this interaction affects unity
+		if = {
+			limit = { scope:actor.culture = { has_cultural_parameter = merciful_blinding } } # If actor's culture has Merciful Blindings, they lose less unity
+			add_clan_unity_interaction_effect = {
+				CHARACTER = scope:actor
+				TARGET = scope:recipient
+				VALUE = minor_unity_loss
+				DESC = clan_unity_blinding.desc
+				REVERSE_NON_HOUSE_TARGET = no
+			}
+		}
+		else = {
+			add_clan_unity_interaction_effect = {
+				CHARACTER = scope:actor
+				TARGET = scope:recipient
+				VALUE = medium_unity_loss
+				DESC = clan_unity_blinding.desc
+				REVERSE_NON_HOUSE_TARGET = no
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_targets = {
+		ai_recipients = prisoners
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = -20
+
+		modifier = {
+			has_trait = sadistic
+			add = 20
+		}
+		ai_value_modifier = {
+			ai_compassion = tiny_chance_impact_negative_ai_value #Adds +50 for highly uncompassionate characters, -50 for highly compassionate characters
+		}
+		opinion_modifier = {
+			opinion_target = scope:recipient
+			multiplier = -0.25
+		}
+		#Scope:target has caused internal strife in the realm
+		character_hates_scope_due_to_strife_modifier = { TARGET = scope:recipient }
+		modifier = { # Family Feud
+			exists = scope:actor.house
+			exists = scope:recipient.house
+			scope:actor = {
+				house.house_head = {
+					any_owned_story = {
+						story_type = story_cycle_house_feud
+						has_variable = house_feud_house
+						var:house_feud_house = scope:recipient.house
+					}
+				}
+				has_opinion_modifier = {
+					modifier = house_feud_opinion
+					target = scope:recipient.house.house_head
+				}
+			}
+			add = 30
+		}
+
+		# -- the purple --
+		modifier = {
+			add = {
+				value = 0
+				if = {
+					limit = {
+						exists = struggle:byzantine_struggle
+					}
+					if = {
+						limit = {
+							struggle:byzantine_struggle ?= {
+								is_struggle_phase = struggle_byzantium_phase_decay
+							}
+						}
+						add = 25
+					}
+					if = {
+						limit = {
+							struggle:byzantine_struggle ?= {
+								is_struggle_phase = struggle_byzantium_phase_hostility
+							}
+						}
+						add = 30
+					}
+					if = {
+						limit = {
+							AND = {
+								scope:actor = {
+									has_claim_on = title:e_byzantium
+								}
+								scope:recipient = {
+									has_claim_on = title:e_byzantium
+								}
+							}
+						}
+						add = 1000
+					}
+				}
+			}
+		}
+		# ----------------
+	}
+
+	ai_frequency = 36
 }
