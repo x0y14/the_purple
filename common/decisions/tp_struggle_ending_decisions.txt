@@ -340,12 +340,23 @@ struggle_byzantium_ending_abdication_decision = {
 		}
 	}
 
+	is_shown = {
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_decay }
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_hostility }
+		}
+	}
+
 	is_valid = {
 		exists = title:e_byzantium.holder
 		has_title = title:e_byzantium
 		exists = primary_heir
 		is_close_or_extended_family_of = primary_heir
 		dynasty = primary_heir.dynasty
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_decay }
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_hostility }
+		}
 	}
 
 	effect = {
