@@ -322,6 +322,11 @@ struggle_byzantium_ending_abdication_decision = {
 	}
 
 	effect = {
+		if = {
+			limit = { NOT = { has_any_nickname = yes } }
+			give_nickname = nick_the_weak
+		}
+
 		root.primary_heir = { save_scope_as = new_basileus }
 		depose = yes
 		scope:new_basileus = {
@@ -635,9 +640,24 @@ struggle_byzantium_ending_renaissance_decision = {
 	}
 
 	is_valid = {
+		exists = title:e_byzantium.holder
+		has_title = title:e_byzantium
+		root.culture.culture_head = root
+
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_prosperity }
+			# struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_opportunity }
+		}
 	}
 
 	effect = {
+		title:e_byzantium.holder.culture = {
+			add_random_innovation = culture_group_civic
+			# add_random_innovation = culture_group_civic
+			# add_random_innovation = culture_group_civic
+		}
+
+		struggle:byzantine_struggle = { change_struggle_phase = { struggle_phase = struggle_byzantium_phase_opportunity } }
 	}
 
 	cost = {}
@@ -675,9 +695,24 @@ struggle_byzantium_ending_strategy_meeting_decision = {
 	}
 
 	is_valid = {
+		exists = title:e_byzantium.holder
+		has_title = title:e_byzantium
+		root.culture.culture_head = root
+
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_prosperity }
+			# struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_opportunity }
+		}
 	}
 
 	effect = {
+		title:e_byzantium.holder.culture = {
+			add_random_innovation = culture_group_military
+			# add_random_innovation = culture_group_military
+			# add_random_innovation = culture_group_military
+		}
+
+		struggle:byzantine_struggle = { change_struggle_phase = { struggle_phase = struggle_byzantium_phase_opportunity } }
 	}
 
 	cost = {}
@@ -716,9 +751,46 @@ struggle_byzantium_ending_surprise_attack_decision = {
 	}
 
 	is_valid = {
+		exists = title:e_byzantium.holder
+		NOT = { has_title = title:e_byzantium }
+
+		OR = {
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_prosperity }
+			struggle:byzantine_struggle ?= { is_struggle_phase = struggle_byzantium_phase_opportunity }
+		}
+
+		# ビザンツの有力な封臣全てと同盟を組んでいる
+		title:e_byzantium.holder = {
+			any_powerful_vassal = {
+				# limit = { is_landed = yes }
+				count = all
+				is_allied_to = root
+				NOT = { is_allied_to = title:e_byzantium.holder }
+				custom_tooltip = {
+					# #bold not#!
+					text = "has not truce with [GetTitleByKey('e_byzantium').GetHolder.GetName|V]"
+					NOT = { has_truce = title:e_byzantium.holder }
+				}
+			}
+		}
 	}
 
 	effect = {
+		title:e_byzantium.holder = {
+			random_powerful_vassal = {
+				save_scope_as = byz_traitor
+			}
+		}
+
+		scope:byz_traitor = {
+			start_war = {
+				casus_belli = "depose_war"
+				target = title:e_byzantium.holder
+				target_title = title:e_byzantium
+			}
+		}
+
+		struggle:byzantine_struggle = { change_struggle_phase = { struggle_phase = struggle_byzantium_phase_decay } }
 	}
 
 	cost = {}

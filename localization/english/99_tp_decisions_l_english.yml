@@ -25,3 +25,16 @@
   struggle_byzantium_ending_the_dawm_of_a_new_era: "The Dowm of A New Era"
   struggle_byzantium_ending_the_dawm_of_a_new_era_tooltip: "For Islam or other"
   struggle_byzantium_ending_the_dawm_of_a_new_era_decision_desc: "We found a good settlement, Anatolia. (Here is our campsite!)"
+
+
+  struggle_byzantium_ending_renaissance: "Renaissance"
+  struggle_byzantium_ending_renaissance_tooltip: "Renaissance TT HERE"
+  struggle_byzantium_ending_renaissance_decision_desc: "Get a random Civil Group Innovation"
+
+  struggle_byzantium_ending_strategy_meeting: "Strategy meeting"
+  struggle_byzantium_ending_strategy_meeting_tooltip: "Strategy meeting TT HERE"
+  struggle_byzantium_ending_strategy_meeting_decision_desc: "Get a random Military Group Innovation"
+
+  struggle_byzantium_ending_surprise_attack: "Surprise attack"
+  struggle_byzantium_ending_surprise_attack_tooltip: "Surprise attack TT HERE"
+  struggle_byzantium_ending_surprise_attack_decision_desc: "Surprise attack DESC HERE"
