@@ -21,6 +21,12 @@
 		# Start the over-time catalysts.
 		trigger_event = neutral_struggle.0001
 		trigger_event = tp_yearly_struggle.0001
+
+		# title:c_byzantion = {
+		# 	add_county_modifier = {
+		# 		id = tp_struggle_basileus_super_suspicious_modifier
+		# 	}
+		# }
 	}
 	transition_state_duration = { months = 3 } # ?
 

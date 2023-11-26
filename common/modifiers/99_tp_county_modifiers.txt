@@ -7,3 +7,8 @@
 	county_opinion_add = 50
 	tax_mult = 1
 }
+
+tp_nova_roma_modifier = {
+	icon = county_modifier_development_positive
+	siege_capture_chance = 1000
+}

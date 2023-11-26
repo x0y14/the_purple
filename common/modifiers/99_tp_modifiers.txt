@@ -5,6 +5,7 @@
 }
 
 tp_struggle_basileus_super_suspicious_modifier = {
-	icon = intrigue_positive
-	hostile_scheme_resistance_add = 300
+	# icon = intrigue_positive
+	icon = horse_dead_positive
+	# hostile_scheme_resistance_add = 300
 }
