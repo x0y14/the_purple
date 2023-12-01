@@ -219,7 +219,7 @@
 				else_if = {
 					limit = {
 						AND = {
-							exists = scope:attacker.var:supporters_faith
+							exists = scope:attacker.var:@rters_faith
 							NOT = {
 								scope:attacker.var:supporters_faith = {
 									has_doctrine_parameter = unreformed
@@ -443,10 +443,24 @@ tp_turkic_plundering_cb = {
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		scope:attacker = {
+			set_variable = {
+				name = got_gold
+				value = 0
+			}
+		}
 		scope:defender = {
 			pay_short_term_gold = {
 				target = scope:attacker
-				gold = 500
+				gold = 300
+			}
+		}
+		scope:attacker = {
+			change_variable = {
+				name = got_gold
+				add = {
+					value = 300
+				}
 			}
 		}
 
@@ -478,12 +492,12 @@ tp_turkic_plundering_cb = {
 				}
 			}
 
-			# 強姦対象を決定
+			# 捕虜の決定、大人のみ
 			every_in_de_jure_hierarchy = {
 				limit = {
 					tier = tier_county
 					# Current holder must be a (sub)vassal of the defender (no poaching titles from 3rd parties!)
-					#exists = holder
+					# exists = holder
 					holder = {
 						OR = {
 							this = scope:defender
@@ -494,27 +508,50 @@ tp_turkic_plundering_cb = {
 				holder = {
 					every_courtier_or_guest = {
 						limit = {
-							is_female = yes
-							is_adult = yes
-							can_have_children = yes
-							NOT = { is_pregnant = yes }
+							location = this.location
 						}
-						add_to_list = pow_for_rape
+						add_to_list = tp_turkic_pow
 					}
+					# if = {
+					# 	limit = { is_adult = yes }
+					# 	add_to_list = tp_turkic_pow
+					# 
 				}
 			}
 
-			if = {
-				limit = {
-					holder = {
+			# 男女で仕分け
+			every_in_list = {
+				list = tp_turkic_pow
+				if = {
+					limit = {
+						is_male = yes
+						is_adult = yes
+					}
+					# add_to_list = tp_turkic_pow_male
+					add_trait = wounded_2
+				}
+				else_if = {
+					limit = {
 						is_female = yes
 						is_adult = yes
-						can_have_children = yes
 						NOT = { is_pregnant = yes }
+						can_have_children = yes
 					}
+					add_to_list = tp_turkic_pow_female
 				}
-				holder = {
-					add_to_list = pow_for_rape
+				# 平等にお金を取る
+				pay_short_term_gold = {
+					target = scope:attacker
+					gold = 50
+				}
+				# @plundered_total_gold = @[plundered_total_gold + 50]
+				scope:attacker = {
+					change_variable = {
+						name = got_gold
+						add = {
+							value = 50
+						}
+					}
 				}
 			}
 
@@ -530,45 +567,45 @@ tp_turkic_plundering_cb = {
 					}
 					add_to_list = rapers
 				}
+				# if = {
+				# 	limit = {
+				# 		is_physically_able = yes
+				# 		is_adult = yes
+				# 		can_have_children = yes
+				# 		is_male = yes
+				# 	}
+				# 	add_to_list = rapers
+				# }
 			}
 			
 			# それを実行
 			every_in_list = {
-				list = pow_for_rape
-				# 攻撃者が子供を作れる場合
+				list = tp_turkic_pow_female
 				random_in_list = {
 					list = rapers
 					save_scope_as = r_father
 				}
-				if = {
-					limit = {
-						scope:attacker = { can_have_children = yes }
-						scope:attacker = { is_male = yes }
-					}
-					random_list = {
-						60 = {
-							make_pregnant = { father = scope:attacker }
-						}
-						40 = {
-							make_pregnant = {
-								father = scope:r_father
-							}
-						}
-					}
+				make_pregnant = {
+					father = scope:r_father
+					number_of_children = 3
 				}
-				# 作れない場合
-				else_if = {
-					limit = {
-						OR = {
-							scope:attacker = { NOT = { can_have_children = yes } }
-							scope:attacker = { is_female = yes }
-						}
-					}
-					make_pregnant = {
-						father = scope:r_father
+			}
+		}
+
+		# 奪ったお金の半分
+		# 支援者に払う
+		scope:attacker = {
+			pay_short_term_gold = {
+				target = scope:attacker.var:supporter
+				gold = {
+					add = {
+						value = scope:attacker.var:got_gold
+						multiply = 0.5
 					}
 				}
 			}
+			remove_variable = supporter
+			remove_variable = got_gold
 		}
 
 		# Prestige Progress for the Attacker
@@ -698,4 +735,8 @@ tp_turkic_plundering_cb = {
 	on_primary_defender_death = inherit
 	attacker_allies_inherit = no
 	defender_allies_inherit = no
+}
+
+tp_anatolia_plundering_cb = {
+
 }

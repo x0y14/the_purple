@@ -366,7 +366,6 @@
 			any_character_struggle = {
 				has_struggle_phase_parameter = unlocks_incite_revolts_interaction
 				involvement = involved
-				is_struggle_type = iberian_struggle
 				OR = {
 					is_struggle_phase = struggle_iberia_phase_opportunity
 					is_struggle_phase = struggle_iberia_phase_hostility
@@ -793,9 +792,13 @@ fp3_request_turkic_invasion_interaction_tp = {
 					# 	divide = 2
 					# }
 				}
+				# set_variable = {
+				# 	name = supporters_faith
+				# 	value = scope:actor.faith
+				# }
 				set_variable = {
-					name = supporters_faith
-					value = scope:actor.faith
+					name = supporter
+					value = scope:actor
 				}
 				start_war = {
 					casus_belli = tp_turkic_plundering_cb
