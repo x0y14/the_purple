@@ -11,6 +11,7 @@
 	}
 	
 	valid = {
+		is_incapable = no
 		trigger_if = {
 			limit = {
 				is_parent_of = scope:target
@@ -282,8 +283,10 @@
 				has_character_modifier = fp3_struggle_caliph_super_suspicious_modifier
 			}
 			desc = has_fp3_struggle_caliph_super_suspicious_modifier
+
 		}
 
+		# -- the purple --
 		# Basileus protection
 		modifier = {
 			add = -200
@@ -292,6 +295,7 @@
 			}
 			desc = has_fp3_struggle_caliph_super_suspicious_modifier
 		}
+		# ----------------
 	}
 	
 	agent_success_chance = {

@@ -19,12 +19,11 @@
 	father = 145129
 	836.5.25 = {
 		birth = "836.5.25"
-		# add_character_modifier = {
-		# 	modifier = fp3_struggle_caliph_super_suspicious_modifier
-		# }
+		# -- the purple --
 		add_character_modifier = {
 			modifier = tp_struggle_basileus_super_suspicious_modifier
 		}
+		# ----------------
 	}
 	860.1.1 = {
 		add_spouse = 145131

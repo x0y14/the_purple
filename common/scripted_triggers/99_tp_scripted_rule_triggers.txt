@@ -1,4 +1,5 @@
-﻿# Here so that you can plug in whatever dynasty modifiers you want without overwriting the whole scripted rule trigger.
+﻿# @C:\Program Files (x86)\Steam\steamapps\common\Crusader Kings III\game\common\scripted_triggers\00_scripted_rule_triggers.txt
+# Here so that you can plug in whatever dynasty modifiers you want without overwriting the whole scripted rule trigger.
 can_raid_dynasty_modifiers_that_enable_raiding_overseas_list_trigger = {
 	OR = {
 		# Yes, I realise the OR is redundant till someone else puts something in here. Shoosh.
