@@ -10,7 +10,8 @@
 	# Byzantine Emperor
 	character = {
 		name = "bookmark_thepurple_basileios_makedonia"
-		dynasty = 644
+		# dynasty = 644
+		dynasty_house = house_makedon
 		dynasty_splendor_level = 1
 		type = male
 		birth = 836.5.25
@@ -82,7 +83,8 @@
 	# Shu'ayb ibn Umar
 	character = {
 		name = "bookmark_thepurple_shuayb_hafsid"
-		dynasty = 1029093
+		# dynasty = 1029093
+		dynasty_house = house_hafsid
 		dynasty_splendor_level = 1
 		type = male
 		birth = 805.1.1

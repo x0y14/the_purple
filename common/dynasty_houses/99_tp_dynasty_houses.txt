@@ -1,0 +1,9 @@
+﻿house_makedon = {
+	name = dynn_Makedon
+	dynasty = 644
+}
+
+house_hafsid = {
+	name = dynn_Hafsid
+	dynasty = 1029093
+}
