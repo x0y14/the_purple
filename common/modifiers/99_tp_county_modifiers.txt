@@ -10,5 +10,5 @@
 
 tp_nova_roma_modifier = {
 	icon = county_modifier_development_positive
-	siege_capture_chance = 1000
+	# siege_capture_chance = 1000
 }
