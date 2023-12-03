@@ -76,6 +76,8 @@ struggle_byzantium_change_phase_prosperity_decision = {
 			}
 		}
 	}
+
+	ai_check_interval = 0
 }
 
 # Debug
@@ -99,6 +101,8 @@ struggle_byzantium_change_phase_opportunity_decision = {
 			}
 		}
 	}
+
+	ai_check_interval = 0
 }
 
 struggle_byzantium_change_phase_decay_decision = {
@@ -121,6 +125,8 @@ struggle_byzantium_change_phase_decay_decision = {
 			}
 		}
 	}
+
+	ai_check_interval = 0
 }
 
 struggle_byzantium_change_phase_hostility_decision = {
@@ -143,6 +149,8 @@ struggle_byzantium_change_phase_hostility_decision = {
 			}
 		}
 	}
+
+	ai_check_interval = 0
 }
 
 # struggle_byzantium_force_collapse_ending_decision = {

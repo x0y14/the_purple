@@ -38,3 +38,35 @@
   struggle_byzantium_ending_surprise_attack: "Surprise attack"
   struggle_byzantium_ending_surprise_attack_tooltip: "Surprise attack TT HERE"
   struggle_byzantium_ending_surprise_attack_decision_desc: "Surprise attack DESC HERE"
+
+
+  # Debug
+  tp_start_byzantine_struggle_decision: "Start Byzantine Struggle"
+  tp_start_byzantine_struggle_decision_tooltip: "Start Byzantine Struggle"
+  tp_start_byzantine_struggle_decision_desc: "Start Byzantine Struggle"
+  tp_start_byzantine_struggle_decision_confirm: "Confirm"
+
+  tp_end_byzantine_struggle_decision: "End Byzantine Struggle"
+  tp_end_byzantine_struggle_decision_tooltip: "End Byzantine Struggle"
+  tp_end_byzantine_struggle_decision_desc: "End Byzantine Struggle"
+  tp_end_byzantine_struggle_decision_confirm: "Confirm"
+
+  struggle_byzantium_change_phase_prosperity_decision: "change phase prosperity"
+  struggle_byzantium_change_phase_prosperity_decision_tooltip: "change phase prosperity"
+  struggle_byzantium_change_phase_prosperity_decision_desc: "change phase prosperity"
+  struggle_byzantium_change_phase_prosperity_decision_confirm: "Confirm"
+
+  struggle_byzantium_change_phase_opportunity_decision: "change phase opportunity"
+  struggle_byzantium_change_phase_opportunity_decision_tooltip: "change phase opportunity"
+  struggle_byzantium_change_phase_opportunity_decision_desc: "change phase opportunity"
+  struggle_byzantium_change_phase_opportunity_decision_confirm: "Confirm"
+
+  struggle_byzantium_change_phase_decay_decision: "change phase decay"
+  struggle_byzantium_change_phase_decay_decision_tooltip: "change phase decay"
+  struggle_byzantium_change_phase_decay_decision_desc: "change phase decay"
+  struggle_byzantium_change_phase_decay_decision_confirm: "Confirm"
+
+  struggle_byzantium_change_phase_hostility_decision: "change phase hostility"
+  struggle_byzantium_change_phase_hostility_decision_tooltip: "change phase hostility"
+  struggle_byzantium_change_phase_hostility_decision_desc: "change phase hostility"
+  struggle_byzantium_change_phase_hostility_decision_confirm: "Confirm"
