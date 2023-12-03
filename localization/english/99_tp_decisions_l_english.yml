@@ -38,6 +38,7 @@
   struggle_byzantium_ending_surprise_attack: "Surprise attack"
   struggle_byzantium_ending_surprise_attack_tooltip: "Surprise attack TT HERE"
   struggle_byzantium_ending_surprise_attack_decision_desc: "Surprise attack DESC HERE"
+  struggle_byzantium_ending_surprise_attack_decision_not_has_truce_with_emperor_tt: "has #bold not#! truce with [GetTitleByKey('e_byzantium').GetHolder.GetName|V]"
 
 
   # Debug

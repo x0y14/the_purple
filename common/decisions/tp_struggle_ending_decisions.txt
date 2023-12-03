@@ -768,7 +768,7 @@ struggle_byzantium_ending_surprise_attack_decision = {
 				NOT = { is_allied_to = title:e_byzantium.holder }
 				custom_tooltip = {
 					# #bold not#!
-					text = "has not truce with [GetTitleByKey('e_byzantium').GetHolder.GetName|V]"
+					text = struggle_byzantium_ending_surprise_attack_decision_not_has_truce_with_emperor_tt
 					NOT = { has_truce = title:e_byzantium.holder }
 				}
 			}

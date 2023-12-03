@@ -12,7 +12,6 @@
 	}
 
 	effect = {
-		custom_tooltip = "start byzantine struggle"
 		if = {
 			limit = { has_dlc_feature = the_fate_of_iberia }
 			start_struggle = {
@@ -40,7 +39,6 @@ tp_end_byzantine_struggle_decision = {
 	}
 
 	effect = {
-		custom_tooltip = "end byzantine struggle"
 		if = {
 			limit = { has_dlc_feature = the_fate_of_iberia }
 			# start_struggle = {
@@ -57,6 +55,8 @@ tp_end_byzantine_struggle_decision = {
 
 # Debug
 struggle_byzantium_change_phase_prosperity_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+
 	# major = yes
 	title = struggle_byzantium_change_phase_prosperity_decision
 	is_invisible = no
@@ -82,6 +82,8 @@ struggle_byzantium_change_phase_prosperity_decision = {
 
 # Debug
 struggle_byzantium_change_phase_opportunity_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+
 	# major = yes
 	title = struggle_byzantium_change_phase_opportunity_decision
 	is_invisible = no
@@ -106,6 +108,8 @@ struggle_byzantium_change_phase_opportunity_decision = {
 }
 
 struggle_byzantium_change_phase_decay_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+
 	# major = yes
 	title = struggle_byzantium_change_phase_decay_decision
 	is_invisible = no
@@ -130,6 +134,8 @@ struggle_byzantium_change_phase_decay_decision = {
 }
 
 struggle_byzantium_change_phase_hostility_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	
 	# major = yes
 	title = struggle_byzantium_change_phase_hostility_decision
 	is_invisible = no
