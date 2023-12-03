@@ -23,9 +23,9 @@
 		add_character_modifier = {
 			modifier = tp_struggle_basileus_super_suspicious_modifier
 		}
-		add_character_modifier = {
-			modifier = tp_conqueror_basileus_modifier
-		}
+		# add_character_modifier = {
+		# 	modifier = tp_conqueror_basileus_modifier
+		# }
 		# ----------------
 	}
 	860.1.1 = {
