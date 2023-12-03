@@ -1,0 +1,49 @@
+﻿texticon = {
+	icon = struggle_byzantium_phase_prosperity
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_byzantium_phase_prosperity.dds" # DBD donation of FP2 icons
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = struggle_byzantium_phase_opportunity
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_byzantium_phase_opportunity.dds" # DBD donation of FP2 icons
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = struggle_byzantium_phase_decay
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_byzantium_phase_decay.dds" # DBD donation of FP2 icons
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = struggle_byzantium_phase_hostility
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_byzantium_phase_hostility.dds" # DBD donation of FP2 icons
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = struggle_byzantium_ending_phase_collapse
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_byzantium_ending_phase_collapse.dds" # DBD donation of FP2 icons
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
